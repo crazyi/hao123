@@ -1,0 +1,342 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type=text/css>
+<!--
+td,body {  font-size: 13px;}
+a:link{ color:#000000; text-decoration:none} 
+a:visited{COLOR: #000000; TEXT-DECORATION: none} 
+a:active{color:green;text-decoration:none}
+a:hover{color:red;text-decoration:underline} 
+a.mml:link{color:#008000; cursor: hand; font-family:"宋体"; line-height:15pt;font-size:9pt;text-decoration: none}
+a.mml:visited{color:green;line-height:15pt;font-size:9pt}
+a.mml:active{color:green;text-decoration:none}
+a.mml:hover{color:red;text-decoration:underline}
+body {
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	background-color: #fcfff7;
+}
+.f13{  font-size:14px; line-height:24px; height:24px;}
+.f9{  font-size: 12px;}
+.f9pt{  font-size: 12px;}
+.h20{ height:12px;line-height:12px;}
+.f10{font-size:13px; line-height:22px; height:22px;}
+#sfont a,#sfont b{font-size:13px;}
+hr.cg {border-top:1px dashed #4D784B;height: 1px;overflow:hidden; width:96%; margin-top:8px}
+.WB {width:530;text-align:left;clear:both;height:52px; padding-top:0px!important; padding-top:5px}
+@media screen and (min-width:0px){.WB {margin-top:3px!important;padding-top:0px!important}}
+#FrP{font-size:13px;border:0px solid #C5D5C5; height:48px; padding-top:1px; padding-bottom:2px;width:530;}<!-- 修改高度44-48>
+#FrP a{color:#205001}
+#FrP a:hover{color:red}
+.searchfod1 {FONT-WEIGHT: bold; COLOR: #000; text-align:center; width:55px; font-size:14px}
+.searchfod2 {CURSOR: pointer; text-align:center; width:55px; font-size:14px}
+--> </style>
+<base target="_blank">
+<title>hao123网址之家－如何在360浏览器、傲游、搜狗浏览器中设hao123为主页</title>
+</head>
+<body>
+<SCRIPT  language=javascript>
+var haoCurrHighLight = document.getElementById("haoweb");
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function setStyle(a,b){
+	var c=document.styleSheets[0];
+	if(c.addRule){
+	c.addRule(a,b);
+	}else if(c.insertRule){
+	c.insertRule(a+" { "+b+" }",c.cssRules.length);
+	}}
+function haoValidate(source){
+	wval = trim(f.word.value);
+	if (f.sc.value=="post")
+	{
+	    f.kw.value=f.word.value
+		f.ct.value=""
+		f.tn.value=""
+		f.rn.value=""
+		f.lm.value=""
+		f.rs2.value=0
+		f.myselectvalue.value=1
+		f.ie.value=""
+		f.cl.value=""
+		f.z.value=""
+		f.from.value=""
+	  }
+	if (f.sc.value=="img")
+	{
+		f.ct.value=201326592
+		f.lm.value=-1
+		f.cl.value=2
+		f.tn.value="baiduimage"
+		f.pv.value=""
+		f.rs2.value=""
+		f.myselectvalue.value=""
+		f.ie.value=""
+		f.z.value=0
+		f.rn.value=""
+		f.from.value=""
+		f.f.value=""
+		}
+	if (f.sc.value=="zhidao")
+	{
+		f.ct.value=17
+		f.tn.value="ikaslist"
+		f.rn.value=10
+		f.lm.value=""
+		f.cl.value=""
+		f.ie.value=""
+		f.rs2.value=""
+		f.f.value=""
+		f.myselectvalue.value=""
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="web")
+	{
+	    f.cl.value=3
+		f.tn.value="hao123"
+		f.ct.value=0
+		f.ie.value="gb2312"
+		f.myselectvalue.value=""
+		f.rn.value=""
+		f.rs2.value=""
+		f.z.value=""
+		f.from.value=""
+		f.lm.value=""
+		}
+	if (f.sc.value=="mp3")
+	{
+	    f.ct.value=134217728
+		f.lm.value=-1
+		f.rn.value=""
+		f.cl.value=""
+		f.tn.value="baidump3"
+		f.f.value="ms"
+		f.myselectvalue.value=""
+		f.ie.value="gb2312"
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="news")
+	{
+	    f.tn.value="news"
+		f.cl.value=2
+		f.rn.value=20
+		f.ct.value=0
+	    f.z.value=""
+		f.from.value="news"
+		f.ie.value=""
+		f.myselectvalue.value=""
+		f.lm.value=""
+		f.rs2.value=""
+	    }
+		return true;
+}
+function haoSubSearch(sc){
+	changePage(sc);
+	if(sc != "baidu"){
+		if(sc == "post")
+		{
+		    f.action = "http://tieba.baidu.com/f";
+			
+		}
+		else if(sc == "zhidao")
+		{
+			f.action = "http://zhidao.baidu.com/q";
+			
+		}
+		else if(sc == "mp3")
+		{
+			f.action = "http://mp3.baidu.com/m";
+			
+		}
+		else if(sc == "img")
+		{
+			f.action = "http://image.baidu.com/i";
+			
+		}
+		else if(sc == "news")
+		{
+			f.action = "http://news.baidu.com/ns";
+			
+		}
+		else if(sc == "video")
+		{
+			f.action = "http://video.baidu.com/v";
+			
+		}
+		else
+		{
+			f.action = "http://www.baidu.com/s";
+			
+		}
+		f.sc.value = sc;
+	}
+	else{
+		f.sc.value = "post";
+		haoGoSoba();
+	}
+}
+
+function haoGoSoba(){
+
+	f.action = "http://www.baidu.com/s";
+	f.kw.value = f.word.value;
+}
+function G(id)
+{
+ return document.getElementById(id);
+}
+function changePage(sc){
+	if(haoCurrHighLight == null){
+		haoCurrHighLight = document.getElementById("haoweb");
+	}
+	haoCurrHighLight.className = "searchfod2";
+	haoCurrHighLight = document.getElementById("hao"+sc);
+	haoCurrHighLight.className = "searchfod1";
+	document.f.word.focus()
+	 f.word.value="";
+}
+function isSoba(){
+	if(haoCurrHighLight == document.getElementById("haosoba")){
+		haoGoSoba();
+		return true;
+	}
+	else{
+		return true;
+	}
+}
+function goSearch(){
+	if(!haoValidate(1))
+	{
+			return false;
+			}
+	else{
+	 return false;
+	 }
+}
+
+</SCRIPT>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="778" height="51">
+    <tr>
+      <td width="230" height="51"><a href="http://www.hao123.com" tppabs="http://www.hao123.com/" target="_self" class="m"><img src="../images/logo.gif" tppabs="http://www.hao123.com/images/logo.gif" alt="hao123网址之家"    width="168" height="63" border="0"></a></td>
+     <td height="51" align="center">
+<p class="WB">
+<table width=100% border=0 cellspacing=0 cellpadding=0 style="margin-bottom:-6px "><tr><td width=2 height=18> </td><td  valign=bottom class=searchfod1 id=haoweb onClick="haoSubSearch('web');goSearch()">网 页</td><td width="4"></td><td valign=bottom class=searchfod2 id=haomp3 onClick="haoSubSearch('mp3');goSearch()">MP3</td> <td width="4"></td><td valign=bottom   class=searchfod2 id=haoimg onClick="haoSubSearch('img');goSearch()">图 片</td><td width="4"></td><td valign=bottom class=searchfod2 id=haopost onClick="haoSubSearch('post');goSearch()">贴 吧</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haozhidao onClick="haoSubSearch('zhidao');goSearch()">知 道</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haonews onClick="haoSubSearch('news');goSearch()">新 闻</td><td width="4"></td><td valign=bottom class=searchfod2 id=haovideo onClick="haoSubSearch('video');goSearch()">视 频</td><td width="4"></td><td  width=240 valign=bottom> </td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" id=FrP><tr><form onSubmit="return haoValidate();" action="http://www.baidu.com/s" name=f><td align="left"><INPUT type=hidden name=kw><INPUT type=hidden name=sc><input type=hidden name=cl value=3><input type=hidden name=tn value=hao123><input type=hidden name=ct><input type=hidden name=rn><input type=hidden name=lm><input type=hidden name=ie><input type=hidden name=rs2><input type=hidden name=myselectvalue><input type=hidden name=f><input type=hidden name=pv><input type=hidden name=z><input type=hidden name=from>  
+<input type="text" name="word" size=38 maxlength="100" class="kw" id="kww"  style="margin-bottom:-5px; font-size:16px;height:1.78em;font-family:arial,sans-serif,宋体;padding-top:2px; padding-left:1px"> <input type=submit value=百度一下 style="height:1.82em;width:6.4em;font-size:16px; margin-bottom:-5px; padding-top:2px"  class=sb monkey="submit">
+</span>
+</td>
+</form></tr></table></p>
+</td>
+	</tr>
+  </table>
+</center></div>
+<script language=javascript>
+<!--
+document.f.word.focus()
+window.onload = function(){	
+	haoSubSearch("web");
+	goSearch();
+}
+//-->
+</script>
+<div align="center"><center>
+ <table border=0 cellPadding=0 cellSpacing=0 width=778 height=1><tr align=center><td height="1" bgcolor="C1D0D7"></td></tr></table>
+<table width=778 height=25 bgcolor=#EEF7FF border=0 cellspacing=0 cellspadding=2><tr>
+<td width="50%" class="f9pt" style="color:#424242 "> <a href="http://www.hao123.com" tppabs="http://www.hao123.com/" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.hao123.com'/*tpa=http://www.hao123.com/*/);return(false);" style="behavior: url(#default#homepage); color:#D35E04"><img src="../images/home.gif" tppabs="http://www.hao123.com/images/home.gif" width="15" height="15" border="0" align="absmiddle"> 把hao123设为主页</a>　　<a href="http://www.hao123.com/inc/book/index.html"><img src="../images/notebook.gif" tppabs="http://www.hao123.com/images/notebook.gif" width="15" height="15" border="0" align="absmiddle"> 网友留言</a></td><td align="right" class="f9pt" style="color:#424242; padding-right:10px">
+<a href="http://www.hao123.com" tppabs="http://www.hao123.com/" target=_self style="color:#424242 ">首页</a> > 如何在360浏览器、傲游、搜狗浏览器中设hao123为主页</td>
+  </tr></table>
+</center></div>
+<div align="center"><center>
+<div class="bgg">
+<table width="778"  border="0" cellpadding="3" cellspacing="1" bgcolor="CAE6BF">
+    <tr bgcolor=E2F7DA>
+      <td><table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="FCFFF7">
+        <tr bgcolor="E2F7DA">
+          <td class="f13">　<strong> 如何在360浏览器、傲游、搜狗浏览器中设hao123为首页？</strong>         
+        </tr>
+        <tr>
+          <td align="center" class="f13"><table width="90%"  border="0" cellspacing="5" cellpadding="0">
+            <tr>
+              <td class="f13"> <a href="#01" target="_self">1. 在360浏览器里如何将hao123设为主页？</a></td>
+            </tr>
+			<tr>
+              <td class="f13"> <a href="#02" target="_self">2. 在傲游浏览器里如何将hao123设为主页？</a> </td>
+            </tr>
+            <tr>
+              <td class="f13"> <a href="#03" target="_self">3. 在搜狗浏览器里如何将hao123设为主页？</a></td>
+            </tr>
+          </table>
+            <hr class=cg>
+            <table width="98%"  border="0" cellspacing="5" cellpadding="0">
+              <tr>
+                <td colspan="2" class="f13" style="font-weight:600 "> <a name="01"></a>1. 在360浏览器里如何将hao123设为主页？</td>
+              </tr>
+              <tr>
+                <td width="63%" valign="top" class="f13"> 打开 360 浏览器，点击菜单里的工具 -360 安全浏览器选项，如右侧图所示： </td>
+                <td width="37%" class="f13"><img src="images/11.gif" tppabs="http://www.hao123.com/redian/images/11.gif" width="555" height="311"></td>
+              </tr>
+              <tr>
+                <td valign="top" class="f13"> 打开 360 安全浏览器选项窗口，在 360 安全浏览器选项的常规 - 主页设置里输入 hao123 网址 <a href="http://www.hao123.com" tppabs="http://www.hao123.com/">http://www.hao123.com/ </a>，启动时显示主页选项前打勾，如右侧图所示： </td>
+                <td class="f13"><img src="images/12.gif" tppabs="http://www.hao123.com/redian/images/12.gif" width="553" height="359"></td>
+              </tr>
+              <tr>
+                <td colspan="2" class="f13" style="padding-bottom: 10px">关闭 360 浏览器，重启浏览器后主页就是 hao123 了。</td>
+                </tr>
+              <tr>
+                <td colspan="2" class="f13" style="font-weight:600 "><a name="02"></a> 2. 在傲游浏览器里如何将hao123设为主页？ </td>
+              </tr>
+              <tr>
+                <td valign="top" class="f13"> 打开傲游浏览器，点击菜单里的工具 - 傲游设置中心选项，如右侧图所示： </td>
+                <td class="f13"><img src="images/21.gif" tppabs="http://www.hao123.com/redian/images/21.gif" width="528" height="411"></td>
+              </tr>
+              <tr>
+                <td valign="top" class="f13"> 打开傲游设置中心窗口，在常规选项 - 主页的文本框里输入 hao123 网址 <a href="http://www.hao123.com" tppabs="http://www.hao123.com/">http://www.hao123.com/ </a>，并选择 傲游启动时 打开主页 ，如右侧图所示： </td>
+                <td class="f13"><img src="images/22.gif" tppabs="http://www.hao123.com/redian/images/22.gif" width="539" height="405"></td>
+              </tr>
+              <tr>
+                <td colspan="2" valign="top" class="f13" style="padding-bottom: 10px"> 关闭傲游浏览器，重启浏览器后主页就是 hao123 了。 </td>
+                </tr>
+              <tr>
+                <td colspan="2" class="f13" style="font-weight:600 "><a name="03"></a> 3. 在搜狗浏览器里如何将hao123设为主页？ </td>
+              </tr>
+              <tr>
+                <td valign="top" class="f13"><p>打开搜狗浏览器，点击菜单里的 工具 - 搜狗浏览器选项，如右侧图所示： </p></td>
+                <td class="f13"><img src="images/31.gif" tppabs="http://www.hao123.com/redian/images/31.gif" width="463" height="224"></td>
+              </tr>
+              <tr>
+                <td valign="top" class="f13"><p>打开搜狗浏览器选项窗口，在常规 - 启动设置里选择自定义网址，在自定义网址里输入 hao123 网址 <a href="http://www.hao123.com" tppabs="http://www.hao123.com/">http://www.hao123.com/ </a>，点击确定，如图： </p></td>
+                <td class="f13"><img src="images/32.gif" tppabs="http://www.hao123.com/redian/images/32.gif" width="554" height="473"></td>
+              </tr>
+              <tr>
+                <td colspan="2" valign="top" class="f13"> 关闭搜狗浏览器，重启浏览器后主页就是 hao123 了。 </td>
+                </tr>
+            </table>
+</td>
+        </tr>
+        <tr>
+          <td >        </tr>
+        
+      </table>
+	  </td>
+    </tr>
+	
+  </table>
+   
+  
+  <table width="778"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align=center>
+<div class="h20"></div>
+       如果您身边的朋友也遇到同样的困扰，请您把本页地址告诉您的朋友！    </td>
+  </tr>
+</table>
+</div>
+</center></div>
+</body>
+</html>

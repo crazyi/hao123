@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+<style type='text/css'>
+    body,p,b,dl,dd,table,td,th,input,img,form,div,ul,li,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
+    :focus{outline:0;}
+    img,iframe{border:medium none;}
+    ol,ul,li{list-style:none;}img,input,label{vertical-align:baseline;}
+    body{font:normal 12px/1.5 Arial,Tahoma,Helvetica,sans-serif; text-align:center;background-color:#FFF;}
+    a:link{color:#000;text-decoration:none;}a:visited{text-decoration:none;}
+    a:hover{text-decoration:underline;cursor:pointer; color:#FF0000;}
+    .clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+    .clearfix{zoom:1;}
+    center{width:960px;margin:0 auto; text-align:left;}
+    .usrbar{height:22px;line-height:22px;border-bottom:1px solid #DEE7F2;font-size:13px;position:relative;z-index:2;}
+    .usrbar_bg{height:22px;width:100%;background-color:#fafafa;position:absolute;left:0;top:0;z-index:-1;}
+    #nav{padding:15px 0 14px 0;border-bottom:3px solid #2db966;}
+    #nav .logo{float:left;padding:4px 107px 0 0;}
+    #nav .logo a{float:left;font-size:0;}
+    #nav .search{float:left;}
+    #header{ width:960px; margin:0 auto;}
+    .search_tab{_height:26px;_width:467px;text-align:left;}
+    .search_tab ul{padding-bottom:2px;}
+    .search_tab li{float:left;height:26px;width:41px;line-height:23px;margin-right:8px;display:inline;text-align:center;font-size:14px;cursor:pointer;}
+    .search_tab li.cur_tab{width:49px;background:transparent url("images/phone/tv.gif"/*tpa=http://www.hao123.com/images/phone/tv.gif*/) no-repeat -141px -131px;color:#fff;font-weight:bold;cursor:default;}
+    .search_input form{overflow:hidden;}
+    .search_input .boo{border-color:#7B7B7B #B6B6B6 #B6B6B6 #7B7B7B;border-style:solid;border-width:1px;float:left;}
+    .search_input .bo{border-color:#D0D0D0 #FFF #FFF #D0D0D0;border-style:solid;border-width:1px 0 0 1px;float:left;}
+    .search_input .kw{height:20px;padding:2px 4px;font:16px/1.25 Simsun;border-color:#EFEFEF #FFF #FFF #EFEFEF;border-style:solid;border-width:1px 0 0 1px;float:left; width:336px;}
+    .search_input .sb{height:30px;width:97px;background:url("images/phone/tv.gif"/*tpa=http://www.hao123.com/images/phone/tv.gif*/) no-repeat -141px -50px;text-indent:-1000em;overflow:hidden;border:medium none;margin-left:10px;float:left;}
+    .search_input .hover{background-position:-141px -20px;cursor:pointer;}
+     #top{ line-height:36px; text-align:left; overflow:hidden; zoom:1;}
+    #top a:hover{ text-decoration:underline; color:Red;}
+    #top .sethome,#top .feedback{ background-image:url("images/phone/icons.jpg"/*tpa=http://www.hao123.com/images/phone/icons.jpg*/); background-repeat:no-repeat; padding-left:20px; margin-right:13px;}
+    #top .sethome{  background-position:0px 10px; }
+    #top .sethome a{color:Red;}
+    #top .feedback{ background-position:0px -36px;}
+    #top li{ float:left;}
+    #top .bread{ float:right; font-size:14px; color:#666;}
+    #top .bread span{ margin:3px;}
+    #top .bread a{ color:#333;}
+    #top .bread a:hover{ color:Red;}
+    #body{ border:1px solid #77AE84;width:960px; margin:0 auto; background-color:#EFF7F0; }
+    #forecast-set{ overflow:hidden; zoom:1; text-align:left; margin-left:10px; padding:8px 10px 8px 0px; height:20px;}
+    #forecast-content{ border-top:1px solid #77AE84; font-size:14px; text-align:left;}
+    
+    #forecast-set .search{ float:right; height:20px;}
+    #forecast-set .search select{ vertical-align:top; }
+    #forecast-set .city{ margin-right:8px;}
+    #forecast-set .search button{ line-height:18px;vertical-align:top; position:relative; top:-2px;}
+    #forecast-set strong,#forecast-set select{ font-size:14px; }
+    #forecast-content{ padding-top:8px; height:107px;}
+    #forecast-content td.first{ padding-left:27px;}
+    #forecast-content td.first .date{ font-weight:bold;}
+    p.info{ padding:0; text-align:center; padding-bottom:12px; font-size:12px; color:#666;}
+    p.info a{ color:#7777CC; margin-left:10px; text-decoration:underline;}
+    
+    #forecast-content li{ line-height:14px;}
+    #forecast-content .date{ padding-left:3px; line-height:16px;}
+
+    #forecast-content .pic{ float:left; padding-top:9px; padding-right:1px;}
+    #forecast-content .pic a{ margin-right:8px;}
+
+    #forecast-content .weather{ padding-top:7px;}
+    #forecast-content .wind{ margin-left:115px; padding-top:10px;}
+    #forecast-content .temperature{font-weight:bold; color:#000066; padding-top:10px;}
+    #forecast-content .temperature .low{ color:#FF8000;}
+    #forecast-content .temperature .sep{ margin:3px;}
+    #forecast-content .wind span{ margin-right:5px;}
+   
+    #weatherSetTip {margin-left:30px; color:#D62929;}
+    #weatherSetTip a { color:#D62929;}
+    
+    #forecast-content td{ width:232px; }
+ </style>
+<base target="_blank"/>
+<title>hao123网址之家－天气预报</title>
+
+</head>
+<body>
+<script>window.onerror=function(){return true;};</script>
+<div id="header" >
+            <div id="nav" class="center clearfix" monkey="cool">
+                <div class="logo">
+                    <a href="http://www.hao123.com/" tppabs="http://www.hao123.com/"   target="_self" title="hao123网址之家"><img src="images/logo_new.gif" tppabs="http://www.hao123.com/images/logo_new.gif" width="146" height="53" alt="hao123网址之家" /></a>               
+                </div>
+                <div class="search">
+                    <div class="search_tab">
+                        <ul class="clearfix">
+							<li onmousedown="ClickMonkey.log('haoweb');" key="web" class="cur_tab">网页</li>
+                            <li onmousedown="ClickMonkey.log('haovideo');" key="video" class="">视频</li>
+
+							<li key='mp3' onmousedown="ClickMonkey.log('haomp3');">MP3</li>
+							<li key='image' onmousedown="ClickMonkey.log('haoimage');">图片</li>
+							<li key='tieba' onmousedown="ClickMonkey.log('haoimage');">贴吧</li>
+							<li key='zhidao' onmousedown="ClickMonkey.log('haozhidao');">知道</li>
+							<li key='news' onmousedown="ClickMonkey.log('haonews');">新闻</li>							
+						</ul>
+                    </div>
+
+                    <div class="search_input">
+                        <form action="http://www.baidu.com/s" name="f" onsubmit="fromElement.submit();return false;" target="_blank" >
+                            <span class="boo"><span class="bo"><input id="kw" class="kw" value="" type="text" /></span></span>
+                            <input class="sb" type="submit" value="百度一下" id='sb' />
+                        </form>
+                    </div>
+                </div>	        
+            </div>
+            <div id="top">
+           <ul>
+            <li class="sethome"><a href="http://www.hao123.com/" tppabs="http://www.hao123.com/"    onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.hao123.com'/*tpa=http://www.hao123.com/*/);return(false);" >把hao123设为首页</a></li>
+            <li class="feedback"><a href="http://www.hao123.com/inc/book/index.html" target="_blank">网友反馈</a></li>
+            <li class="bread"><a href="http://www.hao123.com/" tppabs="http://www.hao123.com/"  >首页</a><span>&gt;</span>天气预报</li>
+           </ul>    
+        </div>
+	    </div>
+        <div id='body'>
+
+
+
+<div class="t1 bgg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<!--无内容-->
+    <tr>
+        <td id="list_table">
+            <style type="text/css">
+                #list_table table{
+                    background:url("images/tianqi/table-bg.png"/*tpa=http://www.hao123.com/images/tianqi/table-bg.png*/) repeat-y top left;
+                }
+                #list_table table tr{
+                    height:37px;
+                }
+                #list_table table tr td{
+                    padding-left:12px;
+                    padding-right:12px;
+                    font-size:16px;
+                    text-align:left;
+                    width:20%;
+                }
+                #list_table h3{
+                    text-align:center;
+                    background:#E0F0E4;
+                    padding:5px 0 4px;
+                    height:12px;
+                    line-height:12px;
+                    font-size:12px;
+                    margin:0px;
+                    font-weight:normal;
+                    color:#2F8059;
+                    border-top:solid 0px #77AE84;
+                }
+            </style>
+            <h3>
+                气象相关网站
+            </h3>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td   ><a href="http://www.weather.com.cn/">中国天气网</a></td>
+			<td   ><a href="http://www.t7online.com/">天气在线</a></td>
+			<td   ><a href="http://weather.news.sina.com.cn/">天气预报-新浪网</a></td>
+			<td   ><a href="http://www.nmc.gov.cn/">中央气象台</a></td>
+			<td   ><a href="http://www.nmc.gov.cn/publish/satellite/fy2.htm">卫星云图</a></td>
+		</tr>
+		<tr>
+			<td   ><a href="http://www.worldweather.cn/">世界天气预报</a></td>
+			<td   ><a href="http://www.cma.gov.cn/">中国气象局</a></td>
+			<td   ><a href="http://www.ceic.ac.cn/">中国地震网</a></td>
+			<td   ><a href="http://www.cea.gov.cn/">中国地震局</a></td>
+			<td   ><a href="http://www.weather.com.cn/textFC/asia.shtml">国外天气预报</a></td>
+		</tr>
+		<tr>
+			<td   ><a href="http://www.typhoon.gov.cn/">中国台风网</a></td>
+			<td   ><a href="http://tieba.baidu.com/f?kw=地震">百度地震贴吧</a></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+		</tr>
+            </table>
+        </td>
+    </tr>
+<tr bgcolor="C5D5C5">
+<td style="border-top: 1px solid rgb(119, 174, 132); padding-top: 6px; padding-bottom: 5px; text-align: center; width: 100%; background-color: rgb(192, 216, 253);" colspan="4">
+    <object width="773" height="581" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="flashResult">
+    	<param name="movie" value="http://www.baidu.com/aladdin/flash/weather/index.swf?from=hao123">
+    	<param name="FlashVars" value="fq=">
+    	<param name="base" value=""><param name="menu" value="false">
+    	<param name="wmode" value="opaque">
+    	<param name="allowfullscreen" value="false">
+    	<param name="allowscriptaccess" value="always">
+    	<embed width="773" height="581" flashvars="fq=" src="../www.baidu.com/aladdin/flash/weather/index.swf-from=hao123" tppabs="http://www.baidu.com/aladdin/flash/weather/index.swf?from=hao123" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" menu="false" allowfullscreen="false" allowscriptaccess="always" name="flashResult" wmode="opaque" base="/">
+    </object>
+</td>
+</tr>
+
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+</table>
+</div>
+</div>
+
+  <script src="js/base.js" tppabs="http://www.hao123.com/js/base.js" type="text/javascript"></script>
+	<script src="js/config.js" tppabs="http://www.hao123.com/js/config.js"  type="text/javascript"></script>
+	<script src="js/usertrack.js" tppabs="http://www.hao123.com/js/usertrack.js"  type="text/javascript"></script>
+    <script type="text/javascript">
+        var fromElement = (function () {
+            var cacheNode = [],
+            sInput = document.getElementById('kw');
+            function deleteFormElement() {
+                var f = document.f;
+                if (cacheNode.length == 0) return;
+                for (var i = 0; i < cacheNode.length; i++) {
+                    f.removeChild(cacheNode[i]);
+                }
+                cacheNode = [];
+            }
+            function createFormElement(key) {
+                var params = Config.FormConfig[key]['params'],
+				action = Config.FormConfig[key]['action'],
+				f = document.f;
+                f.action = action;
+                deleteFormElement();
+                for (var i in params) {
+                    cacheNode.push(Ci(i, params[i]));
+                }
+                for (var i = 0; i < cacheNode.length; i++) {
+                    f.appendChild(cacheNode[i]);
+                }
+            }
+            function submit() {
+                var f = document.f;
+                cacheNode[0].value = sInput.value;
+                f.submit();
+            }
+            function init() {
+                createFormElement("web");
+            }
+            return {
+                init: init,
+                create: createFormElement,
+                submit: submit,
+                searchInput: sInput
+            }
+        })();
+        var liList = document.getElementById('nav').getElementsByTagName('li'),
+            liLength = liList.length;
+        function removeTabClass() {
+            for (var j = 0; j < liLength; j++) {
+                liList[j].className = '';
+            }
+        }
+        for (var i = 0; i < liLength; i++) {
+            liList[i].onclick = function () {
+                fromElement.searchInput.value = '';
+                removeTabClass();
+                this.className = "cur_tab";
+                var key = this.getAttribute('key');
+                fromElement.create(key);
+            }
+        }
+
+        Config.FormConfig['web']['params']['tn'] = "hao123";
+        fromElement.init();
+        var sb = document.getElementById('sb');
+        sb.onmouseover = function () {
+            this.className = 'sb hover';
+        };
+        sb.onmouseout = function () {
+            this.className = 'sb';
+        };
+        var pageId = "hao123-shenzhi";
+    </script>
+       <script src=""http://www.hao123.com/js/base.js"  type="text/javascript"></script>
+    <script type="text/javascript">
+        function byId(a){return document.getElementById(a)}function getWeek(a){if(!a){return""}var c=new Date(),b="日一二三四五六";c.setTime(Date.parse(a.replace(/-/g,"/")));return"星期"+b.charAt(c.getDay())}var XSAjax=(function(){function c(g){var e=[],f;if(!g){return""}for(f in g){e.push(f+"="+encodeURIComponent(g[f]))}return e.join("&")}function d(e,f){if(!e){return""}if(-1<e.indexOf("?")){return e+"&"+f}return e+"?"+f}function a(g){if(!g||!g.url){return}if(g.onbeforesend&&typeof g.onbeforesend=="function"){g.onbeforesend()}var h="",f,e;h=c(g.json);e=d(g.url,h);f=document.createElement("SCRIPT");f.type="text/javascript";f.src=e;f.onload=f.onreadystatechange=function(){if(f.readyState&&f.readyState=="loading"){return}document.getElementsByTagName("body")[0].removeChild(f);if(g.onsuccess&&typeof g.onsuccess=="function"){g.onsuccess()}};f.onerror=function(){if(g.onerror&&typeof g.onerror=="function"){g.onerror()}};document.getElementsByTagName("body")[0].appendChild(f)}function b(e){window.setTimeout(function(){var f=e;a(f)},0)}return{send:b}})();function loadXSAjax(b){var a={};a.t=b.t;a.r=Math.random();if(b.t==2){a.provice=b.prov;a.city=b.city}XSAjax.send({url:b.url||"http://app.hao123.com/weather/forecast.php",json:a,onsuccess:function(){if(typeof HaoForecast=="undefined"||HaoForecast==null){b.onerror()}else{b.onsuccess()}},onerror:function(){b.onerror()}})}var HaoForecast=null;var setWeather={init:function(a){setWeather.buildSelect(byId("prov"),a);setTimeout(function(){byId("prov").options[0].selected=true},0);setWeather.changeSelect();byId("prov").onchange=setWeather.changeSelect;byId("setBtn").onclick=setWeather.update;loadXSAjax({t:1,onsuccess:function(){if(typeof HaoForecast=="undefined"||HaoForecast==null){setWeather.error()}else{byId("weatherSetTip").innerHTML="";setWeather.show(HaoForecast)}},onerror:function(){}})},changeSelect:function(){var a=byId("prov").options[byId("prov").selectedIndex].value;setWeather.buildSelect(byId("city"),cities[a])},buildSelect:function(e,d){var b=document.createDocumentFragment();for(var c in d){var f=document.createElement("option"),a=Object.prototype.toString.call(d)==="[object Array]";c=a?d[c]:c;f.value=c;f.appendChild(document.createTextNode(c));b.appendChild(f)}e.style.zoom="";e.options.length=0;e.appendChild(b);e.style.zoom="1";b=null},show:function(g){var k=byId("forecast-content"),a=byId("default_city"),b=g.forecast,j=b.length,e="",l=["今天","明天","后天"],c=["今晚","明天","后天","大后天"],d=j>3?c:l,h=j>3?233:310;a.innerHTML=g.Name;e="<table><tbody><tr>";for(var f=0;f<j;f++){if(f==0){e+='<td class="first" style="width:'+h+'px">'}else{e+='<td style="width:'+h+'px">'}e+="<ul>";e+=['<li class="date">',d[f],"（",getWeek(b[f]["Date"]),"）","</li>"].join("");e+='<li class="pic"><a target="_blank" href="'+g.URL+'"><img src="'+b[f]["Pic_1"]+'"></a><a target="_blank" href="'+g.URL+'"><img src="'+b[f]["Pic_2"]+'"></a></li> ';e+=['<li class="weather">',b[f]["Weather"],"</li>"].join("");if(f==0&&j>3){e+=['<li class="temperature">',b[f]["Tmax"],"</span>℃</li>"].join("")}else{e+=['<li class="temperature"><span class="low">',b[f]["Tmin"],'</span><span class="low">℃</span><span class="sep">~</span><span>',b[f]["Tmax"],"</span>℃</li>"].join("")}e+=['<li class="wind">',b[f]["Wind"],"</li>"].join("");e+="</ul>"}e+="</tr></tbody></table>";k.innerHTML=e;byId("weatherReleaseTime").innerHTML=g.Provider;byId("moreWeather1").href=g.Link_1;byId("moreWeather2").href=g.Link_2;byId("moreWeather1").innerHTML=g.Link_content_1;byId("moreWeather2").innerHTML=g.Link_content_2;e=null;HaoForecast=null},update:function(){if(byId("prov").selectedIndex>0){if(navigator.cookieEnabled){byId("weatherSetTip").innerHTML='<span style="color:#666;">正在加载天气信息...请稍候</span>';loadXSAjax({t:2,prov:encodeURIComponent(byId("prov").value),city:encodeURIComponent(byId("city").value),onsuccess:function(){if(typeof HaoForecast=="undefined"||HaoForecast==null){setWeather.error()}else{byId("weatherSetTip").innerHTML="";setWeather.show(HaoForecast)}},onerror:function(){byId("weatherSetTip").innerHTML='<a href="javascript:void(0)" onclick="setWeather.init(cities)">由于网络原因，天气加载失败...<b>点此重试</b></a>'}})}else{byId("weatherSetTip").innerHTML='提示：您的浏览器未开启cookies，不能定制城市！<a href="redian/scookie.htm"/*tpa=http://www.hao123.com/redian/scookie.htm*/ target="_blank">如何开启cookies功能</a>'}}}};
+    </script>
+	   <script src="js/weather_city_2010_v1.js" tppabs="http://www.hao123.com/js/weather_city_2010_v1.js"  type="text/javascript"></script>			
+        <script  type="text/javascript">
+            (function () {
+                if (cities) { setWeather.init(cities); return; }
+                setTimeout(arguments.callee, 64)
+            })();
+		   				
+	    </script>
+<div align="center" style="padding:20px"><a href="http://www.hao123.com/" tppabs="http://www.hao123.com/"   target="_self"><img src="images/phone/back.jpg" tppabs="http://www.hao123.com/images/phone/back.jpg" alt="返回本站首页" border="0" id="aeaoofnhgocdbnbeljkmbjdmhbcokfdb-mousedown"></a></div>
+<script>    var pageId = "hao123-tianqi";</script>
+<script src="js/monitor.js" tppabs="http://www.hao123.com/js/monitor.js"  type="text/javascript"></script>
+<script src="js/usertrack.js" tppabs="http://www.hao123.com/js/usertrack.js"  type="text/javascript"></script>
+ <script type="text/javascript">
+            var setBtn = document.getElementById('setBtn'), oldfun = setBtn.onclick;
+            if (oldfun && typeof oldfun == 'function') {
+                setBtn.onclick = function () {
+                    oldfun();
+                    UserTrack.send({ level: "2", page: "hao123-shenzhi", type: "click", t: "search" });
+                }
+            }
+            else{
+                 setBtn.onclick = function () {
+                    UserTrack.send({ level: "2", page: "hao123-shenzhi", type: "click", t: "search" });
+                }
+           }
+ </script>
+</body>
+</html>

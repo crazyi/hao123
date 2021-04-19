@@ -1,0 +1,518 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0042)http://www.hao123.com/inc/book/index.html -->
+<HTML><HEAD><TITLE>hao123网址之家－解决浏览器退出时自动清除Cookies的取消方法</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<STYLE type=text/css>
+
+
+ body{margin-top:0px; margin-left:0px; margin-right:0px;background-color: #fcfff7} 
+ a:link{ color:#000000; text-decoration:none;padding-left:4px; }     
+ a:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:4px;} a:active{color:green;text-decoration:none;padding-left:4px;}
+ a:hover{color:red;text-decoration:underline;padding-left:4px;} 
+a.m:link{ color:#000000; text-decoration:none;padding-left:0px;}
+a.m:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:0px;}
+a.m:active{color:green;text-decoration:none;padding-left:0px;}
+a.m:hover{color:red;text-decoration:underline;padding-left:0px;}
+.bgg{width:766px; background:#D9EDDA;border:1px solid #8AB78A}
+.bgg table{ margin:5px 5px 5px 5px}
+.zb table{ margin:0px 5px 0px 5px}
+.zbfont{color:#2E6D4A; text-align:center}
+.zbfont a:link,.zbfont a:visited{color:#2E6D4A}
+.zbfont a:hover{color:red}
+.f9pt{font-size: 12px;}
+.f14{font-size: 15px;}
+#sfont a,#sfont b{font-size:13px;}
+.t1{border-width:1px 1px 1px 1px;border-style:solid;font-size:12px;text-align: center}
+.bgg2{width:776px; background:#D9EDDA;border:1px solid #8AB78A}
+.searchfod2 {
+cursor:pointer;
+font-size:14px;
+text-align:center;
+width:55px;
+}
+td {
+font-family:arial,sans-serif,宋体;
+font-size:14px;
+}
+table {
+border:0 none;
+border-collapse:collapse;
+border-spacing:0;
+}
+.WB {
+clear:both;
+height:52px;
+padding-top:5px;
+text-align:left;
+width:530px;
+}
+
+#FrP {
+border:0 solid #C5D5C5;
+font-size:13px;
+height:48px;
+padding-bottom:2px;
+padding-top:1px;
+width:530px;
+}
+.h20{font-size: 12px;line-height:18px; color:#000099}
+
+
+
+
+
+
+A:link {
+	PADDING-LEFT: 4px; COLOR: #000000; TEXT-DECORATION: none
+}
+A:visited {
+	PADDING-LEFT: 4px; COLOR: #000000; TEXT-DECORATION: none
+}
+A:active {
+	PADDING-LEFT: 4px; COLOR: green; TEXT-DECORATION: none
+}
+A:hover {
+	PADDING-LEFT: 4px; COLOR: red; TEXT-DECORATION: underline
+}
+A.m:link {
+	PADDING-LEFT: 0px; COLOR: #000000; TEXT-DECORATION: none
+}
+A.m:visited {
+	PADDING-LEFT: 0px; COLOR: #000000; TEXT-DECORATION: none
+}
+A.m:active {
+	PADDING-LEFT: 0px; COLOR: green; TEXT-DECORATION: none
+}
+A.m:hover {
+	PADDING-LEFT: 0px; COLOR: red; TEXT-DECORATION: underline
+}
+
+
+.t1 {
+	BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; FONT-SIZE: 12px; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid; TEXT-ALIGN: center
+}
+.t2 {
+	BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid
+}
+.rqh {
+	MARGIN: 0px 0px 0px 85px; WIDTH: 80%
+}
+
+
+
+.f9pt {
+	FONT-SIZE: 12px
+}
+#sfont A {
+	FONT-SIZE: 13px
+}
+#sfont B {
+	FONT-SIZE: 13px
+}
+.highlight_1 A:link {
+	COLOR: red
+}
+.highlight_1 A:visited {
+	COLOR: red
+}
+.wr {
+	TEXT-ALIGN: right
+}
+
+
+#FrP A:hover {
+	COLOR: red
+}
+.searchfod1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; WIDTH: 55px; COLOR: #000; TEXT-ALIGN: center
+}
+.searchfod2 {
+	FONT-SIZE: 14px; WIDTH: 55px; CURSOR: pointer; TEXT-ALIGN: center
+}
+
+
+.f13 {
+font-size:14px;
+height:24px;
+line-height:24px;
+}
+.bgg {
+background:none repeat scroll 0 0 #D9EDDA;
+border:1px solid #8AB78A;
+width:891px;
+}
+.bgg table {
+margin:5px;
+}
+td, body {
+font-family:arial,sans-serif,宋体;
+font-size:15px;
+}
+</STYLE>
+
+<META content="MSHTML 6.00.2900.6058" name=GENERATOR></HEAD>
+<BODY>
+<SCRIPT src="index.files/base.js"></SCRIPT>
+
+<SCRIPT src="index.files/userdata.js"></SCRIPT>
+
+<SCRIPT src="index.files/record.js"></SCRIPT>
+
+<SCRIPT language=javascript>
+var haoCurrHighLight = document.getElementById("haoweb");
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function setStyle(a,b){
+	var c=document.styleSheets[0];
+	if(c.addRule){
+	c.addRule(a,b);
+	}else if(c.insertRule){
+	c.insertRule(a+" { "+b+" }",c.cssRules.length);
+	}}
+function haoValidate(source){
+	wval = trim(f.word.value);
+	if (f.sc.value=="post")
+	{
+	    f.kw.value=f.word.value
+		f.ct.value=""
+		f.tn.value=""
+		f.rn.value=""
+		f.lm.value=""
+		f.rs2.value=0
+		f.myselectvalue.value=1
+		f.ie.value=""
+		f.cl.value=""
+		f.z.value=""
+		f.from.value=""
+	  }
+	if (f.sc.value=="img")
+	{
+		f.ct.value=201326592
+		f.lm.value=-1
+		f.cl.value=2
+		f.tn.value="baiduimage"
+		f.pv.value=""
+		f.rs2.value=""
+		f.myselectvalue.value=""
+		f.ie.value=""
+		f.z.value=0
+		f.rn.value=""
+		f.from.value=""
+		f.f.value=""
+		}
+	if (f.sc.value=="zhidao")
+	{
+		f.ct.value=17
+		f.tn.value="ikaslist"
+		f.rn.value=10
+		f.lm.value=""
+		f.cl.value=""
+		f.ie.value=""
+		f.rs2.value=""
+		f.f.value=""
+		f.myselectvalue.value=""
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="web")
+	{
+	    f.cl.value=3
+		f.tn.value="hao123"
+		f.ct.value=0
+		f.ie.value="gb2312"
+		f.myselectvalue.value=""
+		f.rn.value=""
+		f.rs2.value=""
+		f.z.value=""
+		f.from.value=""
+		f.lm.value=""
+		}
+	if (f.sc.value=="mp3")
+	{
+	    f.ct.value=134217728
+		f.lm.value=-1
+		f.rn.value=""
+		f.cl.value=""
+		f.tn.value="baidump3"
+		f.f.value="ms"
+		f.myselectvalue.value=""
+		f.ie.value="gb2312"
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="news")
+	{
+	    f.tn.value="news"
+		f.cl.value=2
+		f.rn.value=20
+		f.ct.value=0
+	    f.z.value=""
+		f.from.value="news"
+		f.ie.value=""
+		f.myselectvalue.value=""
+		f.lm.value=""
+		f.rs2.value=""
+	    }
+		return true;
+}
+function haoSubSearch(sc){
+	changePage(sc);
+	if(sc != "baidu"){
+		if(sc == "post")
+		{
+		    f.action = "http://tieba.baidu.com/f";
+		}
+		else if(sc == "zhidao")
+		{
+			f.action = "http://zhidao.baidu.com/q";
+		}
+		else if(sc == "mp3")
+		{
+			f.action = "http://mp3.baidu.com/m";
+		}
+		else if(sc == "img")
+		{
+			f.action = "http://image.baidu.com/i";
+
+		}
+		else if(sc == "news")
+		{
+			f.action = "http://news.baidu.com/ns";
+		}
+		else if(sc == "video")
+		{
+			f.action = "http://video.baidu.com/v";
+		}
+		else
+		{
+			f.action = "http://www.baidu.com/s";
+		}
+		f.sc.value = sc;
+	}
+	else{
+		f.sc.value = "post";
+		haoGoSoba();
+	}
+}
+function haoGoSoba(){
+	f.action = "http://www.baidu.com/s";
+	f.kw.value = f.word.value;
+}
+function G(id)
+{
+ return document.getElementById(id);
+}
+function changePage(sc){
+	if(haoCurrHighLight == null){
+		haoCurrHighLight = document.getElementById("haoweb");
+	}
+	haoCurrHighLight.className = "searchfod2";
+	haoCurrHighLight = document.getElementById("hao"+sc);
+	haoCurrHighLight.className = "searchfod1";
+	document.f.word.focus()
+	 f.word.value="";
+}
+function isSoba(){
+	if(haoCurrHighLight == document.getElementById("haosoba")){
+		haoGoSoba();
+		return true;
+	}
+	else{
+		return true;
+	}
+}
+function goSearch(){
+	if(!haoValidate(1))
+	{
+			return false;
+			}
+	else{
+	 return false;
+	 }
+}
+function checkrequired(which) {
+	var pass=false;
+	if (document.images) {
+	for (i=0;i<which.length;i++) {
+		var tempobj=which.elements[i];
+		if (tempobj.name.substring(0,8)=="required") {
+			if (((tempobj.type=="text"||tempobj.type=="textarea")&&tempobj.value!='')){
+				pass=true;
+				break;
+			}
+		}
+	   }
+	}
+
+	if (!pass) {
+		alert("请在此提出对hao123的意见和建议！");
+		return false;
+	}
+	
+	if (which.requireddescription.value.length > 200) {
+		alert("请缩短你的问题描述至100字符以下.");
+		which.requireddescription.focus();
+		return false;
+	}
+	else{
+		return true;
+		}
+}
+
+</SCRIPT>
+
+<DIV align=center>
+<CENTER>
+<TABLE height=51 cellSpacing=0 cellPadding=0 width=900 border=0>
+  <TBODY>
+  <TR>
+    <TD width=290 height=51><A class=m href="http://www.hao123.com/" 
+      target=_self><IMG height=63 alt=hao123网址之家www.hao123.com 
+      src="index.files/logo.gif" width=168 border=0></A> </TD>
+    <TD align=middle height=51>
+      <P class=WB>
+      <TABLE style="MARGIN-BOTTOM: -6px" cellSpacing=0 cellPadding=0 
+      width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width=2 height=18></TD>
+          <TD class=searchfod1 onMouseDown="ClickMonkey.log('haoweb');" 
+          id=haoweb onClick="haoSubSearch('web');goSearch()" vAlign=bottom>网 页 
+          </TD>
+          <TD width=4></TD>
+          <TD class=searchfod2 onMouseDown="ClickMonkey.log('haomp3');" 
+          id=haomp3 onClick="haoSubSearch('mp3');goSearch()" vAlign=bottom>MP3 
+          </TD>
+          <TD width=4></TD>
+          <TD class=searchfod2 onMouseDown="ClickMonkey.log('haoimg');" 
+          id=haoimg onClick="haoSubSearch('img');goSearch()" vAlign=bottom>图 片 
+          </TD>
+          <TD width=4></TD>
+          <TD class=searchfod2 onMouseDown="ClickMonkey.log('haopost');" 
+          id=haopost onClick="haoSubSearch('post');goSearch()" vAlign=bottom>贴 
+            吧 </TD>
+          <TD width=4></TD>
+          <TD class=searchfod2 onMouseDown="ClickMonkey.log('haozhidao');" 
+          id=haozhidao onClick="haoSubSearch('zhidao');goSearch()" 
+            vAlign=bottom>知 道 </TD>
+          <TD width=4></TD>
+          <TD class=searchfod2 onMouseDown="ClickMonkey.log('haonews');" 
+          id=haonews onClick="haoSubSearch('news');goSearch()" vAlign=bottom>新 
+            闻 </TD>
+          <TD width=4></TD>
+          <TD class=searchfod2 onMouseDown="ClickMonkey.log('haovideo');" 
+          id=haovideo onClick="haoSubSearch('video');goSearch()" 
+            vAlign=bottom>视 频 </TD>
+          <TD width=4></TD>
+          <TD vAlign=bottom width=240></TD></TR></TBODY></TABLE>
+      <TABLE id=FrP cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <FORM name=f onSubmit="return haoValidate();" 
+          action=http://www.baidu.com/s target=_blank>
+          <TD align=left><SPAN><INPUT type=hidden name=kw> <INPUT type=hidden 
+            name=sc> <INPUT type=hidden value=3 name=cl> <INPUT type=hidden 
+            value=hao123 name=tn> <INPUT type=hidden name=ct> <INPUT type=hidden 
+            name=rn> <INPUT type=hidden name=lm> <INPUT type=hidden name=ie> 
+            <INPUT type=hidden name=rs2> <INPUT type=hidden name=myselectvalue> 
+            <INPUT type=hidden name=f> <INPUT type=hidden name=pv> <INPUT 
+            type=hidden name=z> <INPUT type=hidden name=from> <INPUT class=kw 
+            id=kww 
+            style="PADDING-LEFT: 1px; FONT-SIZE: 16px; MARGIN-BOTTOM: -5px; PADDING-TOP: 2px; FONT-FAMILY: arial,sans-serif,宋体; HEIGHT: 1.78em" 
+            maxLength=100 size=38 name=word><INPUT class=sb style="FONT-SIZE: 16px; MARGIN-BOTTOM: -5px; MARGIN-LEFT: 5px; WIDTH: 6.4em; PADDING-TOP: 2px; HEIGHT: 1.82em" type=submit value=百度一下 monkey="submit"> 
+            </SPAN></TD></FORM></TR></TBODY></TABLE></P></TD></TR></TBODY></TABLE></CENTER></DIV>
+<SCRIPT language=javascript>
+<!--
+window.onload = function(){
+	haoSubSearch("web");
+	goSearch();
+        document.form1.requireddescription.focus();
+}
+//-->
+</SCRIPT>
+
+<DIV align=center>
+<CENTER>
+<TABLE height=1 cellSpacing=0 cellPadding=0 width=900 border=0>
+  <TBODY>
+  <TR align=middle>
+    <TD bgColor=#c1d0d7 height=1></TD></TR></TBODY></TABLE>
+<TABLE height=25 cellSpacing=0 width=900 bgColor=#eef7ff border=0 
+cellspadding="2">
+  <TBODY>
+  <TR>
+    <TD class=f9pt style="COLOR: #424242" width="50%"><A 
+      style="BEHAVIOR: url(#default#homepage); COLOR: #d35e04" 
+      onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.hao123.com/');return(false);" 
+      href="http://www.hao123.com/"><IMG height=15 src="index.files/home.gif" 
+      width=15 align=absMiddle border=0> 把hao123设为主页</A> <A 
+      href="http://www.hao123.com/inc/book/index.html"><IMG height=15 
+      src="index.files/notebook.gif" width=15 align=absMiddle border=0> 网友留言</A> 
+    </TD>
+    <TD class=f9pt style="PADDING-RIGHT: 10px; COLOR: #424242" align=right><A 
+      style="COLOR: #424242" href="http://www.hao123.com/" target=_self>首页</A> 
+      &gt;解决你浏览器退出时自动清除Cookies的取消方法</TD></TR></TBODY></TABLE></CENTER></DIV>
+<!--DIV onmousedown=bdRecord.scope(event) align=center-->
+
+
+<DIV align=center>
+<CENTER>
+<DIV class=bgg>
+<TABLE border=0 cellSpacing=1 cellPadding=0 width="99%">
+
+  <TBODY>
+  <TR bgColor=#eff7f0>
+    <TD bgColor=#eff7f0 width="25%">
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD class=f13 align=middle>
+            <TABLE border=0 cellSpacing=5 cellPadding=0 width="94%">
+              <TBODY>
+              <TR>
+                <TD class=f13>
+                  <H4>IE浏览器</H4>
+                  <UL>
+                    <LI>打开 IE浏览器，点击 “工具”－－“Internet选项”， 
+                    <LI>在打开的选项中，选择“隐私”，保持“Cookies”该复选框为未选中状态，点击按钮"确定"(OK)。 
+                  </LI></UL><BR>
+                  <H4>遨游 </H4>
+                  <UL>
+                    <LI>打开的遨游（Maxthon）浏览器，点击选项－－Maxthon选项， 
+                    <LI>在打开的选项中，选择“常规”，查看“退出”。保持“清除Cookies”该复选框为未选中状态，遨游（Maxthon）在退出时就不会自动清除cookies了， 
+
+                    <LI>重新刷新本页面。 </LI></UL><BR>
+                  <H4>360浏览器（无痕浏览模式） </H4>
+                  <UL>
+                    <LI>选择360浏览器的“工具”选项， 
+                    <LI>在下拉菜单“360安全浏览器选项”下找到“隐私保护”全选即可。 </LI></UL><BR>
+                  <H4>腾讯TT</H4>
+                  <UL>
+                    <LI>打开TT浏览器，点工具－－TT选项， 
+                    <LI>在打开的选项中，选择“综合设置”，查看“退出时清除浏览记录”。保持该复选框为未选中状态，TT在退出时就不会自动清除cookies了。 
+                    </LI></UL><BR>
+                  <H4>火狐浏览器</H4>
+                  <UL>
+                    <LI>打开 火狐（Firefox）浏览器，点击 “工具”－－“选项”， 
+                    <LI>在打开的选项中，选择“隐私”，保持“退出Firefox时自动清除我的隐私数据”该复选框为未选中状态。 
+                  </LI></UL><BR>
+                  <H4>其它浏览器</H4>
+                  <UL>
+                    <LI>浏览器的设置都是大同小异的，按照一般默认安装的话，浏览器是不会默认自动清除您的Cookies的信息的。如果在您退出时，自动清除了，一般的设置方法如下： 
+
+                    <LI>打开浏览器，打开浏览器，找到设置选项的窗口， 
+                    <LI>在打开的选项中，找到退出相关的选项，保持“退出”时清空Cookies的信息该复选框为未选中状态，浏览器在退出时就不会自动清除cookies了。 
+                    </LI></UL>
+					
+					</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+					</TBODY>
+					</TABLE>
+					</DIV>
+					</CENTER>
+					</DIV>
+				
+					
+					
+					</BODY>
+					</HTML>

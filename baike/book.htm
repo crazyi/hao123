@@ -1,0 +1,409 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type=text/css>
+<!--
+ td,body {  font-size: 16px; font-family:arial,sans-serif,宋体;}body{margin-top:0px;margin-left:0px;margin-right:0px;background-color: #fcfff7} a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:4px;} a:active{color:green;text-decoration:none;padding-left:4px;}a:hover{color:red;text-decoration:underline;padding-left:4px;}
+a.m:link{ color:#000000; text-decoration:none;padding-left:0px;}
+a.m:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:0px;}
+a.m:active{color:green;text-decoration:none;padding-left:0px;}
+a.m:hover{color:red;text-decoration:underline;padding-left:0px;}
+.t1{border-width:1px 1px 1px 1px;border-style:solid;font-size:12px;text-align: center}
+.bgg{border-color:#8AB78A; width:998px;}
+.f9pt{font-size: 12px;}
+.f14pt{font-size: 14px; line-height:18px; }
+#sfont a,#sfont b{font-size:13px;}
+.WB {width:530;text-align:left;clear:both;height:52px; padding-top:0px!important; padding-top:5px}
+@media screen and (min-width:0px){.WB {margin-top:3px!important;padding-top:0px!important}}
+#FrP{font-size:13px;border:0px solid #C5D5C5; height:48px; padding-top:1px; padding-bottom:2px;width:530;}<!-- 修改高度44-48>
+#FrP a{color:#205001}
+#FrP a:hover{color:red}
+.searchfod1 {FONT-WEIGHT: bold; COLOR: #000; text-align:center; width:55px; font-size:14px}
+.searchfod2 {CURSOR: pointer; text-align:center; width:55px; font-size:14px}
+.area {margin-bottom:10px;zoom:1;}
+.f15 {line-height:26px; font-size:15px; padding-left:20px; padding-top:10px; padding-right:20px}
+.tab {border:1px solid #CBDFEC;padding:5px 1px 5px 1px}
+hr.cg {border-top:1px solid #DFE1DD;height: 1px;overflow:hidden; width:96%; margin-top:8px}
+--> </style>
+<script LANGUAGE="JavaScript">
+<!--
+function checkrequired(which) {
+var pass=false;
+if (document.images) {
+for (i=0;i<which.length;i++) {
+	var tempobj=which.elements[i];
+	if (tempobj.name.substring(0,8)=="required") {
+		if (((tempobj.type=="text"||tempobj.type=="textarea")&&tempobj.value!='')){
+			pass=true;
+			break;
+		}
+	}
+}
+}
+if (!pass) {
+	alert("请在此提出对hao123的意见和建议！");
+	return false;
+}
+else if (which.requireddescription.value.length > 400) {
+	alert("请缩短你的问题描述至400字符以下.");
+	which.requireddescription.focus();
+	return false;
+}
+else
+	return true;
+}
+//-->
+</script>
+<base target="_blank">
+<title>hao123网址之家－小说网站简介</title>
+</head>
+<body>
+<script src="../js/base.js" tppabs="http://www.hao123.com/js/base.js"></script>
+<script src="../js/userdata.js" tppabs="http://www.hao123.com/js/userdata.js"></script>
+<script src="../js/record.js" tppabs="http://www.hao123.com/js/record.js"></script>
+<SCRIPT  language=javascript>
+var haoCurrHighLight = document.getElementById("haoweb");
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function setStyle(a,b){
+	var c=document.styleSheets[0];
+	if(c.addRule){
+	c.addRule(a,b);
+	}else if(c.insertRule){
+	c.insertRule(a+" { "+b+" }",c.cssRules.length);
+	}}
+function haoValidate(source){
+	wval = trim(f.word.value);
+	if (f.sc.value=="post")
+	{
+	    f.kw.value=f.word.value
+		f.ct.value=""
+		f.tn.value=""
+		f.rn.value=""
+		f.lm.value=""
+		f.rs2.value=0
+		f.myselectvalue.value=1
+		f.ie.value=""
+		f.cl.value=""
+		f.z.value=""
+		f.from.value=""
+	  }
+	if (f.sc.value=="img")
+	{
+		f.ct.value=201326592
+		f.lm.value=-1
+		f.cl.value=2
+		f.tn.value="baiduimage"
+		f.pv.value=""
+		f.rs2.value=""
+		f.myselectvalue.value=""
+		f.ie.value=""
+		f.z.value=0
+		f.rn.value=""
+		f.from.value=""
+		f.f.value=""
+		}
+	if (f.sc.value=="zhidao")
+	{
+		f.ct.value=17
+		f.tn.value="ikaslist"
+		f.rn.value=10
+		f.lm.value=""
+		f.cl.value=""
+		f.ie.value=""
+		f.rs2.value=""
+		f.f.value=""
+		f.myselectvalue.value=""
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="web")
+	{
+	    f.cl.value=3
+		f.tn.value="hao123"
+		f.ct.value=0
+		f.ie.value="gb2312"
+		f.myselectvalue.value=""
+		f.rn.value=""
+		f.rs2.value=""
+		f.z.value=""
+		f.from.value=""
+		f.lm.value=""
+		}
+	if (f.sc.value=="mp3")
+	{
+	    f.ct.value=134217728
+		f.lm.value=-1
+		f.rn.value=""
+		f.cl.value=""
+		f.tn.value="baidump3"
+		f.f.value="ms"
+		f.myselectvalue.value=""
+		f.ie.value="gb2312"
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="news")
+	{
+	    f.tn.value="news"
+		f.cl.value=2
+		f.rn.value=20
+		f.ct.value=0
+	    f.z.value=""
+		f.from.value="news"
+		f.ie.value=""
+		f.myselectvalue.value=""
+		f.lm.value=""
+		f.rs2.value=""
+	    }
+		return true;
+}
+function haoSubSearch(sc){
+	changePage(sc);
+	if(sc != "baidu"){
+		if(sc == "post")
+		{
+		    f.action = "http://tieba.baidu.com/f";
+
+		}
+		else if(sc == "zhidao")
+		{
+			f.action = "http://zhidao.baidu.com/q";
+
+		}
+		else if(sc == "mp3")
+		{
+			f.action = "http://mp3.baidu.com/m";
+
+		}
+		else if(sc == "img")
+		{
+			f.action = "http://image.baidu.com/i";
+
+		}
+		else if(sc == "news")
+		{
+			f.action = "http://news.baidu.com/ns";
+
+		}
+		else if(sc == "video")
+		{
+			f.action = "http://video.baidu.com/v";
+
+		}
+		else
+		{
+			f.action = "http://www.baidu.com/s";
+
+		}
+		f.sc.value = sc;
+	}
+	else{
+		f.sc.value = "post";
+		haoGoSoba();
+	}
+}
+
+function haoGoSoba(){
+
+	f.action = "http://www.baidu.com/s";
+	f.kw.value = f.word.value;
+}
+function G(id)
+{
+ return document.getElementById(id);
+}
+function changePage(sc){
+	if(haoCurrHighLight == null){
+		haoCurrHighLight = document.getElementById("haoweb");
+	}
+	haoCurrHighLight.className = "searchfod2";
+	haoCurrHighLight = document.getElementById("hao"+sc);
+	haoCurrHighLight.className = "searchfod1";
+	document.f.word.focus()
+	 f.word.value="";
+}
+function isSoba(){
+	if(haoCurrHighLight == document.getElementById("haosoba")){
+		haoGoSoba();
+		return true;
+	}
+	else{
+		return true;
+	}
+}
+function goSearch(){
+	if(!haoValidate(1))
+	{
+			return false;
+			}
+	else{
+	 return false;
+	 }
+}
+
+</SCRIPT>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="1000" height="51">
+    <tr>
+      <td width="290" height="51"><a href="http://www.hao123.com" tppabs="http://www.hao123.com/" target="_self" class="m"><img src="../images/logo.gif" tppabs="http://www.hao123.com/images/logo.gif" alt="hao123网址之家"    width="168" height="63" border="0"></a></td>
+     <td height="51" align="center">
+<p class="WB">
+<table width=100% border=0 cellspacing=0 cellpadding=0 style="margin-bottom:-6px "><tr><td width=2 height=18> </td><td  valign=bottom class=searchfod1 id=haoweb onClick="haoSubSearch('web');goSearch()">网 页</td><td width="4"></td><td valign=bottom class=searchfod2 id=haomp3 onClick="haoSubSearch('mp3');goSearch()">MP3</td> <td width="4"></td><td valign=bottom   class=searchfod2 id=haoimg onClick="haoSubSearch('img');goSearch()">图 片</td><td width="4"></td><td valign=bottom class=searchfod2 id=haopost onClick="haoSubSearch('post');goSearch()">贴 吧</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haozhidao onClick="haoSubSearch('zhidao');goSearch()">知 道</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haonews onClick="haoSubSearch('news');goSearch()">新 闻</td><td width="4"></td><td valign=bottom class=searchfod2 id=haovideo onClick="haoSubSearch('video');goSearch()">视 频</td><td width="4"></td><td  width=240 valign=bottom> </td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" id=FrP><tr><form onSubmit="return haoValidate();" action="http://www.baidu.com/s" name=f><td align="left"><INPUT type=hidden name=kw><INPUT type=hidden name=sc><input type=hidden name=cl value=3><input type=hidden name=tn value=hao123><input type=hidden name=ct><input type=hidden name=rn><input type=hidden name=lm><input type=hidden name=ie><input type=hidden name=rs2><input type=hidden name=myselectvalue><input type=hidden name=f><input type=hidden name=pv><input type=hidden name=z><input type=hidden name=from>  
+<input type="text" name="word" size=38 maxlength="100" class="kw" id="kww"  style="margin-bottom:-5px; font-size:16px;height:1.78em;font-family:arial,sans-serif,宋体;padding-top:2px; padding-left:1px"> <input type=submit value=百度一下 style="height:1.82em;width:6.4em;font-size:16px; margin-bottom:-5px; padding-top:2px"  class=sb monkey="submit">
+</span>
+</td>
+</form></tr></table></p>
+</td>
+	</tr>
+  </table>
+</center></div>
+<script language=javascript>
+<!--
+document.f.word.focus()
+window.onload = function(){
+	haoSubSearch("web");
+	goSearch();
+}
+//-->
+</script>
+<div align="center"><center>
+ <table border=0 cellPadding=0 cellSpacing=0 width=1000 height=1><tr align=center><td height="1" bgcolor="C1D0D7"></td></tr></table>
+<table width=1000 height=25 bgcolor=#EEF7FF border=0 cellspacing=0 cellspadding=2>
+  <tr>
+    <td width="50%" class="f9pt" style="color:#424242 ">&nbsp;<a href="http://www.hao123.com" tppabs="http://www.hao123.com/" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.hao123.com'/*tpa=http://www.hao123.com/*/);return(false);" style="behavior: url(#default#homepage);"><img src="../images/home.gif" tppabs="http://www.hao123.com/images/home.gif" width="15" height="15" border="0" align="absmiddle"> 把hao123设为主页</a>　　<a href="http://www.hao123.com/inc/book/index.html"><img src="../images/notebook.gif" tppabs="http://www.hao123.com/images/notebook.gif" width="15" height="15" border="0" align="absmiddle"> 网友留言</a></td><td align="right" class="f9pt" style="color:#424242; padding-right:10px">
+<a href="http://www.hao123.com" tppabs="http://www.hao123.com/" target=_self style="color:#424242 ">首页</a> >  <a href="../book.htm" tppabs="http://www.hao123.com/book.htm" style="color:#424242 ">小说</a> > 小说网站简介</td>
+  </tr></table>
+<div class="t1 bgg">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr bgcolor="C5D5C5">
+      <td ><table width="100%"  border="0" cellpadding="0" cellspacing="0" bgcolor="#EFF7F0">
+        <tr>
+          <td colspan="2" class="f15">　
+          hao123收录小说网站分类和简介：</td>
+          </tr>
+
+        <tr>
+          <td width="50%" valign="top"><br>          
+            <fieldset align="center" style="border:1px dashed #8AC188; width:92%"  >
+<legend class="f9pt" style="color:#346F0E" >原创小说</legend>
+<table width="100%"  border="0" align="right" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td valign="top" style=" font-size:14px; line-height:30px;padding:10px 25px 10px 35px ">       <b style="font-size:15px ">起点中文</b>
+　　<a href="http://www.qidian.com/">http://www.qidian.com/</a>　　<br>       
+<font class="f14pt">点评：国内著名的原创玄幻小说网站，很多热门玄幻小说均来源于此。</font></td>
+                      </tr>
+                      <tr>
+                        <td valign="top" style=" font-size:14px; line-height:30px;padding:10px 25px 10px 35px ">       <b style="font-size:15px ">小说阅读</b>
+　　<a href="http://www.readnovel.com/">http://www.readnovel.com/</a>　　<br>       
+<font class="f14pt">点评：国内著名原创小说网站，分为男生版、女生版和校园版，适合不同人阅读。</font></td>
+                      </tr>
+                      <tr>
+                        <td valign="top" style=" font-size:14px; line-height:30px;padding:10px 25px 10px 35px ">       <b style="font-size:15px ">纵横中文</b>
+　　<a href="http://www.zongheng.com/">http://www.zongheng.com/</a>　　<br>       
+<font class="f14pt">点评：完美时空旗下，新兴原创小说网站，以玄幻小说为主，网站用户增长很快。</font></td>
+                      </tr>
+               
+              </table>
+</fieldset><br><br></td>
+          <td valign="top"><br>          
+            <fieldset align="center" style="border:1px dashed #8AC188; width:92%"  >
+<legend class="f9pt" style="color:#346F0E" >言情小说</legend>
+<table width="100%"  border="0" align="right" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td valign="top" style=" font-size:14px; line-height:30px;padding:10px 25px 10px 35px ">       <b style="font-size:15px ">红袖添香</b>
+　　<a href="http://www.hongxiu.com/">http://www.hongxiu.com/</a>　　<br>       
+<font class="f14pt">点评：老牌女性原创文学网站，以言情小说为主，深受女性网友青睐。</font></td>
+                      </tr>
+                      <tr>
+                        <td valign="top" style=" font-size:14px; line-height:30px;padding:10px 25px 10px 35px ">       <b style="font-size:15px ">晋江原创</b>
+　　<a href="http://www.jjwxc.net/">http://www.jjwxc.net/</a>　　<br>       
+<font class="f14pt">点评：著名女性文学门户，包括言情、耽美等类原创小说。</font></td>
+                      </tr>
+                      <tr>
+                        <td valign="top" style=" font-size:14px; line-height:30px;padding:10px 25px 10px 35px ">       <b style="font-size:15px ">言情小说吧</b>
+　　<a href="http://www.xs8.cn/">http://www.xs8.cn/</a>　　<br>       
+<font class="f14pt">点评：老牌言情小说站，网络言情小说写作发布平台之一。</font></td>
+                      </tr>
+               
+              </table>
+</fieldset><br><br></td>
+        </tr>
+
+        <tr>
+          <td valign="top"><br>          
+            <fieldset align="center" style="border:1px dashed #8AC188; width:92%"  >
+<legend class="f9pt" style="color:#346F0E" >电子书</legend>
+<table width="100%"  border="0" align="right" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td valign="top" style=" font-size:14px; line-height:30px;padding:10px 25px 10px 35px ">       <b style="font-size:15px ">飞库</b>
+　　<a href="http://www.feiku.com/">http://www.feiku.com/</a>　　<br>       
+<font class="f14pt">点评：老牌手机电子书下载网站，提供txt、jar、umd等格式电子书下载。</font></td>
+                      </tr>
+                      <tr>
+                        <td valign="top" style=" font-size:14px; line-height:30px;padding:10px 25px 10px 35px ">       <b style="font-size:15px ">狗狗书籍</b>
+　　<a href="http://book.gougou.com/">http://book.gougou.com/</a>　　<br>       
+<font class="f14pt">点评：迅雷狗狗搜索电子书频道，可以搜索下载txt等格式电子书。</font></td>
+                      </tr>
+
+               
+              </table>
+</fieldset><br><br></td>
+          <td valign="top"><br>          
+            <fieldset align="center" style="border:1px dashed #8AC188; width:92%"  >
+<legend class="f9pt" style="color:#346F0E" >文化文学</legend>
+<table width="100%"  border="0" align="right" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td valign="top" style=" font-size:14px; line-height:30px;padding:10px 25px 10px 35px ">       <b style="font-size:15px ">榕树下</b>
+　　<a href="http://www.rongshuxia.com/">http://www.rongshuxia.com/</a>　　<br>       
+<font class="f14pt">点评：老牌的中文原创文学网站，很有影响力的文学互动门户。</font></td>
+                      </tr>
+                      <tr>
+                        <td valign="top" style=" font-size:14px; line-height:30px;padding:10px 25px 10px 35px ">       <b style="font-size:15px ">新浪读书</b>
+　　<a href="http://book.sina.com.cn/">http://book.sina.com.cn/</a>　　<br>       
+<font class="f14pt">点评：新浪的读书频道，包含文史评论、原创文学等内容。</font></td>
+                      </tr>
+               </table>
+</fieldset><br><br></td>
+        </tr>
+<tr>
+          <td valign="top"><br>          
+            <fieldset align="center" style="border:1px dashed #8AC188; width:92%"  >
+<legend class="f9pt" style="color:#346F0E" >文档</legend>
+<table width="100%"  border="0" align="right" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td valign="top" style=" font-size:14px; line-height:30px;padding:10px 25px 10px 35px ">       <b style="font-size:15px ">百度文库</b>
+　　<a href="http://wenku.baidu.com/">http://wenku.baidu.com/</a>　　<br>       
+<font class="f14pt">点评：在线互动式文档分享平台，可以和千万网友分享自己手中的文档。</font></td>
+                      </tr>
+                      <tr>
+                        <td valign="top" style=" font-size:14px; line-height:30px;padding:10px 25px 10px 35px ">       <b style="font-size:15px ">豆丁网</b>
+　　<a href="http://www.docin.com/">http://www.docin.com/</a>　　<br>       
+<font class="f14pt">点评：文档销售与分享社区。借助豆丁，你可以为你的文档定价，并通过豆丁发表到不同网站上。</font></td>
+                      </tr>
+
+               
+              </table>
+</fieldset><br><br></td>
+          <td valign="top"><br>          
+            </td>
+        </tr>		
+           <tr>
+          <td colspan="2"><table width="94%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>
+          </table></td>
+          </tr>
+      </table></td>
+      </tr>
+  </table>
+</div>
+</center></div>
+
+
+<DIV align=center><br><a href="http://www.hao123.com" tppabs="http://www.hao123.com/" target="_self"><img src="../images/return.gif" tppabs="http://www.hao123.com/images/return.gif" width="60" height="30" alt="返回本站首页" border="0"></a></DIV>
+<script> var pageId="hao123-baike-book";</script><script src="../js/monitor.js" tppabs="http://www.hao123.com/js/monitor.js"></script>
+</body>
+</html>

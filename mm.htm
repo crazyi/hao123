@@ -1,0 +1,1593 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type=text/css>
+<!--
+ td,body {  font-size: 16px; font-family:arial,sans-serif,宋体;}body{margin-top:0px;margin-left:0px;margin-right:0px;background-color: #fcfff7} a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:4px;} a:active{color:green;text-decoration:none;padding-left:4px;}a:hover{color:red;text-decoration:underline;padding-left:4px;}
+a.m:link{ color:#000000; text-decoration:none;padding-left:0px;}
+a.m:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:0px;}
+a.m:active{color:green;text-decoration:none;padding-left:0px;}
+a.m:hover{color:red;text-decoration:underline;padding-left:0px;}
+.t1{border-width:1px 1px 1px 1px;border-style:solid;font-size:12px;text-align: center}
+.bgg{border-color:#8AB78A; width:898px}
+.f9pt{font-size: 12px;}
+#sfont a,#sfont b{font-size:13px;}
+.highlight_1 a:link,.highlight_1 a:visited{color:red}
+.wr{text-align:right}
+.WB {width:530;text-align:left;clear:both;height:52px; padding-top:0px!important; padding-top:5px}
+@media screen and (min-width:0px){.WB {margin-top:3px!important;padding-top:0px!important}}
+#FrP{font-size:13px;border:0px solid #C5D5C5; height:48px; padding-top:1px; padding-bottom:2px;width:530;}<!-- 修改高度44-48>
+#FrP a{color:#205001}
+#FrP a:hover{color:red}
+.searchfod1 {FONT-WEIGHT: bold; COLOR: #000; text-align:center; width:55px; font-size:14px}
+.searchfod2 {CURSOR: pointer; text-align:center; width:55px; font-size:14px}
+.mm{ color:#636870; padding:0px 0 0 65px; font-size: 15px;}
+.mm a:link,.mm a:visited{color:#538753;}
+.mm a:hover{color:red;}
+--> </style>
+<base target="_blank">
+<title>hao123网址之家－明星</title>
+</head>
+<body>
+<script src="js/base.js" tppabs="http://www.hao123.com/js/base.js"></script>
+<script src="js/userdata.js" tppabs="http://www.hao123.com/js/userdata.js"></script>
+<script src="js/record.js" tppabs="http://www.hao123.com/js/record.js"></script>
+<SCRIPT  language=javascript>
+var haoCurrHighLight = document.getElementById("haoweb");
+function trim(str){
+	return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+function setStyle(a,b){
+	var c=document.styleSheets[0];
+	if(c.addRule){
+	c.addRule(a,b);
+	}else if(c.insertRule){
+	c.insertRule(a+" { "+b+" }",c.cssRules.length);
+	}}
+function haoValidate(source){
+	wval = trim(f.word.value);
+	if (f.sc.value=="post")
+	{
+	    f.kw.value=f.word.value
+		f.ct.value=""
+		f.tn.value=""
+		f.rn.value=""
+		f.lm.value=""
+		f.rs2.value=0
+		f.myselectvalue.value=1
+		f.ie.value=""
+		f.cl.value=""
+		f.z.value=""
+		f.from.value=""
+	  }
+	if (f.sc.value=="img")
+	{
+		f.ct.value=201326592
+		f.lm.value=-1
+		f.cl.value=2
+		f.tn.value="baiduimage"
+		f.pv.value=""
+		f.rs2.value=""
+		f.myselectvalue.value=""
+		f.ie.value=""
+		f.z.value=0
+		f.rn.value=""
+		f.from.value=""
+		f.f.value=""
+		}
+	if (f.sc.value=="zhidao")
+	{
+		f.ct.value=17
+		f.tn.value="ikaslist"
+		f.rn.value=10
+		f.lm.value=""
+		f.cl.value=""
+		f.ie.value=""
+		f.rs2.value=""
+		f.f.value=""
+		f.myselectvalue.value=""
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="web")
+	{
+	    f.cl.value=3
+		f.tn.value="hao123"
+		f.ct.value=0
+		f.ie.value="gb2312"
+		f.myselectvalue.value=""
+		f.rn.value=""
+		f.rs2.value=""
+		f.z.value=""
+		f.from.value=""
+		f.lm.value=""
+		}
+	if (f.sc.value=="mp3")
+	{
+	    f.ct.value=134217728
+		f.lm.value=-1
+		f.rn.value=""
+		f.cl.value=""
+		f.tn.value="baidump3"
+		f.f.value="ms"
+		f.myselectvalue.value=""
+		f.ie.value="gb2312"
+		f.z.value=""
+		f.from.value=""
+		}
+	if (f.sc.value=="news")
+	{
+	    f.tn.value="news"
+		f.cl.value=2
+		f.rn.value=20
+		f.ct.value=0
+	    f.z.value=""
+		f.from.value="news"
+		f.ie.value=""
+		f.myselectvalue.value=""
+		f.lm.value=""
+		f.rs2.value=""
+	    }
+		return true;
+}
+function haoSubSearch(sc){
+	changePage(sc);
+	if(sc != "baidu"){
+		if(sc == "post")
+		{
+		    f.action = "http://tieba.baidu.com/f";
+
+		}
+		else if(sc == "zhidao")
+		{
+			f.action = "http://zhidao.baidu.com/q";
+
+		}
+		else if(sc == "mp3")
+		{
+			f.action = "http://mp3.baidu.com/m";
+
+		}
+		else if(sc == "img")
+		{
+			f.action = "http://image.baidu.com/i";
+
+		}
+		else if(sc == "news")
+		{
+			f.action = "http://news.baidu.com/ns";
+
+		}
+		else if(sc == "video")
+		{
+			f.action = "http://video.baidu.com/v";
+
+		}
+		else
+		{
+			f.action = "http://www.baidu.com/s";
+
+		}
+		f.sc.value = sc;
+	}
+	else{
+		f.sc.value = "post";
+		haoGoSoba();
+	}
+}
+
+function haoGoSoba(){
+
+	f.action = "http://www.baidu.com/s";
+	f.kw.value = f.word.value;
+}
+function G(id)
+{
+ return document.getElementById(id);
+}
+function changePage(sc){
+	if(haoCurrHighLight == null){
+		haoCurrHighLight = document.getElementById("haoweb");
+	}
+	haoCurrHighLight.className = "searchfod2";
+	haoCurrHighLight = document.getElementById("hao"+sc);
+	haoCurrHighLight.className = "searchfod1";
+	document.f.word.focus()
+	 f.word.value="";
+}
+function isSoba(){
+	if(haoCurrHighLight == document.getElementById("haosoba")){
+		haoGoSoba();
+		return true;
+	}
+	else{
+		return true;
+	}
+}
+function goSearch(){
+	if(!haoValidate(1))
+	{
+			return false;
+			}
+	else{
+	 return false;
+	 }
+}
+
+</SCRIPT>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="900" height="51">
+    <tr>
+      <td width="290" height="51"><a href="http://www.hao123.com/" tppabs="http://www.hao123.com/"   target="_self" class="m"><img src="images/logo.gif" tppabs="http://www.hao123.com/images/logo.gif" alt="hao123网址之家"    width="168" height="63" border="0"></a></td>
+     <td height="51" align="center">
+<p class="WB">
+<table width=100% border=0 cellspacing=0 cellpadding=0 style="margin-bottom:-6px "><tr><td width=2 height=18> </td><td  valign=bottom class=searchfod1 id=haoweb onClick="haoSubSearch('web');goSearch()" onMouseDown="ClickMonkey.log('haoweb');" >网 页</td><td width="4"></td><td valign=bottom class=searchfod2 id=haomp3 onClick="haoSubSearch('mp3');goSearch()" onMouseDown="ClickMonkey.log('haomp3');" >MP3</td> <td width="4"></td><td valign=bottom   class=searchfod2 id=haoimg onClick="haoSubSearch('img');goSearch()" onMouseDown="ClickMonkey.log('haoimg');" >图 片</td><td width="4"></td><td valign=bottom class=searchfod2 id=haopost onClick="haoSubSearch('post');goSearch()" onMouseDown="ClickMonkey.log('haopost');" >贴 吧</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haozhidao onClick="haoSubSearch('zhidao');goSearch()" onMouseDown="ClickMonkey.log('haozhidao');" >知 道</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haonews onClick="haoSubSearch('news');goSearch()" onMouseDown="ClickMonkey.log('haonews');" >新 闻</td><td width="4"></td><td valign=bottom class=searchfod2 id=haovideo onClick="haoSubSearch('video');goSearch()" onMouseDown="ClickMonkey.log('haovideo');">视 频</td><td width="4"></td><td  width=240 valign=bottom> </td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" id=FrP><tr><form onSubmit="return haoValidate();" action="http://www.baidu.com/s" name=f><td align="left"><INPUT type=hidden name=kw><INPUT type=hidden name=sc><input type=hidden name=cl value=3><input type=hidden name=tn value=hao123><input type=hidden name=ct><input type=hidden name=rn><input type=hidden name=lm><input type=hidden name=ie><input type=hidden name=rs2><input type=hidden name=myselectvalue><input type=hidden name=f><input type=hidden name=pv><input type=hidden name=z><input type=hidden name=from>
+<input type="text" name="word" size=38 maxlength="100" class="kw" id="kww"  style="margin-bottom:-5px; font-size:16px;height:1.78em;font-family:arial,sans-serif,宋体;padding-top:2px; padding-left:1px"> <input type=submit value=百度一下 style="height:1.82em;width:6.4em;font-size:16px; margin-bottom:-5px; padding-top:2px"  class=sb monkey="submit">
+</span>
+</td>
+</form></tr></table></p>
+</td>
+	</tr>
+  </table>
+</center></div>
+<script language=javascript>
+<!--
+document.f.word.focus()
+window.onload = function(){
+	haoSubSearch("web");
+	goSearch();
+}
+//-->
+</script>
+<div align="center"><center>
+ <table border=0 cellPadding=0 cellSpacing=0 width=900 height=1><tr align=center><td height="1" bgcolor="C1D0D7"></td></tr></table>
+<table width=900 height=25 bgcolor=#EEF7FF border=0 cellspacing=0 cellspadding=2><tr>
+<td width="50%" class="f9pt" style="color:#424242 "> <a href="http://www.hao123.com/" tppabs="http://www.hao123.com/"   onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.hao123.com'/*tpa=http://www.hao123.com/*/);return(false);" style="behavior: url(#default#homepage); color:#D35E04"><img src="images/home.gif" tppabs="http://www.hao123.com/images/home.gif" width="15" height="15" border="0" align="absmiddle"> 把hao123设为主页</a>　<a href="http://www.hao123.com/inc/book/index.html"><img src="images/notebook.gif" tppabs="http://www.hao123.com/images/notebook.gif" width="15" height="15" border="0" align="absmiddle"> 网友留言</a></td><td align="right" class="f9pt" style="color:#424242; padding-right:10px"><a href="http://www.hao123.com/" tppabs="http://www.hao123.com/"   target=_self style="color:#424242 ">首页</a> > 明星</td></tr></table>
+</center></div>
+<div align="center" onMouseDown="bdRecord.scope(event)"><center>
+<div class="t1 bgg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">娱乐综合</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://ent.sina.com.cn/">新浪娱乐</a></td>
+		
+											<td  width="20%"    ><a href="http://ent.qq.com/">腾讯娱乐</a></td>
+		
+											<td  width="20%"    ><a href="http://yule.baidu.com/">百度娱乐</a></td>
+		
+											<td  width="20%"    ><a href="http://www.67.com/">中国娱乐网</a></td>
+		
+											<td  width="20%"    ><a href="http://data.yule.baidu.com/f">明星档案</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://yule.sohu.com/">搜狐娱乐</a></td>
+		
+											<td  width="20%"    ><a href="http://www.tianya.cn/publicforum/articleslist/0/funinfo.shtml">天涯娱乐八卦</a></td>
+		
+											<td  width="20%"    ><a href="http://ent.163.com/">网易娱乐</a></td>
+		
+											<td  width="20%"    ><a href="http://ent.ifeng.com/">凤凰网娱乐</a></td>
+		
+											<td  width="20%"    ><a href="http://ent.mop.com/">猫扑娱乐</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://ent.sina.com.cn/star/">明星全接触-新浪网</a></td>
+		
+											<td  width="20%"    ><a href="http://ent.cn.yahoo.com/">雅虎娱乐</a></td>
+		
+											<td  width="20%"    ><a href="http://ent.tom.com/">TOM娱乐</a></td>
+		
+											<td  width="20%"    ><a href="http://www.ifensi.com/">粉丝网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.ewang.com/">E视网娱乐</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://tieba.baidu.com/f?ct=536870912&rn=200&pn=0&cm=1101&tn=simpleCategory&sn=%C3%F7%D0%C7%C8%CB%CE%EF">百度贴吧-明星大全</a></td>
+		
+											<td  width="20%"    ><a href="http://blog.sina.com.cn/lm/search/ent/index.html">明星博客</a></td>
+		
+											<td  width="20%"    ><a href="http://www.tvb.com/">香港TVB娱乐</a></td>
+		
+											<td  width="20%"    ><a href="http://www.chinabug.net/">穿帮网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.eemedia.cn/">天娱传媒</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://ent.joy.cn/">激动网-娱乐</a></td>
+		
+											<td  width="20%"    ><a href="http://www.piaowutong.com/">中演票务通</a></td>
+		
+											<td  width="20%"    ><a href="http://top.baidu.com/buzz/ymingxing.html">女明星排行榜</a></td>
+		
+											<td  width="20%"    ><a href="http://top.baidu.com/buzz/nmingxing.html">男明星排行榜</a></td>
+		
+											<td  width="20%"    ><a href="http://ent.youku.com/">优酷娱乐</a></td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">综艺节目</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://fcwr.jstv.com/">非诚勿扰</a></td>
+		
+											<td  width="20%"    ><a href="http://video.baidu.com/v?word=%BF%EC%C0%D6%B4%F3%B1%BE%D3%AA&ct=301989888&rn=20&pn=0&db=0&s=0&fbl=800">快乐大本营</a></td>
+		
+											<td  width="20%"    ><a href="http://video.baidu.com/v?word=%D0%D2%B8%A3%C4%A7%B7%BD&ct=301989888&rn=20&pn=0&db=0&s=0&fbl=800">幸福魔方</a></td>
+		
+											<td  width="20%"    ><a href="http://video.baidu.com/v?word=%CC%EC%CC%EC%CF%F2%C9%CF&ct=301989888&rn=20&pn=0&db=0&s=0&fbl=800">天天向上</a></td>
+		
+											<td  width="20%"    ><a href="http://video.baidu.com/v?word=%BF%B5%CE%F5%C0%B4%C1%CB&ct=301989888&rn=20&pn=0&db=0&s=0&fbl=800">康熙来了</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://video.baidu.com/v?word=%B9%FA%B9%E2%B0%EF%B0%EF%C3%A6&ct=301989888&rn=20&pn=0&db=0&s=0&fbl=800">国光帮帮忙</a></td>
+		
+											<td  width="20%"    ><a href="http://www.qiyi.com/zongyi/ylxc.html">娱乐现场</a></td>
+		
+											<td  width="20%"    ><a href="http://www.youku.com/show_page/id_z7e25495200f311df97c0.html">娱乐百分百</a></td>
+		
+											<td  width="20%"    ><a href="http://www.qiyi.com/zongyi/zgdrx2010.html">中国达人秀</a></td>
+		
+											<td  width="20%"    ><a href="http://www.qiyi.com/zongyi/bkqs.html">百科全说</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://ent.cntv.cn/chunwan/">我要上春晚</a></td>
+		
+											<td  width="20%"    ><a href="http://bt.hliang.com/">黑亮综艺</a></td>
+		
+											<td  width="20%"    ><a href="http://video.baidu.com/childchannal/tvshow/tvshow.html">更多综艺视频</a></td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+											<td  width="20%">&nbsp;</td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">热门明星</font></td>
+</tr>
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    >姚晨<div class=mm><a href="http://tieba.baidu.com/f?kw=%D2%A6%B3%BF">贴吧</a>　<a href="http://t.sina.com.cn/yaochen">微博</a></div></td>
+		
+											<td  width="20%"    >小S<div class=mm><a href="http://tieba.baidu.com/f?kw=%D0%A1S">贴吧</a>　<a href="http://t.sina.com.cn/dees">微博</a></div></td>
+		
+											<td  width="20%"    >赵薇<div class=mm><a href="http://tieba.baidu.com/f?kw=%D5%D4%DE%B1">贴吧</a>　<a href="http://t.sina.com.cn/zhaowei">微博</a></div></td>
+		
+											<td  width="20%"    > 杨幂
+  <div class=mm><a href="http://tieba.baidu.com/f?kw=%D1%EE%C3%DD&fr=wwwt">贴吧</a>　<a href="http://t.sina.com.cn/yangmiblog">微博</a></div></td><td  width="20%"    >谢娜<div class=mm><a href="http://tieba.baidu.com/f?kw=%D0%BB%C4%C8">贴吧</a>　<a href="http://t.sina.com.cn/xiena">微博</a></div></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    >何炅<div class=mm><a href="http://tieba.baidu.com/f?kw=%BA%CE%EA%C1">贴吧</a>　<a href="http://t.sina.com.cn/hejiong">微博</a></div></td>
+		
+											<td  width="20%"    >李冰冰<div class=mm><a href="http://tieba.baidu.com/f?kw=%C0%EE%B1%F9%B1%F9">贴吧</a>　<a href="http://t.sina.com.cn/libingbing">微博</a></div></td>
+		
+											<td  width="20%"    >陈坤<div class=mm><a href="http://tieba.baidu.com/f?kw=%B3%C2%C0%A4">贴吧</a>　<a href="http://t.sina.com.cn/chenkun">微博</a>　</div></td>
+		
+											<td  width="20%"    >蔡卓妍<div class=mm><a href="http://tieba.baidu.com/f?kw=%B2%CC%D7%BF%E5%FB">贴吧</a>　<a href="http://t.sina.com.cn/choicharlene">微博</a></div></td>
+		
+											<td  width="20%"    >蔡依林<div class=mm><a href="http://tieba.baidu.com/f?kw=%B2%CC%D2%C0%C1%D67">贴吧</a>　<a href="http://t.sina.com.cn/1742727537">微博</a></div></td>
+		
+				</tr>
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    >武艺<div class=mm><a href="http://tieba.baidu.com/f?kw=%CE%E4%D2%D5">贴吧</a>　<a href="http://t.sina.com.cn/wuyi">微博</a></div></td>
+		
+											<td  width="20%"    >super junior<div class=mm><a href="http://tieba.baidu.com/f?kw=superjunior">贴吧</a>　</div></td>
+		
+											<td  width="20%"    >东方神起<div class=mm><a href="http://tieba.baidu.com/f?kw=%B6%AB%B7%BD%C9%F1%C6%F0">贴吧</a>　</div></td>
+		
+											<td  width="20%"    >快男陈翔<div class=mm><a href="http://tieba.baidu.com/f?kw=%BF%EC%C4%D0%B3%C2%CF%E8">贴吧</a>　<a href="http://t.sina.com.cn/kuainanchenxiang">微博</a></div></td>
+		
+											<td  width="20%"    >韩庚<div class=mm><a href="http://tieba.baidu.com/f?kw=%BA%AB%B8%FD">贴吧</a>　<a href="http://t.sina.com.cn/hangeng">微博</a></div></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    >李宇春<div class=mm><a href="http://tieba.baidu.com/f?kw=%C0%EE%D3%EE%B4%BA">贴吧</a>　<a href="http://t.sina.com.cn/liyuchun">微博</a></div></td>
+		
+											<td  width="20%"    >张杰<div class=mm><a href="http://tieba.baidu.com/f?kw=%D5%C5%BD%DC">贴吧</a>　<a href="http://t.sina.com.cn/jasonzhangjie">微博</a></div></td>
+		
+											<td  width="20%"    >冯绍峰<div class=mm><a href="http://tieba.baidu.com/f?kw=%B7%EB%C9%DC%B7%E5&fr=wwwt">贴吧</a>　<a href="http://t.sina.com.cn/fengshaofeng">微博</a>　</div></td>
+		
+											<td  width="20%"    >李炜<div class=mm><a href="http://tieba.baidu.com/f?kw=%C0%EE%EC%BF">贴吧</a>　<a href="http://t.sina.com.cn/liwei1206">微博</a></div></td>
+		
+											<td  width="20%"    >何晟铭<div class=mm><a href="http://tieba.baidu.com/f?kw=%BA%CE%EA%C9%C3%FA">贴吧</a>　<a href="http://t.sina.com.cn/hemin">微博</a></div></td>
+		
+				</tr>				
+			</table>
+	</td>
+</tr>
+<tr bgcolor="C5D5C5">
+	<td >
+<TABLE cellSpacing=1 borderColorDark=#ffffff cellPadding=5 width=100% bgColor=#80b080 borderColorLight=#008000 border=0>
+  <TBODY>
+  <TR align="right" bgcolor="#D9EDDA">
+    <TD colSpan=5 class=f9pt align="center"><FONT color="#346F0E">娱乐明星</FONT></TD>
+  </TR>
+  <TR align="center" bgcolor="#EFF7F0">
+    <TD colSpan=5 class="f16"><a href="#abcd" target="_self">A　B　C　D</a>　 <a href="#efgh" target="_self">E　F　G　H</a>　I　<a href="#jklm" target="_self">J　K　L　M</a>　<a href="#nopq" target="_self">N　O　P　Q</a>　<a href="#rstu" target="_self">R　S　T　U</a>　<a href="#vwxyz" target="_self">V　W　X　Y　Z</a></TD>
+  </TR>
+  <TR bgcolor="#EFF7F0"><TD align=left bgcolor="#EFF7F0" 
+rowSpan=10><STRONG>A－D</STRONG></TD>
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4 height=2><TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+      <TBODY>
+        <TR>
+          <TD width="20%"><a name="abcd"></a><A href="http://data.yule.baidu.com/star/%B0%A2%B6%C5">阿杜资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B0%A2%B6%E4">阿朵资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B0%AC%DE%B1%B6%F9">艾薇儿资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B0%B2%C6%DF%EC%C5">安七炫资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B0%B2%D2%D4%D0%F9">安以轩资料</A></TD>
+        </TR>
+        <TR>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B0%A2%B6%C5">阿杜吧</A></TD>
+          <TD><A href="http://image.baidu.com/i?tn=baiduimage&ct=201326592&lm=-1&cl=2&fm=ps&word=%B0%A2%B6%E4">阿朵图片</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B0%AC%DE%B1%B6%F9">艾薇儿吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B0%B2%C6%DF%EC%C5">安七炫吧</A></TD>
+          <TD><A href="http://blog.sina.com.cn/anyixuan">安以轩博客</A></TD>
+        </TR>
+        <TR>
+          <TD>&nbsp;</TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B0%A2%B6%E4">阿朵吧</A></TD>
+          <TD></TD>
+          <TD>&nbsp;</TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B0%B2%D2%D4%D0%F9">安以轩吧</A></TD>
+        </TR>
+      </TBODY>
+    </TABLE></TD></TR>
+  <TR bgcolor="#EFF7F0">
+    <TD vAlign=center align=left bgcolor="#D9EDDA" colSpan=4 height=3></TD></TR>
+  <TR bgcolor="#EFF7F0">
+    <TD colSpan=4 align=left vAlign=center bgcolor="#EFF7F0"><TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+      <TBODY>
+        <TR>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B0%B2%D4%DA%D0%F1">安在旭资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/beyond">Beyond资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/bobo">BOBO资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/By2">By2资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B1%A6%B6%F9">宝儿资料</A></TD>
+        </TR>
+        <TR>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B0%B2%D4%DA%D0%F1">安在旭吧</A></TD>
+          <TD><A href="http://www.lovebeyond.com/">永远的Beyond</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=bobo">BOBO吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=By2">By2吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B1%A6%B6%F9">宝儿吧</A></TD>
+        </TR>
+        <TR>
+          <TD>&nbsp;</TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=beyond">Beyond吧</A></TD>
+          <TD>&nbsp;</TD>
+          <TD></TD>
+          <TD>&nbsp;</TD>
+        </TR>
+      </TBODY>
+    </TABLE></TD>
+  </TR>
+  <TR bgcolor="#EFF7F0">
+    <TD colSpan=4 align=left vAlign=center bgcolor="#D9EDDA" height="3"></TD>
+  </TR>
+  <TR bgcolor="#EFF7F0">
+    <TD colSpan=4 align=left vAlign=center bgcolor="#EFF7F0"><TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+      <TBODY>
+        <TR>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B1%B4%BF%CB%BA%BA%C4%B7">贝克汉姆资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B1%F5%C6%E9%B2%BD">滨崎步资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B2%BC%C0%BC%C4%DD">布兰妮资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B2%CC%D2%C0%C1%D6">蔡依林资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B2%CC%D7%BF%E5%FB">蔡卓妍资料</A></TD>
+        </TR>
+        <TR>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B1%B4%BF%CB%BA%BA%C4%B7">贝克汉姆吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B1%F5%C6%E9%B2%BD">滨崎步吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B2%BC%C0%BC%C4%DD">布兰妮吧</A></TD>
+          <TD><A href="http://blog.sina.com.cn/jolin">蔡依林博客</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B2%CC%D7%BF%E5%FB">蔡卓妍吧</A></TD>
+        </TR>
+        <TR>
+          <TD>&nbsp;</TD>
+          <TD></TD>
+          <TD></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B2%CC%D2%C0%C1%D6">蔡依林吧</A></TD>
+          <TD>&nbsp;</TD>
+        </TR>
+      </TBODY>
+    </TABLE></TD>
+  </TR>
+  <TR bgcolor="#EFF7F0">
+    <TD height="3" colSpan=4 align=left vAlign=center bgcolor="#D9EDDA"></TD>
+  </TR>
+  <TR bgcolor="#EFF7F0">
+    <TD colSpan=4 align=left vAlign=center bgcolor="#EFF7F0"><TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+      <TBODY>
+        <TR>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B3%C2%B3%FE%C9%FA">陈楚生资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B3%C2%B9%DA%CF%A3">陈冠希资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B3%C2%BA%C3">陈好资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B3%C2%BB%DB%C1%D5">陈慧琳资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B3%C2%C7%C7%B6%F7">陈乔恩资料</A></TD>
+        </TR>
+        <TR>
+          <TD><A href="http://blog.sina.com.cn/chenchushengblog">陈楚生博客</A></TD>
+          <TD><A href="http://yule.baidu.com/zt/star/yanzhaomen/">陈冠希百度专题</A></TD>
+          <TD><A href="http://blog.sina.com.cn/chenhao">陈好博客</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B3%C2%BB%DB%C1%D5">陈慧琳吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B3%C2%C7%C7%B6%F7">陈乔恩吧</A></TD>
+        </TR>
+        <TR>
+          <TD><A  href="http://tieba.baidu.com/f?kw=%B3%C2%B3%FE%C9%FA">陈楚生吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B3%C2%B9%DA%CF%A3">陈冠希吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B3%C2%BA%C3">陈好吧</A></TD>
+          <TD>&nbsp;</TD>
+          <TD>&nbsp;</TD>
+        </TR>
+      </TBODY>
+    </TABLE></TD>
+  </TR>
+  <TR bgcolor="#EFF7F0">
+    <TD height="3" colSpan=4 align=left vAlign=center bgcolor="#EFF7F0"></TD>
+  </TR>
+  <TR bgcolor="#EFF7F0">
+    <TD colSpan=4 align=left vAlign=center bgcolor="#EFF7F0"><TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+      <TBODY>
+        <TR>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B3%C2%D0%A1%B4%BA">陈小春资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B3%C2%DE%C8%D1%B8">陈奕迅资料</A></TD>
+          <TD><A href="http://data.yule.baidu.com/star/%B3%C9%C1%FA">成龙资料</A></TD>
+          <TD><A href="http://data.yule.baidu.com/star/%B5%CB%B3%AC">邓超资料</A></TD>
+          <TD><A href="http://data.yule.baidu.com/star/%B6%AD%BD%E0">董洁资料</A></TD>
+        </TR>
+        <TR>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B3%C2%D0%A1%B4%BA">陈小春吧</A></TD>
+          <TD><A href="http://mp3.baidu.com/m?tn=baidump3&ct=134217728&lm=-1&word=%B3%C2%DE%C8%D1%B8">陈奕迅歌曲</A></TD>
+          <TD></TD>
+          <TD><A href="http://blog.sina.com.cn/dengchao">邓超博客</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B6%AD%BD%E0">董洁吧</A></TD>
+        </TR>
+        <TR>
+          <TD>&nbsp;</TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B3%C2%DE%C8%D1%B8">陈奕迅吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B3%C9%C1%FA">成龙吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B5%CB%B3%AC">邓超吧</A></TD>
+          <TD>&nbsp;</TD>
+        </TR>
+      </TBODY>
+    </TABLE></TD>
+  </TR>
+  
+  
+  
+  <TR>
+    <TD vAlign=center align=left bgcolor="#D9EDDA" colSpan=4 height=3></TD></TR>
+  <TR bgcolor="#EFF7F0">
+    <TD align=left bgcolor="#EFF7F0" 
+rowSpan=12><STRONG>E－H</STRONG></TD>
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4>
+      <TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width="20%"><a name="efgh"></a><A href="http://data.yule.baidu.com/star/F4">F4资料</A></TD>
+          <TD><A href="http://data.yule.baidu.com/star/%B7%B6%B1%F9%B1%F9">范冰冰资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B7%B9%B5%BA%B0%AE">饭岛爱资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B7%B6%CE%B0">范伟资料</A></TD>
+          <TD width="20%"><a href="http://data.yule.baidu.com/star/%B7%B6%E7%E2%E7%F7">范玮琪资料</a></TD>
+        </TR>
+        <TR>
+          <TD><A  href="http://tieba.baidu.com/f?kw=F4">F4吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B7%B6%B1%F9%B1%F9">范冰冰吧</A></TD>
+          <TD><A href="http://yule.baidu.com/zt/star/fandaoai/index.html">饭岛爱百度专题</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B7%B6%CE%B0">范伟吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B7%B6%E7%E2%E7%F7">范玮琪吧</A></TD>
+        </TR>
+        <TR>
+          <TD>&nbsp;</TD>
+          <TD>&nbsp;</TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B7%B9%B5%BA%B0%AE">饭岛爱吧</A></TD>
+          <TD>&nbsp;</TD>
+          <TD></TD>
+        </TR>
+        </TBODY></TABLE></TD></TR>
+  <TR bgcolor="#EFF7F0">
+    <TD vAlign=center align=left bgcolor="#D9EDDA" colSpan=4 height=3></TD></TR>
+  <TR bgcolor="#EFF7F0">
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4>
+      <TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width="20%"><a href="http://data.yule.baidu.com/star/%B7%C9%C2%D6%BA%A3">飞轮海资料</a></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B7%EB%D0%A1%B8%D5">冯小刚资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B8%B6%D0%C1%B2%A9">付辛博资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B8%DF%D4%B2%D4%B2">高圆圆资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B9%AE%C0%FE">巩俐资料</A></TD>
+        </TR>
+        <TR>
+          <TD><a href="http://www.flhcn.com/">飞轮海中文网</a></TD>
+          <TD><a href="http://tieba.baidu.com/f?kw=%B7%EB%D0%A1%B8%D5">冯小刚吧</a></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B8%B6%D0%C1%B2%A9">付辛博吧</A></TD>
+          <TD><A href="http://blog.sina.com.cn/gaoyuanyuan">高圆圆博客</A></TD>
+          <TD><a href="http://tieba.baidu.com/f?kw=%B9%AE%C0%FE">巩俐吧</a></TD>
+        </TR>
+        <TR>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B7%C9%C2%D6%BA%A3">飞轮海吧</A></TD>
+          <TD>&nbsp;</TD>
+          <TD>&nbsp;</TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%B8%DF%D4%B2%D4%B2">高圆圆吧</A></TD>
+          <TD>&nbsp;</TD>
+        </TR></TBODY></TABLE></TD>
+        </TR> 
+  <TR bgcolor="#EFF7F0">
+    <TD vAlign=center align=left bgcolor="#D9EDDA" colSpan=4 height=3></TD></TR>
+  <TR bgcolor="#EFF7F0">
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4>
+      <TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+          <TR>
+            <TD width="20%"><A href="http://data.yule.baidu.com/star/%B9%C5%BE%DE%BB%F9">古巨基资料</A></TD>
+            <TD width="20%"><A href="http://data.yule.baidu.com/star/%B9%C5%CC%EC%C0%D6">古天乐资料</A></TD>
+            <TD width="20%"><A href="http://data.yule.baidu.com/star/%B9%E2%C1%BC">光良资料</A></TD>
+            <TD width="20%"><A href="http://data.yule.baidu.com/star/%B9%F0%C2%DA%C3%BE">桂纶镁资料</A></TD>
+            <TD><A href="http://data.yule.baidu.com/star/%B9%F9%B5%C2%B8%D9">郭德纲资料</A></TD>
+          </TR>
+          <TR>
+            <TD><a href="http://tieba.baidu.com/f?kw=%B9%C5%BE%DE%BB%F9">古巨基吧</a></TD>
+            <TD><A href="http://blog.sina.com.cn/louiskoo2008">古天乐博客</A></TD>
+            <TD><A href="http://tieba.baidu.com/f?kw=%B9%E2%C1%BC">光良吧</A></TD>
+            <TD><A href="http://tieba.baidu.com/f?kw=%B9%F0%C2%DA%C3%BE">桂纶镁吧</A></TD>
+            <TD><a href="http://video.baidu.com/v?ct=301989888&rn=20&pn=0&db=0&s=25&word=%B9%F9%B5%C2%B8%D9">郭德纲视频</a></TD>
+          </TR>
+          <TR>
+            <TD>&nbsp;</TD>
+            <TD><a href="http://tieba.baidu.com/f?kw=%B9%C5%CC%EC%C0%D6">古天乐吧</a></TD>
+            <TD>&nbsp;</TD>
+            <TD>&nbsp;</TD>
+            <TD><A href="http://tieba.baidu.com/f?kw=%B9%F9%B5%C2%B8%D9">郭德纲吧</A></TD>
+          </TR>
+        </TBODY></TABLE></TD></TR>
+  <TR bgcolor="#EFF7F0">
+    <TD vAlign=center align=left bgcolor="D9EDDA" colSpan=4 height="3"></TD>
+  </TR>
+  <TR bgcolor="#EFF7F0">
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4><TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+      <TBODY>
+        <TR>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%B9%F9%B8%BB%B3%C7">郭富城资料</A></TD>
+
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%BA%AB%B2%CA%D3%A2">韩彩英资料</A></TD>
+          <TD width="20%"><a href="http://data.yule.baidu.com/star/%BA%AB%B8%FD">韩庚资料</a></TD>
+          <TD><A href="http://data.yule.baidu.com/star/%BA%AB%BC%D1%C8%CB">韩佳人资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%BA%AB%D1%A9">韩雪资料</A></TD>
+        </TR>
+        <TR>
+          <TD><A  href="http://tieba.baidu.com/f?kw=%B9%F9%B8%BB%B3%C7">郭富城吧</A></TD>
+          <TD><A  href="http://tieba.baidu.com/f?kw=%BA%AB%B2%CA%D3%A2">韩彩英吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%BA%AB%B8%FD">韩庚吧</A></TD>
+          <TD><A href="http://image.baidu.com/i?tn=baiduimage&ct=201326592&lm=-1&cl=2&fm=ps&word=%BA%AB%BC%D1%C8%CB">韩佳人图片</A></TD>
+          <TD><A href="http://blog.sina.com.cn/hanxue">韩雪博客</A></TD>
+        </TR>
+        <TR>
+          <TD>&nbsp;</TD>
+          <TD>&nbsp;</TD>
+          <TD><A href="http://www.gxtd1010.cn/">庚希天道</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%BA%AB%BC%D1%C8%CB">韩佳人吧</A></TD>
+          <TD><A  href="http://tieba.baidu.com/f?kw=%BA%AB%D1%A9">韩雪吧</A></TD>
+        </TR>
+      </TBODY>
+    </TABLE></TD>
+  </TR>
+  <TR bgcolor="#EFF7F0">
+    <TD height="3" colSpan=4 align=left vAlign=center bgcolor="#D9EDDA"></TD>
+  </TR>
+  <TR bgcolor="#EFF7F0">
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4><TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+      <TBODY>
+        <TR>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%BA%CE%BD%E0">何洁资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%BA%CE%C8%F3%B6%AB">何润东资料</A></TD>
+          <TD width="20%"><a href="http://data.yule.baidu.com/star/%BA%E9%BD%F0%B1%A6">洪金宝资料</a></TD>
+          <TD><A href="http://data.yule.baidu.com/star/%BA%F3%BD%D6%C4%D0%BA%A2">后街男孩资料</A></TD>
+          <TD><A href="http://data.yule.baidu.com/star/%BA%F3%C9%E1%C4%D0%C9%FA">后舍男生资料</A></TD>
+        </TR>
+        <TR>
+          <TD width="20%"><A href="http://blog.sina.com.cn/hejie">何洁博客</A></TD>
+          <TD width="20%"><A href="http://blog.sina.com.cn/herundong">何润东博客</A></TD>
+          <TD width="20%"><a href="http://tieba.baidu.com/f?kw=%BA%E9%BD%F0%B1%A6">洪金宝吧</a></TD>
+          <TD width="20%"><A href="http://tieba.baidu.com/f?kw=%BA%F3%BD%D6%C4%D0%BA%A2">后街男孩吧</A></TD>
+          <TD width="20%"><A  href="http://tieba.baidu.com/f?kw=%BA%F3%C9%E1%C4%D0%C9%FA">后舍男生吧</A></TD>
+        </TR>
+        <TR>
+          <TD><a href="http://tieba.baidu.com/f?kw=%BA%CE%BD%E0">何洁吧</a></TD>
+          <TD><A   href="http://tieba.baidu.com/f?kw=%BA%CE%C8%F3%B6%AB">何润东吧</A></TD>
+          <TD>&nbsp;</TD>
+          <TD>&nbsp;</TD>
+          <TD>&nbsp;</TD>
+        </TR>
+      </TBODY>
+    </TABLE></TD>
+  </TR>
+  <TR bgcolor="#EFF7F0">
+    <TD height="3" colSpan=4 align=left vAlign=center bgcolor="#EFF7F0"></TD>
+  </TR>
+  <TR bgcolor="#EFF7F0">
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4><TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+      <TBODY>
+        <TR>
+          <TD width="20%"><A  href="http://data.yule.baidu.com/star/%BA%FA%B8%E8">胡歌资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%BA%FA%D1%E5%B1%F3">胡彦斌资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%BB%C6%C3%F7">黄明资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%BB%C6%CF%FE%C3%F7">黄晓明资料</A></TD>
+          <TD><A href="http://data.yule.baidu.com/star/%BB%C6%D1%C5%C0%F2">黄雅莉资料</A></TD>
+        </TR>
+        <TR>
+          <TD><A href="http://blog.sina.com.cn/hu_ge">胡歌博客</A></TD>
+          <TD><A  href="http://tieba.baidu.com/f?kw=%BA%FA%D1%E5%B1%F3">胡彦斌吧</A></TD>
+          <TD><A href="http://blog.sina.com.cn/huangm">黄明博客</A></TD>
+          <TD><A  href="http://tieba.baidu.com/f?kw=%BB%C6%CF%FE%C3%F7">黄晓明吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%BB%C6%D1%C5%C0%F2">黄雅莉吧</A></TD>
+        </TR>
+        <TR>
+          <TD><A href="http://tieba.baidu.com/f?kw=%BA%FA%B8%E8">胡歌吧</A></TD>
+          <TD>&nbsp;</TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%BB%C6%C3%F7">黄明吧</A></TD>
+          <TD>&nbsp;</TD>
+          <TD>&nbsp;</TD>
+        </TR>
+      </TBODY>
+    </TABLE></TD>
+  </TR>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#D9EDDA" colSpan=4 height=3></TD></TR>
+  <TR bgcolor="#EFF7F0">
+    <TD align=left bgcolor="#EFF7F0" 
+    rowSpan=16><STRONG>J－M</STRONG></TD>
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4 height=1>
+      <TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width="20%"><a name="jklm"></a><A  href="http://data.yule.baidu.com/star/%BC%D6%BE%B2%F6%A9">贾静雯资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%BD%AD%D3%EF%B3%BF">江语晨资料</A></TD>
+          <TD width="20%"><A  href="http://data.yule.baidu.com/star/%BE%AE%B0%D8%C8%BB">井柏然资料</A></TD>
+          <TD width="20%"><a href="http://data.yule.baidu.com/star/%BD%F0%B3%C7%CE%E4">金城武资料</a></TD>
+          <TD><A href="http://data.yule.baidu.com/star/%BD%F0%B7%B6">金范资料</A></TD>
+        </TR>
+        <TR>
+          <TD><A href="http://tieba.baidu.com/f?kw=%BC%D6%BE%B2%F6%A9">贾静雯吧</A></TD>
+          <TD><A href="http://mp3.baidu.com/singerlist/%BD%AD%D3%EF%B3%BF.html">江语晨歌曲</A></TD>
+          <TD><A href="http://blog.sina.com.cn/boranjing/">井柏然博客</A></TD>
+          <TD><a href="http://tieba.baidu.com/f?kw=%BD%F0%B3%C7%CE%E4">金城武吧</a></TD>
+          <TD><A  href="http://tieba.baidu.com/f?kw=%BD%F0%B7%B6">金范吧</A></TD>
+        </TR>
+        <TR>
+          <TD></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%BD%AD%D3%EF%B3%BF">江语晨吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%BE%AE%B0%D8%C8%BB">井柏然吧</A></TD>
+          <TD>&nbsp;</TD>
+          <TD></TD>
+        </TR></TBODY></TABLE></TD></TR>
+  <TR bgcolor="#EFF7F0">
+    <TD vAlign=center align=left bgcolor="#D9EDDA" colSpan=4 height=3></TD></TR>
+  <TR bgcolor="#EFF7F0">
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4 height=4>
+      <TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%BD%F0%BB%F9%B7%B6">金基范资料</A></TD>
+          <TD><A href="http://data.yule.baidu.com/star/%BD%F0%CF%B2%C9%C6">金喜善资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%BD%F0%D5%FE%D1%AB">金政勋资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%C0%EE%B3%BF">李晨资料</A></TD>
+          <TD width="20%"><A  href="http://data.yule.baidu.com/star/%C0%EE%BC%CE%D0%C0">李嘉欣资料</A></TD>
+        </TR>
+        <TR>
+          <TD><A href="http://tieba.baidu.com/f?kw=%BD%F0%BB%F9%B7%B6">金基范吧</A></TD>
+          <TD><A  href="http://tieba.baidu.com/f?kw=%BD%F0%CF%B2%C9%C6">金喜善吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%BD%F0%D5%FD%D1%AB">金政勋吧</A></TD>
+          <TD><A href="http://blog.sina.com.cn/lichenlichen">李晨博客</A></TD>
+          <TD><A href="http://yule.baidu.com/zt/star/lijiaxinmarry/">李嘉欣百度专题</A></TD>
+        </TR>
+        <TR>
+          <TD>&nbsp;</TD>
+          <TD>&nbsp;</TD>
+          <TD>&nbsp;</TD>
+          <TD><a  href="http://tieba.baidu.com/f?kw=%C0%EE%B3%BF">李晨吧</a></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%C0%EE%BC%CE%D0%C0">李嘉欣吧</A></TD>
+        </TR></TBODY></TABLE></TD></TR>
+  <TR bgcolor="#EFF7F0">
+    <TD vAlign=center align=left bgcolor="#D9EDDA" colSpan=4 height=3></TD></TR>
+  <TR bgcolor="#EFF7F0">
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4 height=4>
+      <TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width="20%"><a href="http://data.yule.baidu.com/star/%C0%EE%C1%AC%BD%DC">李连杰资料</a></TD>
+          <TD><A  href="http://data.yule.baidu.com/star/%C0%E8%C3%F7">黎明资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%C0%EE%C4%FE">李宁资料</A></TD>
+          <TD width="20%"><a href="http://data.yule.baidu.com/star/%C0%EE%D0%A2%C0%FB">李孝利资料</a></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%C0%EE%D0%A1%C1%FA">李小龙资料</A></TD>
+        </TR>
+        <TR>
+          <TD><a href="http://blog.sina.com.cn/lilianjie">李连杰博客</a></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%C0%E8%C3%F7">黎明吧</A></TD>
+          <TD><a href="http://tieba.baidu.com/f?kw=%C0%EE%C4%FE">李宁吧</a></TD>
+          <TD><a href="http://image.baidu.com/i?tn=baiduimage&ct=201326592&lm=-1&cl=2&word=%C0%EE%D0%A2%C0%FB">李孝利图片</a></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%C0%EE%D0%A1%C1%FA">李小龙吧</A></TD>
+        </TR>
+        <TR>
+          <TD><a href="http://tieba.baidu.com/f?kw=%C0%EE%C1%AC%BD%DC">李连杰吧</a></TD>
+          <TD></TD>
+          <TD></TD>
+          <TD><a href="http://tieba.baidu.com/f?kw=%C0%EE%D0%A2%C0%FB">李孝利吧</a></TD>
+          <TD>&nbsp;</TD>
+        </TR></TBODY></TABLE></TD></TR>
+  <TR bgcolor="#EFF7F0">
+    <TD vAlign=center align=left bgcolor="#D9EDDA" colSpan=4 height=3></TD></TR>
+  <TR bgcolor="#EFF7F0">
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4 height=1>
+      <TABLE width="100%" height=66 border=0 cellPadding=0 cellSpacing=0>
+        <TBODY>
+        <TR>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%C0%EE%D0%A1%E8%B4">李小璐资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%C0%EE%D0%C0%C8%EA">李欣汝资料</A></TD>
+          <TD width="20%"><a href="http://data.yule.baidu.com/star/%C0%EE%E7%E4">李玟资料</a></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%C0%EE%D3%EE%B4%BA">李宇春资料</A></TD>
+          <TD width="20%"><a href="http://data.yule.baidu.com/star/%C0%EE%D7%BC%BB%F9">李准基资料</a></TD>
+        </TR>
+        <TR>
+          <TD><a href="http://blog.sina.com.cn/lixiaolu">李小璐博客</a></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%C0%EE%D0%C0%C8%EA">李欣汝吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%C0%EE%E7%E4">李玟吧</A></TD>
+          <TD><A href="http://blog.sina.com.cn/m/liyuchun">李宇春博客</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%C0%EE%BF%A1%BB%F9">李准基吧</A></TD>
+        </TR>
+        <TR>
+          <TD><A href="http://tieba.baidu.com/f?kw=%C0%EE%D0%A1%E8%B4">李小璐吧</A></TD>
+          <TD>&nbsp;</TD>
+          <TD>&nbsp;</TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%C0%EE%D3%EE%B4%BA">李宇春吧</A></TD>
+          <TD>&nbsp;</TD>
+        </TR>
+        </TBODY></TABLE></TD></TR>
+  <TR bgcolor="#EFF7F0">
+    <TD vAlign=center align=left bgcolor="#D9EDDA" colSpan=4 height=3></TD></TR>
+  <TR bgcolor="#EFF7F0">
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4 height=1>
+      <TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+          <TR>
+            <TD width="20%"><A href="http://data.yule.baidu.com/star/%C0%E8%D7%CB">黎姿资料</A></TD>
+            <TD width="20%"><A href="http://data.yule.baidu.com/star/%C1%BA%B3%AF%CE%B0">梁朝伟资料</A></TD>
+            <TD width="20%"><A href="http://data.yule.baidu.com/star/%C1%BA%BE%B2%C8%E3">梁静茹资料</A></TD>
+            <TD width="20%"><A href="http://data.yule.baidu.com/star/%C1%BA%D3%BD%E7%F7">梁咏琪资料</A></TD>
+            <TD width="20%"><A href="http://data.yule.baidu.com/star/%C1%D6%B7%E5">林峰资料</A></TD>
+          </TR>
+          <TR>
+            <TD></TD>
+            <TD><A  href="http://yule.baidu.com/zt/star/llmarrykx/">梁朝伟百度专题</A></TD>
+            <TD><A   href="http://tieba.baidu.com/f?kw=%C1%BA%BE%B2%C8%E3">梁静茹吧</A></TD>
+            <TD><a href="http://tieba.baidu.com/f?kw=%C1%BA%D3%BD%E7%F7">梁咏琪吧</a></TD>
+            <TD><A href="http://blog.tvb.com/raymondlam/">林峰博客</A></TD>
+          </TR>
+          <TR>
+            <TD><a href="http://tieba.baidu.com/f?kw=%C0%E8%D7%CB">黎姿吧</a></TD>
+            <TD><A  href="http://tieba.baidu.com/f?kw=%C1%BA%B3%AF%CE%B0">梁朝伟吧</A></TD>
+            <TD>&nbsp;</TD>
+            <TD>&nbsp;</TD>
+            <TD><a href="http://tieba.baidu.com/f?kw=%C1%D6%B7%E5">林峰吧</a></TD>
+          </TR>
+        </TBODY></TABLE></TD></TR>
+  <TR bgcolor="#EFF7F0">
+    <TD vAlign=center align=left bgcolor="#D9EDDA" colSpan=4 height=3></TD>
+  </TR>
+  <TR bgcolor="#EFF7F0">
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4><TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+      <TBODY>
+        <TR>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%C1%D6%BC%CE%D0%C0">林嘉欣资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%C1%D6%BF%A1%BD%DC">林俊杰资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%C1%D6%D0%C4%C8%E7">林心如资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%C1%D6%D2%C0%B3%BF">林依晨资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%C1%D6%D5%FD%D3%A2">林正英资料</A></TD>
+        </TR>
+        <TR>
+          <TD><A  href="http://tieba.baidu.com/f?kw=%C1%D6%BC%CE%D0%C0">林嘉欣吧</A></TD>
+          <TD><A href="http://www.jjfamily.com/">林俊杰内地家族</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%C1%D6%D0%C4%C8%E7">林心如吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%C1%D6%D2%C0%B3%BF">林依晨吧</A></TD>
+          <TD><A href="http://www.youku.com/playlist_show/id_537138.html">林正英鬼片专辑</A></TD>
+        </TR>
+        <TR>
+          <TD>&nbsp;</TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%C1%D6%BF%A1%BD%DC">林俊杰吧</A></TD>
+          <TD>&nbsp;</TD>
+          <TD>&nbsp;</TD>
+          <TD><a href="http://tieba.baidu.com/f?kw=%C1%D6%D5%FD%D3%A2">林正英吧</a></TD>
+        </TR>
+      </TBODY>
+    </TABLE></TD>
+  </TR>
+  <TR bgcolor="#EFF7F0">
+    <TD height="3" colSpan=4 align=left vAlign=center bgcolor="#EFF7F0"></TD>
+  </TR>
+  <TR bgcolor="#EFF7F0">
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4><TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+      <TBODY>
+        <TR>
+          <TD><A  href="http://data.yule.baidu.com/star/%C1%D6%D6%BE%C1%E1">林志玲资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%C1%D6%D6%BE%D3%B1">林志颖资料</A></TD>
+          <TD><A  href="http://data.yule.baidu.com/star/%C1%F5%B5%C2%BB%AA">刘德华资料</A></TD>
+          <TD width="20%"><a href="http://data.yule.baidu.com/star/%C1%F5%BC%CE%C1%E1">刘嘉玲资料</a></TD>
+          <TD width="20%"><a href="http://data.yule.baidu.com/star/%C1%F5%D2%E0%B7%C6">刘亦菲资料</a></TD>
+        </TR>
+        <TR>
+          <TD><A href="http://image.baidu.com/i?tn=baiduimage&ct=201326592&lm=-1&cl=2&word=%C1%D6%D6%BE%C1%E1">林志玲图片</A></TD>
+          <TD><a href="http://yule.baidu.com/zt/star/linzhiying2008/index.html">林志颖百度专题</a></TD>
+          <TD><A  href="http://www.awc618.com/">华仔天地</A></TD>
+          <TD><A href="http://yule.baidu.com/zt/star/tonymarry/index.html">刘嘉玲百度专题</A></TD>
+          <TD><A href="http://image.baidu.com/i?tn=baiduimage&ct=201326592&lm=-1&cl=2&fm=ps&word=%C1%F5%D2%E0%B7%C6">刘亦菲图片</A></TD>
+        </TR>
+        <TR>
+          <TD><A  href="http://tieba.baidu.com/f?kw=%C1%D6%D6%BE%C1%E1">林志玲吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%C1%D6%D6%BE%D3%B1">林志颖吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%C1%F5%B5%C2%BB%AA">刘德华吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%C1%F5%BC%CE%C1%E1">刘嘉玲吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%C1%F5%D2%E0%B7%C6">刘亦菲吧</A></TD>
+        </TR>
+      </TBODY>
+    </TABLE></TD>
+  </TR>
+  <TR bgcolor="#EFF7F0">
+    <TD height="3" colSpan=4 align=left vAlign=center bgcolor="#EFF7F0"></TD>
+  </TR>
+  <TR bgcolor="#EFF7F0">
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4><TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+      <TBODY>
+        <TR>
+          <TD width="20%"><a href="http://data.yule.baidu.com/star/%C2%DE%D6%BE%CF%E9">罗志祥资料</a></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%C3%B7%D1%DE%B7%BC">梅艳芳资料</A></TD>
+          <TD><A href="http://data.yule.baidu.com/star/%C2%ED%CC%EC%D3%EE">马天宇资料</A></TD>
+          <TD><A href="http://data.yule.baidu.com/star/%C3%CF%D1%FE">孟瑶资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%C3%F7%B5%C0">明道资料</A></TD>
+        </TR>
+        <TR>
+          <TD width="20%"><A href="http://t.sina.com.cn/1784537661/">罗志祥微博</A></TD>
+          <TD width="20%"><A href="http://mp3.baidu.com/singerlist/%C3%B7%D1%DE%B7%BC.html">梅艳芳歌曲</A></TD>
+          <TD width="20%"><A  href="http://blog.sina.com.cn/matianyu">马天宇博客</A></TD>
+          <TD><A  href="http://image.baidu.com/i?tn=baiduimage&ct=201326592&lm=-1&cl=2&fm=ps&word=%C3%CF%D1%FE">孟瑶图片</A></TD>
+          <TD><A  href="http://tieba.baidu.com/f?kw=%C3%F7%B5%C0">明道吧</A></TD>
+        </TR>
+        <TR>
+          <TD><a href="http://tieba.baidu.com/f?kw=%C2%DE%D6%BE%CF%E9">罗志祥吧</a></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%C3%B7%D1%DE%B7%BC">梅艳芳吧</A></TD>
+          <TD><A  href="http://tieba.baidu.com/f?kw=%C2%ED%CC%EC%D3%EE">马天宇吧</A></TD>
+          <TD><A  href="http://tieba.baidu.com/f?kw=%C3%CF%D1%FE">孟瑶吧</A></TD>
+          <TD>&nbsp;</TD>
+        </TR>
+      </TBODY>
+    </TABLE></TD>
+  </TR>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#D9EDDA" colSpan=4 height=3></TD></TR>
+  <TR bgcolor="#EFF7F0">
+    <TD align=left rowSpan=4><STRONG>N－Q</STRONG></TD>
+    <TD colSpan=4 height=20><TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+      <TBODY>
+        <TR>
+          <TD width="20%"><a name="nopq"></a><A href="http://data.yule.baidu.com/star/%C4%C7%D3%A2">那英资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%C4%CF%C8%AD%C2%E8%C2%E8">南拳妈妈资料</A></TD>
+          <TD width="20%"><A  href="http://data.yule.baidu.com/star/%C4%DF%D5%F0">倪震资料</A></TD>
+          <TD><A  href="http://data.yule.baidu.com/star/%C5%B7%D1%F4%D5%F0%BB%AA">欧阳震华资料</A></TD>
+          <TD width="20%"><A  href="http://data.yule.baidu.com/star/%C5%CB%B3%A4%BD%AD">潘长江资料</A></TD>
+        </TR>
+        <TR>
+          <TD><A href="http://mp3.baidu.com/singerlist/%C4%C7%D3%A2.html">那英歌曲</A></TD>
+          <TD><A href="http://mp3.baidu.com/singerlist/%C4%CF%C8%AD%C2%E8%C2%E8.html">南拳妈妈歌曲</A></TD>
+          <TD><A  href="http://yule.baidu.com/zt/star/zhouhuimin/index.html">倪震百度专题</A></TD>
+          <TD><A  href="http://tieba.baidu.com/f?kw=%C5%B7%D1%F4%D5%F0%BB%AA">欧阳震华吧</A></TD>
+          <TD><A href="http://video.baidu.com/v?ct=301989888&rn=20&pn=0&db=0&s=8&word=%C5%CB%B3%A4%BD%AD">潘长江视频</A></TD>
+        </TR>
+        <TR>
+          <TD><A href="http://tieba.baidu.com/f?kw=%C4%C7%D3%A2">那英吧</A></TD>
+          <TD><A  href="http://tieba.baidu.com/f?kw=%C4%CF%C8%AD%C2%E8%C2%E8">南拳妈妈吧</A></TD>
+          <TD><a  href="http://tieba.baidu.com/f?kw=%C4%DF%D5%F0">倪震吧</a></TD>
+          <TD></TD>
+          <TD><a href="http://tieba.baidu.com/f?kw=%C5%CB%B3%A4%BD%AD">潘长江吧</a></TD>
+        </TR>
+      </TBODY>
+    </TABLE></TD>
+  </TR>
+  <TR bgcolor="#EFF7F0">
+    <TD height=3 colSpan=4 bgcolor="#D9EDDA"></TD>
+  </TR>
+  <TR bgcolor="#EFF7F0">
+    <TD colSpan=4 height=20><TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+      <TBODY>
+        <TR>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%C5%CB%E7%E2%B0%D8">潘玮柏资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%C5%E1%D3%C2%BF%A1">裴勇俊资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%C6%D3%CA%F7">朴树资料</A></TD>
+          <TD><A  href="http://data.yule.baidu.com/star/%C8%A8%CF%E0%D3%EE">权相宇资料</A></TD>
+          <TD width="20%"><A  href="http://data.yule.baidu.com/star/%C8%AB%D6%C7%CF%CD">全智贤资料</A></TD>
+        </TR>
+        <TR>
+          <TD><A href="http://tieba.baidu.com/f?kw=%C5%CB%E7%E2%B0%D8">潘玮柏吧</A></TD>
+          <TD><A  href="http://tieba.baidu.com/f?kw=%C5%E1%D3%C2%BF%A1">裴勇俊吧</A></TD>
+          <TD><a href="http://tieba.baidu.com/f?kw=%C6%D3%CA%F7">朴树吧</a></TD>
+          <TD><A  href="http://tieba.baidu.com/f?kw=%C8%A8%CF%E0%D3%EE">权相宇吧</A></TD>
+          <TD><A  href="http://image.baidu.com/i?tn=baiduimage&ct=201326592&lm=-1&cl=2&word=%C8%AB%D6%C7%CF%CD">全智贤图片</A></TD>
+        </TR>
+        <TR>
+          <TD>&nbsp;</TD>
+          <TD>&nbsp;</TD>
+          <TD></TD>
+          <TD></TD>
+          <TD><a   href="http://tieba.baidu.com/f?kw=%C8%AB%D6%C7%CF%CD">全智贤吧</a></TD>
+        </TR>
+      </TBODY>
+    </TABLE></TD></TR>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#D9EDDA" colSpan=4 height=3></TD></TR>
+  <TR bgcolor="#EFF7F0">
+    <TD align=left rowSpan=10><STRONG>R－U</STRONG></TD>
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4>
+      <TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width="20%"><a name="rstu"></a><A href="http://data.yule.baidu.com/star/Rain">Rain资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%C8%CE%CF%CD%C6%EB">任贤齐资料</A></TD>
+          <TD width="20%"><a href="http://data.yule.baidu.com/star/%C8%DD%D7%E6%B6%F9">容祖儿资料</a></TD>
+          <TD><A href="http://data.yule.baidu.com/star/%C8%EE%BE%AD%CC%EC">阮经天资料</A></TD>
+          <TD><A href="http://data.yule.baidu.com/star/s.h.e">S.H.E资料</A></TD>
+        </TR>
+        <TR>
+          <TD><A 
+            href="http://tieba.baidu.com/f?kw=rain">Rain吧</A></TD>
+          <TD><A href="http://mp3.baidu.com/singerlist/%C8%CE%CF%CD%C6%EB.html">任贤齐歌曲</A></TD>
+          <TD><A 
+            href="http://tieba.baidu.com/f?kw=%C8%DD%D7%E6%B6%F9">容祖儿吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%C8%EE%BE%AD%CC%EC">阮经天吧</A></TD>
+          <TD><A href="http://www.sheshow.net/">S.H.E大陆后援会</A></TD>
+        </TR>
+        <TR>
+          <TD width="20%">&nbsp;</TD>
+          <TD width="20%"><A href="http://tieba.baidu.com/f?kw=%C8%CE%CF%CD%C6%EB">任贤齐吧</A></TD>
+          <TD width="20%">&nbsp;</TD>
+          <TD width="20%">&nbsp;</TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=s%2Eh%2Ee">S.H.E吧</A></TD>
+        </TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#D9EDDA" colSpan=4 height=3></TD></TR>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4>
+      <TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/sjm">SJ-M资料</A></TD>
+          <TD width="20%"><A 
+            href="http://baike.baidu.com/view/4229.htm">单田芳资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%C9%D0%F6%A9%E6%BC">尚雯婕资料</A></TD>
+          <TD width="20%"><a href="http://data.yule.baidu.com/star/%D9%DC%CA%AB%C2%FC">佘诗曼资料</a></TD>
+          <TD width="20%"><a href="http://data.yule.baidu.com/star/%CA%E6%E4%BF">舒淇资料</a></TD>
+        </TR>
+        <TR>
+          <TD><A href="http://tieba.baidu.com/f?kw=sj-m">SJ-M吧</A></TD>
+          <TD><a href="http://tieba.baidu.com/f?kw=%B5%A5%CC%EF%B7%BC">单田芳吧</a></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%C9%D0%F6%A9%E6%BC">尚雯婕吧</A></TD>
+          <TD></TD>
+          <TD><a href="http://image.baidu.com/i?tn=baiduimage&ct=201326592&lm=-1&cl=2&word=%CA%E6%E4%BF">舒淇图片</a></TD>
+        </TR>
+        <TR>
+          <TD><A href="http://sjbluecn.ifensi.com/">宝蓝阁</A></TD>
+          <TD></TD>
+          <TD></TD>
+          <TD><a href="http://tieba.baidu.com/f?kw=%D9%DC%CA%AB%C2%FC">佘诗曼吧</a></TD>
+          <TD><a href="http://tieba.baidu.com/f?kw=%CA%E6%E4%BF">舒淇吧</a></TD>
+        </TR>
+        </TBODY></TABLE></TD></TR>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#D9EDDA" colSpan=4 height=3></TD></TR>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4>
+      <TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%CB%AE%C4%BE%C4%EA%BB%AA">水木年华资料</A></TD>
+          <TD width="20%"><A 
+          href="http://data.yule.baidu.com/star/%CB%CE%B3%D0%CF%DC">宋承宪资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%CB%CE%BB%DB%C7%C7">宋慧乔资料</A></TD>
+          <TD width="20%"><A 
+href="http://data.yule.baidu.com/star/%CB%CE%D7%E6%D3%A2">宋祖英资料</A></TD>
+          <TD><A href="http://data.yule.baidu.com/star/%CB%D5%D0%D1">苏醒资料</A></TD>
+        </TR>
+        <TR>
+          <TD><a 
+          href="http://tieba.baidu.com/f?kw=%CB%AE%C4%BE%C4%EA%BB%AA">水木年华吧</a></TD>
+          <TD><A 
+          href="http://tieba.baidu.com/f?kw=%CB%CE%B3%D0%CF%DC">宋承宪吧</A></TD>
+          <TD><A 
+          href="http://tieba.baidu.com/f?kw=%CB%CE%BB%DB%C7%C7">宋慧乔吧</A></TD>
+          <TD><A 
+            href="http://tieba.baidu.com/f?kw=%CB%CE%D7%E6%D3%A2">宋祖英吧</A></TD>
+          <TD><A 
+          href="http://supersuxing.blog.sohu.com/">苏醒博客</A></TD>
+        </TR>
+        <TR>
+          <TD></TD>
+          <TD>&nbsp;</TD>
+          <TD>&nbsp;</TD>
+          <TD>&nbsp;</TD>
+          <TD><a href="http://tieba.baidu.com/f?kw=%CB%D5%D0%D1">苏醒吧</a></TD>
+        </TR></TBODY></TABLE></TD>
+        </TR>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#D9EDDA" colSpan=4 height=3></TD>
+  </TR>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4><TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+      <TBODY>
+        <TR>
+          <TD width="20%"><A 
+href="http://data.yule.baidu.com/star/%CB%D5%D3%D0%C5%F3">苏有朋资料</A></TD>
+          <TD><A href="http://data.yule.baidu.com/star/%CB%EF%BA%EC%C0%D7">孙红雷资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%CB%EF%D9%B3">孙俪资料</A></TD>
+          <TD width="20%"><A 
+            href="http://data.yule.baidu.com/star/%CB%EF%E9%AA">孙楠资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%CB%EF%D1%E0%D7%CB">孙燕姿资料</A></TD>
+        </TR>
+        <TR>
+          <TD><A 
+            href="http://tieba.baidu.com/f?kw=%CB%D5%D3%D0%C5%F3">苏有朋吧</A></TD>
+          <TD><a href="http://tieba.baidu.com/f?kw=%CB%EF%BA%EC%C0%D7">孙红雷吧</a></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%CB%EF%D9%B3">孙俪吧</A></TD>
+          <TD><a href="http://tieba.baidu.com/f?kw=%CB%EF%E9%AA">孙楠吧</a></TD>
+          <TD><a 
+          href="http://tieba.baidu.com/f?kw=%CB%EF%D1%E0%D7%CB">孙燕姿吧</a></TD>
+        </TR>
+      </TBODY>
+    </TABLE></TD>
+  </TR>
+  <TR>
+    <TD height="3" colSpan=4 align=left vAlign=center bgcolor="#EFF7F0"></TD>
+  </TR>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4><TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+      <TBODY>
+        <TR>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/twins">Twins资料</A></TD>
+          <TD width="20%"><A 
+            href="http://data.yule.baidu.com/star/%CC%B7%D3%BD%F7%EB">谭咏麟资料</A></TD>
+          <TD><a href="http://data.yule.baidu.com/star/%CC%C0%CE%A8">汤唯资料</a></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%CC%C6%D3%ED%D5%DC">唐禹哲资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%CC%D5%86%B4">陶喆资料</A></TD>
+        </TR>
+        <TR>
+          <TD><A href="http://tieba.baidu.com/f?kw=twins">Twins吧</A></TD>
+          <TD><a href="http://tieba.baidu.com/f?kw=%CC%B7%D3%BD%F7%EB">谭咏麟吧</a></TD>
+          <TD><A 
+            href="http://tieba.baidu.com/f?kw=%CC%C0%CE%A8">汤唯吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%CC%C6%D3%ED%D5%DC">唐禹哲吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%CC%D5%86%B4">陶喆吧</A></TD>
+        </TR>
+        <TR>
+          <TD>&nbsp;</TD>
+          <TD>&nbsp;</TD>
+          <TD></TD>
+          <TD>&nbsp;</TD>
+          <TD>&nbsp;</TD>
+        </TR>
+      </TBODY>
+    </TABLE></TD>
+  </TR>
+        
+  <TR>
+    <TD vAlign=center align=left bgcolor="#D9EDDA" colSpan=4 height=3></TD></TR>
+  <TR bgcolor="#EFF7F0">
+    <TD rowSpan=24 align=left bgcolor="#EFF7F0"><STRONG>V－Z</STRONG></TD>
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4>
+      <TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width="20%"><a name="vwxyz"></a><a href="http://data.yule.baidu.com/star/5566">5566资料</a></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%CD%F5%B1%A6%C7%BF">王宝强资料</A></TD>
+          <TD width="20%"><a href="http://data.yule.baidu.com/star/%CD%F5%B7%C6">王菲资料</a></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%CD%F5%C1%A6%BA%EA">王力宏资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%CD%F5%E7%F3%B5%A4">王珞丹资料</A></TD>
+        </TR>
+        <TR>
+          <TD><a href="http://tieba.baidu.com/f?kw=5566">5566吧</a></TD>
+          <TD><A href="http://blog.sina.com.cn/wbq">王宝强博客</A></TD>
+          <TD><A 
+          href="http://tieba.baidu.com/f?kw=%CD%F5%B7%C6">王菲吧</A></TD>
+          <TD><A href="http://www.leehom-cn.com/bbs/">王力宏大陆歌迷会</A></TD>
+          <TD><A href="http://blog.sina.com.cn/wangluodan">王珞丹博客</A></TD>
+        </TR>
+        <TR>
+          <TD>&nbsp;</TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%CD%F5%B1%A6%C7%BF">王宝强吧</A></TD>
+          <TD>&nbsp;</TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%CD%F5%C1%A6%BA%EA">王力宏吧</A></TD>
+          <TD><A 
+            href="http://tieba.baidu.com/f?kw=%CD%F5%E7%F3%B5%A4">王珞丹吧</A></TD>
+        </TR>
+        </TBODY></TABLE></TD></TR>  
+    <TD vAlign=center align=left bgcolor="#D9EDDA" colSpan=4 height=3></TD></TR>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4>
+      <TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%CD%F5%D0%C4%C1%E8">王心凌资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%CE%BA%B3%BF">魏晨资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%CE%C4%D5%C2">文章资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%CE%E9%B0%DB">伍佰资料</A></TD>
+          <TD width="20%"><A 
+          href="http://data.yule.baidu.com/star/%CE%E2%BE%A9">吴京资料</A></TD>
+        </TR>
+        <TR>
+          <TD><A 
+            href="http://tieba.baidu.com/f?kw=%CD%F5%D0%C4%C1%E8">王心凌吧</A></TD>
+          <TD></TD>
+          <TD><A href="http://blog.sina.com.cn/wenzhang626">文章博客</A></TD>
+          <TD><A 
+          href="http://tieba.baidu.com/f?kw=%CE%E9%B0%DB">伍佰吧</A></TD>
+          <TD></TD>
+        </TR>
+        <TR>
+          <TD>&nbsp;</TD>
+          <TD><A 
+            href="http://tieba.baidu.com/f?kw=%CE%BA%B3%BF">魏晨吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%D1%DD%D4%B1%CE%C4%D5%C2">文章吧</A></TD>
+          <TD>&nbsp;</TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%CE%E2%BE%A9">吴京吧</A></TD>
+        </TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#D9EDDA" colSpan=4 height=3></TD></TR>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4>
+      <TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%CE%E2%BF%CB%C8%BA">吴克群资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%CE%E2%D1%E5%D7%E6">吴彦祖资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%CE%E5%D4%C2%CC%EC">五月天资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%CE%E2%D7%DA%CF%DC">吴宗宪资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%CE%E2%D7%F0">吴尊资料</A></TD>
+        </TR>
+        <TR>
+          <TD><A href="http://blog.sina.com.cn/kenjiwu">吴克群博客</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%CE%E2%D1%E5%D7%E6">吴彦祖吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%CE%E5%D4%C2%CC%EC">五月天吧</A></TD>
+          <TD><A 
+          href="http://tieba.baidu.com/f?kw=%CE%E2%D7%DA%CF%DC">吴宗宪吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%CE%E2%D7%F0">吴尊吧</A></TD>
+        </TR>
+        <TR>
+          <TD><A 
+            href="http://tieba.baidu.com/f?kw=%CE%E2%BF%CB%C8%BA">吴克群吧</A></TD>
+          <TD>&nbsp;</TD>
+          <TD></TD>
+          <TD></TD>
+          <TD>&nbsp;</TD>
+        </TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#D9EDDA" colSpan=4 height=3></TD></TR>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4>
+      <TABLE height=88 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width="20%"><A 
+            href="http://data.yule.baidu.com/star/%D0%A1%C9%F2%D1%F4">小沈阳资料</A></TD>
+          <TD width="20%"><A 
+            href="http://data.yule.baidu.com/star/%CF%F4%D1%C7%D0%F9">萧亚轩资料</A></TD>
+          <TD><A href="http://data.yule.baidu.com/star/%D0%BB%F6%AA%B7%E6">谢霆锋资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D0%DC%F7%EC%C1%D6">熊黛林资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D0%ED%B7%C9">许飞资料</A></TD>
+        </TR>
+        <TR>
+          <TD><A 
+            href="http://video.baidu.com/v?ct=301989888&rn=20&pn=0&db=0&s=25&word=%D0%A1%C9%F2%D1%F4">小沈阳视频</A></TD>
+          <TD><A 
+            href="http://blog.sina.com.cn/xiaoyaxuan">萧亚轩博客</A></TD>
+          <TD><A 
+            href="http://tieba.baidu.com/f?kw=%D0%BB%F6%AA%B7%E6">谢霆锋吧</A></TD>
+          <TD><A href="http://image.baidu.com/i?tn=baiduimage&ct=201326592&cl=2&lm=-1&pv=&word=%D0%DC%F7%EC%C1%D6&z=0">熊黛林图片</A></TD>
+          <TD><A href="http://blog.sina.com.cn/xufei2006">许飞博客</A></TD>
+        </TR>
+        <TR>
+          <TD><a href="http://tieba.baidu.com/f?kw=%D0%A1%C9%F2%D1%F4">小沈阳吧</a></TD>
+          <TD><a href="http://tieba.baidu.com/f?kw=%CF%F4%D1%C7%D0%F9">萧亚轩吧</a></TD>
+          <TD>&nbsp;</TD>
+          <TD><A 
+          href="http://tieba.baidu.com/f?kw=%D0%DC%F7%EC%C1%D6">熊黛林吧</A></TD>
+          <TD><A 
+            href="http://tieba.baidu.com/f?kw=%D0%ED%B7%C9">许飞吧</A></TD>
+        </TR>
+        <TR>
+          <TD><a href="http://xiaoshenyangvip.blog.sohu.com/">小沈阳博客</a></TD>
+          <TD>&nbsp;</TD>
+          <TD>&nbsp;</TD>
+          <TD>&nbsp;</TD>
+          <TD>&nbsp;</TD>
+        </TR>
+        </TBODY></TABLE></TD></TR>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#D9EDDA" colSpan=4 height=3></TD></TR>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4>
+      <TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D0%EC%BE%B2%C0%D9">徐静蕾资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D0%ED%C8%E3%DC%BF">许茹芸资料</A></TD>
+          <TD><A href="http://data.yule.baidu.com/star/%D0%EC%C8%F4%ACu">徐若瑄资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D0%ED%CE%A1">许巍资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D0%EC%CE%F5%E6%C2">徐熙媛资料</A></TD>
+        </TR>
+        <TR>
+          <TD><A href="http://blog.sina.com.cn/xujinglei">徐静蕾博客</A></TD>
+          <TD><a href="http://tieba.baidu.com/f?kw=%D0%ED%C8%E3%DC%BF">许茹芸吧</a></TD>
+          <TD><A 
+href="http://blog.sina.com.cn/xuruoxuan">徐若瑄博客</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%D0%ED%CE%A1">许巍吧</A></TD>
+          <TD><A href="http://xuxiyuanvip.blog.sohu.com/">徐熙媛博客</A></TD>
+        </TR>
+        <TR>
+          <TD><A 
+            href="http://tieba.baidu.com/f?kw=%D0%EC%BE%B2%C0%D9">徐静蕾吧</A></TD>
+          <TD>&nbsp;</TD>
+          <TD><A 
+          href="http://tieba.baidu.com/f?kw=%D0%EC%C8%F4%ACu">徐若瑄吧</A></TD>
+          <TD>&nbsp;</TD>
+          <TD><A 
+            href="http://tieba.baidu.com/f?kw=%D0%EC%CE%F5%E6%C2">徐熙媛吧</A></TD>
+        </TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#D9EDDA" colSpan=4 height=3></TD></TR>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4>
+      <TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D0%FE%B1%F2">玄彬资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D1%D4%B3%D0%D0%F1">言承旭资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D1%EE%D8%A9%C1%D5">杨丞琳资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D2%C1%C4%DC%BE%B2">伊能静资料</A></TD>
+          <TD width="20%"><A 
+            href="http://data.yule.baidu.com/star/%E2%D7%B3%CE%C7%EC">庾澄庆资料</A></TD>
+        </TR>
+        <TR>
+          <TD><A 
+            href="http://tieba.baidu.com/f?kw=%D0%FE%B1%F2">玄彬吧</A></TD>
+          <TD></TD>
+          <TD><A href="http://blog.sina.com.cn/yangchenglin">杨丞琳博客</A></TD>
+          <TD><A href="http://yule.baidu.com/zt/star/yinengjing/">伊能静百度专题</A></TD>
+          <TD><A 
+            href="http://yule.baidu.com/zt/star/yinengjing/">庾澄庆百度专题</A></TD>
+        </TR>
+        <TR>
+          <TD></TD>
+          <TD><A 
+            href="http://tieba.baidu.com/f?kw=%D1%D4%B3%D0%D0%F1">言承旭吧</A></TD>
+          <TD><A 
+          href="http://tieba.baidu.com/f?kw=%D1%EE%D8%A9%C1%D5">杨丞琳吧</A></TD>
+          <TD><A 
+          href="http://tieba.baidu.com/f?kw=%D2%C1%C4%DC%BE%B2">伊能静吧</A></TD>
+          <TD><a href="http://tieba.baidu.com/f?kw=%E2%D7%B3%CE%C7%EC">庾澄庆吧</a></TD>
+        </TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#D9EDDA" colSpan=4 height=3></TD></TR>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4><TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+      <TBODY>
+        <TR>
+          <TD width="20%"><A 
+            href="http://data.yule.baidu.com/star/%D3%E0%C9%D9%C8%BA">余少群资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D5%C5%B0%D8%D6%A5">张柏芝资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D5%C5%B6%AB%BD%A1">张东健资料</A></TD>
+          <TD width="20%"><a href="http://data.yule.baidu.com/star/%D5%C5%B6%B0%C1%BA">张栋梁资料</a></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D5%C5%B9%FA%C8%D9">张国荣资料</A></TD>
+        </TR>
+        <TR>
+          <TD><A 
+            href="http://image.baidu.com/i?tn=baiduimage&ct=201326592&lm=-1&cl=2&fm=ps&word=%D3%E0%C9%D9%C8%BA">余少群图片</A></TD>
+          <TD></TD>
+          <TD><A 
+          href="http://tieba.baidu.com/f?kw=%D5%C5%B6%AB%BD%A1">张东健吧</A></TD>
+          <TD><A 
+            href="http://tieba.baidu.com/f?kw=%D5%C5%B6%B0%C1%BA">张栋梁吧</A></TD>
+          <TD><A 
+            href="http://tieba.baidu.com/f?kw=%D5%C5%B9%FA%C8%D9">张国荣吧</A></TD>
+        </TR>
+        <TR>
+          <TD><A 
+            href="http://tieba.baidu.com/f?kw=%D3%E0%C9%D9%C8%BA">余少群吧</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%D5%C5%B0%D8%D6%A5">张柏芝吧</A></TD>
+          <TD>&nbsp;</TD>
+          <TD></TD>
+          <TD></TD>
+        </TR>
+      </TBODY>
+    </TABLE></TD>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#D9EDDA" colSpan=4 height=3></TD>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4><TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+      <TBODY>
+        <TR>
+          <TD width="20%"><a href="http://data.yule.baidu.com/star/%D5%C5%BA%AC%D4%CF">张含韵资料</a></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D5%C5%BB%DD%C3%C3">张惠妹资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D5%C5%BD%DC">张杰资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D5%C5%F6%A6%D3%B1">张靓颖资料</A></TD>
+          <TD width="20%"><a href="http://data.yule.baidu.com/star/%D5%C5%C4%C8%C0%AD">张娜拉资料</a></TD>
+        </TR>
+        <TR>
+          <TD><A href="http://blog.sina.com.cn/zhanghanyun">张含韵博客</A></TD>
+          <TD></TD>
+          <TD><A 
+        href="http://blog.sina.com.cn/jasonzhangjie">张杰博客</A></TD>
+          <TD><A 
+        href="http://blog.sina.com.cn/m/zhangliangying">张靓颖博客</A></TD>
+          <TD></TD>
+        </TR>
+        <TR>
+          <TD><A 
+          href="http://tieba.baidu.com/f?kw=%D5%C5%BA%AC%D4%CF">张含韵吧</A></TD>
+          <TD><A 
+            href="http://tieba.baidu.com/f?kw=%D5%C5%BB%DD%C3%C3">张惠妹吧</A></TD>
+          <TD><a 
+          href="http://tieba.baidu.com/f?kw=%D5%C5%BD%DC">张杰吧</a></TD>
+          <TD><a 
+          href="http://tieba.baidu.com/f?kw=%D5%C5%F6%A6%D3%B1">张靓颖吧</a></TD>
+          <TD><a href="http://tieba.baidu.com/f?kw=%D5%C5%C4%C8%C0%AD">张娜拉吧</a></TD>
+        </TR>
+      </TBODY>
+    </TABLE></TD>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#D9EDDA" colSpan=4 height=3></TD>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4><TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+      <TBODY>
+        <TR>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D5%C5%C9%D8%BA%AD">张韶涵资料</A></TD>
+          <TD><A 
+        href="http://data.yule.baidu.com/star/%D5%C5%CE%C0%BD%A1">张卫健资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D5%C5%D0%C5%D5%DC">张信哲资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D5%C5%D1%A7%D3%D1">张学友资料</A></TD>
+          <TD width="20%"><a href="http://data.yule.baidu.com/star/%D5%C5%D3%EA%C9%FA">张雨生资料</a></TD>
+        </TR>
+        <TR>
+          <TD><A href="http://mp3.baidu.com/singerlist/%D5%C5%C9%D8%BA%AD.html">张韶涵歌曲</A></TD>
+          <TD><A 
+          href="http://tieba.baidu.com/f?kw=%D5%C5%CE%C0%BD%A1">张卫健吧</A></TD>
+          <TD><A 
+            href="http://tieba.baidu.com/f?kw=%D5%C5%D0%C5%D5%DC">张信哲吧</A></TD>
+          <TD><A href="http://mp3.baidu.com/m?tn=baidump3&ct=134217728&lm=-1&word=%D5%C5%D1%A7%D3%D1">张学友歌曲</A></TD>
+          <TD><a href="http://mp3.baidu.com/singerlist/%D5%C5%D3%EA%C9%FA.html">张雨生歌曲</a></TD>
+        </TR>
+        <TR>
+          <TD><A href="http://tieba.baidu.com/f?kw=%D5%C5%C9%D8%BA%AD">张韶涵吧</A></TD>
+          <TD>&nbsp;</TD>
+          <TD>&nbsp;</TD>
+          <TD><A 
+          href="http://tieba.baidu.com/f?kw=%D5%C5%D1%A7%D3%D1">张学友吧</A></TD>
+          <TD><a href="http://tieba.baidu.com/f?kw=%D5%C5%D3%EA%C9%FA">张雨生吧</a></TD>
+        </TR>
+      </TBODY>
+    </TABLE></TD>
+  <TR>
+    <TD vAlign=center align=lef bgcolor="#D9EDDA" colSpan=4 height=3></TD>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4><TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+      <TBODY>
+        <TR>
+          <TD width="20%"><A 
+            href="http://data.yule.baidu.com/star/%D5%C2%D7%D3%E2%F9">章子怡资料</A></TD>
+          <TD width="20%"><A 
+            href="http://data.yule.baidu.com/star/%D5%D4%B1%BE%C9%BD">赵本山资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D5%D4%DE%B1">赵薇资料</A></TD>
+          <TD width="20%"><A 
+            href="http://data.yule.baidu.com/star/%D5%D4%D1%C5%D6%A5">赵雅芝资料</A></TD>
+          <TD width="20%"><A 
+            href="http://data.yule.baidu.com/star/%D5%E7%D7%D3%B5%A4">甄子丹资料</A></TD>
+        </TR>
+        <TR>
+          <TD><a href="http://tieba.baidu.com/f?kw=%D5%C2%D7%D3%E2%F9">章子怡吧</a></TD>
+          <TD><a href="http://tieba.baidu.com/f?kw=%D5%D4%B1%BE%C9%BD">赵本山吧</a></TD>
+          <TD><A 
+            href="http://tieba.baidu.com/f?kw=%D5%D4%DE%B1">赵薇吧</A></TD>
+          <TD><a 
+          href="http://tieba.baidu.com/f?kw=%D5%D4%D1%C5%D6%A5">赵雅芝吧</a></TD>
+          <TD><A 
+          href="http://tieba.baidu.com/f?kw=%D5%E7%D7%D3%B5%A4">甄子丹吧</A></TD>
+        </TR>
+        <TR>
+          <TD>&nbsp;</TD>
+          <TD>&nbsp;</TD>
+          <TD>&nbsp;</TD>
+          <TD></TD>
+          <TD>&nbsp;</TD>
+        </TR>
+      </TBODY>
+    </TABLE></TD>
+  <TR>
+    <TD height="3" colSpan=4 align=left vAlign=center bgcolor="#EFF7F0"></TD>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4><TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+      <TBODY>
+        <TR>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D6%A3%D2%C1%BD%A1">郑伊健资料</A></TD>
+          <TD><A href="http://data.yule.baidu.com/star/%D6%A3%D4%AA%B3%A9">郑元畅资料</A></TD>
+          <TD width="20%"><a href="http://data.yule.baidu.com/star/%D6%D3%D0%C0%CD%A9">钟欣桐资料</a></TD>
+          <TD width="20%"><a href="http://data.yule.baidu.com/star/%D6%DC%B1%CA%B3%A9">周笔畅资料</a></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D6%DC%BB%AA%BD%A1">周华健资料</A></TD>
+        </TR>
+        <TR>
+          <TD><a href="http://tieba.baidu.com/f?kw=%D6%A3%D2%C1%BD%A1">郑伊健吧</a></TD>
+          <TD><A 
+href="http://www.joesfamily.com.tw/">郑元畅官网</A></TD>
+          <TD><a href="http://tieba.baidu.com/f?kw=%D6%D3%D0%C0%CD%A9">钟欣桐吧</a></TD>
+          <TD><a href="http://tieba.baidu.com/f?kw=%D6%DC%B1%CA%B3%A9">周笔畅吧</a></TD>
+          <TD><A 
+          href="http://tieba.baidu.com/f?kw=%D6%DC%BB%AA%BD%A1">周华健吧</A></TD>
+        </TR>
+        <TR>
+          <TD>&nbsp;</TD>
+          <TD><A 
+            href="http://tieba.baidu.com/f?kw=%D6%A3%D4%AA%B3%A9">郑元畅吧</A></TD>
+          <TD>&nbsp;</TD>
+          <TD>&nbsp;</TD>
+          <TD>&nbsp;</TD>
+        </TR>
+      </TBODY>
+    </TABLE></TD>
+  <TR>
+    <TD height="3" colSpan=4 align=left vAlign=center bgcolor="#EFF7F0"></TD>
+  <TR>
+    <TD vAlign=center align=left bgcolor="#EFF7F0" colSpan=4><TABLE height=66 cellSpacing=0 cellPadding=0 width="100%" border=0>
+      <TBODY>
+        <TR>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D6%DC%BB%DB%C3%F4">周慧敏资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D6%DC%BD%DC%C2%D7">周杰伦资料</A></TD>
+          <TD width="20%"><A href="http://data.yule.baidu.com/star/%D6%DC%C8%F3%B7%A2">周润发资料</A></TD>
+          <TD><A href="http://data.yule.baidu.com/star/%D6%DC%D0%C7%B3%DB">周星驰资料</A></TD>
+          <TD width="20%"><A 
+            href="http://data.yule.baidu.com/star/%D6%DC%D3%E5%C3%F1">周渝民资料</A></TD>
+        </TR>
+        <TR>
+          <TD><A href="http://yule.baidu.com/zt/star/zhouhuimin/index.html">周慧敏百度专题</A></TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%D6%DC%BD%DC%C2%D7">周杰伦吧</A></TD>
+          <TD><A 
+            href="http://tieba.baidu.com/f?kw=%D6%DC%C8%F3%B7%A2">周润发吧</A></TD>
+          <TD><A 
+href="http://blog.sina.com.cn/stephenchow622">周星驰博客</A></TD>
+          <TD><a href="http://tieba.baidu.com/f?kw=%D6%DC%D3%E5%C3%F1">周渝民吧</a></TD>
+        </TR>
+        <TR>
+          <TD><A 
+          href="http://tieba.baidu.com/f?kw=%D6%DC%BB%DB%C3%F4">周慧敏吧</A></TD>
+          <TD><A 
+          href="http://www.jaycn.com/">周杰伦中文网</A></TD>
+          <TD>&nbsp;</TD>
+          <TD><A href="http://tieba.baidu.com/f?kw=%D6%DC%D0%C7%B3%DB">周星驰吧</A></TD>
+          <TD>&nbsp;</TD>
+        </TR>
+      </TBODY>
+    </TABLE></TD>
+  <TR>
+    <TD height="3" colSpan=4 align=left vAlign=center bgcolor="#D9EDDA"></TD>
+  </TR>
+  </TBODY></TABLE>
+
+	</td>
+</tr>
+</table>
+</div>
+</center></div>
+<DIV align=center><br><a href="http://www.hao123.com/" tppabs="http://www.hao123.com/"   target="_self"><img src="images/return.gif" tppabs="http://www.hao123.com/images/return.gif" width="60" height="30" alt="返回本站首页" border="0"></a></DIV>
+<script> var pageId="hao123-mm";</script><script src="js/monitor.js" tppabs="http://www.hao123.com/js/monitor.js"></script>
+</body>
+</html>

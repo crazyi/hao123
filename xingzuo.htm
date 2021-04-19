@@ -1,0 +1,585 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type=text/css>
+<!--
+ td,body {  font-size: 16px; font-family:arial,sans-serif,宋体;}body{margin-top:0px;margin-left:0px;margin-right:0px;background-color: #fcfff7} a:link{ color:#000000; text-decoration:none;padding-left:4px; }     a:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:4px;} a:active{color:green;text-decoration:none;padding-left:4px;}a:hover{color:red;text-decoration:underline;padding-left:4px;}
+a.m:link{ color:#000000; text-decoration:none;padding-left:0px;}
+a.m:visited{COLOR: #000000; TEXT-DECORATION: none;padding-left:0px;}
+a.m:active{color:green;text-decoration:none;padding-left:0px;}
+a.m:hover{color:red;text-decoration:underline;padding-left:0px;}
+.t1{border-width:1px 1px 1px 1px;border-style:solid;font-size:12px;text-align: center}
+.bgg{border-color:#8AB78A; width:900px}
+.f9pt{font-size: 12px;}
+#sfont a,#sfont b{font-size:13px;}
+.highlight_1 a:link,.highlight_1 a:visited{color:red}
+.wr{text-align:right}
+.WB {width:530;text-align:left;clear:both;height:52px; padding-top:0px!important; padding-top:5px}
+@media screen and (min-width:0px){.WB {margin-top:3px!important;padding-top:0px!important}}
+#FrP{font-size:13px;border:0px solid #C5D5C5; height:48px; padding-top:1px; padding-bottom:2px;width:530;}<!-- 修改高度44-48>
+#FrP a{color:#205001}
+#FrP a:hover{color:red}
+.searchfod1 {FONT-WEIGHT: bold; COLOR: #000; text-align:center; width:55px; font-size:14px}
+.searchfod2 {CURSOR: pointer; text-align:center; width:55px; font-size:14px}
+.f5pt {font-size: 11px; color:#636870}
+--> </style>
+<base target="_blank">
+<title>hao123网址之家－星座</title>
+</head>
+<body>
+<script src="js/base.js" tppabs="http://www.hao123.com/js/base.js"></script>
+<script src="js/userdata.js" tppabs="http://www.hao123.com/js/userdata.js"></script>
+<script src="js/record.js" tppabs="http://www.hao123.com/js/record.js"></script>
+<SCRIPT  language=javascript>
+    var haoCurrHighLight = document.getElementById("haoweb");
+    function trim(str) {
+        return str.replace(/(^\s*)|(\s*$)/g, "");
+    }
+    function setStyle(a, b) {
+        var c = document.styleSheets[0];
+        if (c.addRule) {
+            c.addRule(a, b);
+        } else if (c.insertRule) {
+            c.insertRule(a + " { " + b + " }", c.cssRules.length);
+        } 
+    }
+    function haoValidate(source) {
+        wval = trim(f.word.value);
+        if (f.sc.value == "post") {
+            f.kw.value = f.word.value
+            f.ct.value = ""
+            f.tn.value = ""
+            f.rn.value = ""
+            f.lm.value = ""
+            f.rs2.value = 0
+            f.myselectvalue.value = 1
+            f.ie.value = ""
+            f.cl.value = ""
+            f.z.value = ""
+            f.from.value = ""
+        }
+        if (f.sc.value == "img") {
+            f.ct.value = 201326592
+            f.lm.value = -1
+            f.cl.value = 2
+            f.tn.value = "baiduimage"
+            f.pv.value = ""
+            f.rs2.value = ""
+            f.myselectvalue.value = ""
+            f.ie.value = ""
+            f.z.value = 0
+            f.rn.value = ""
+            f.from.value = ""
+            f.f.value = ""
+        }
+        if (f.sc.value == "zhidao") {
+            f.ct.value = 17
+            f.tn.value = "ikaslist"
+            f.rn.value = 10
+            f.lm.value = ""
+            f.cl.value = ""
+            f.ie.value = ""
+            f.rs2.value = ""
+            f.f.value = ""
+            f.myselectvalue.value = ""
+            f.z.value = ""
+            f.from.value = ""
+        }
+        if (f.sc.value == "web") {
+            f.cl.value = 3
+            f.tn.value = "hao123"
+            f.ct.value = 0
+            f.ie.value = "gb2312"
+            f.myselectvalue.value = ""
+            f.rn.value = ""
+            f.rs2.value = ""
+            f.z.value = ""
+            f.from.value = ""
+            f.lm.value = ""
+        }
+        if (f.sc.value == "mp3") {
+            f.ct.value = 134217728
+            f.lm.value = -1
+            f.rn.value = ""
+            f.cl.value = ""
+            f.tn.value = "baidump3"
+            f.f.value = "ms"
+            f.myselectvalue.value = ""
+            f.ie.value = "gb2312"
+            f.z.value = ""
+            f.from.value = ""
+        }
+        if (f.sc.value == "news") {
+            f.tn.value = "news"
+            f.cl.value = 2
+            f.rn.value = 20
+            f.ct.value = 0
+            f.z.value = ""
+            f.from.value = "news"
+            f.ie.value = ""
+            f.myselectvalue.value = ""
+            f.lm.value = ""
+            f.rs2.value = ""
+        }
+        return true;
+    }
+    function haoSubSearch(sc) {
+        changePage(sc);
+        if (sc != "baidu") {
+            if (sc == "post") {
+                f.action = "http://tieba.baidu.com/f";
+
+            }
+            else if (sc == "zhidao") {
+                f.action = "http://zhidao.baidu.com/q";
+
+            }
+            else if (sc == "mp3") {
+                f.action = "http://mp3.baidu.com/m";
+
+            }
+            else if (sc == "img") {
+                f.action = "http://image.baidu.com/i";
+
+            }
+            else if (sc == "news") {
+                f.action = "http://news.baidu.com/ns";
+
+            }
+            else if (sc == "video") {
+                f.action = "http://video.baidu.com/v";
+
+            }
+            else {
+                f.action = "http://www.baidu.com/s";
+
+            }
+            f.sc.value = sc;
+        }
+        else {
+            f.sc.value = "post";
+            haoGoSoba();
+        }
+    }
+
+    function haoGoSoba() {
+
+        f.action = "http://www.baidu.com/s";
+        f.kw.value = f.word.value;
+    }
+    function G(id) {
+        return document.getElementById(id);
+    }
+    function changePage(sc) {
+        if (haoCurrHighLight == null) {
+            haoCurrHighLight = document.getElementById("haoweb");
+        }
+        haoCurrHighLight.className = "searchfod2";
+        haoCurrHighLight = document.getElementById("hao" + sc);
+        haoCurrHighLight.className = "searchfod1";
+        document.f.word.focus()
+        f.word.value = "";
+    }
+    function isSoba() {
+        if (haoCurrHighLight == document.getElementById("haosoba")) {
+            haoGoSoba();
+            return true;
+        }
+        else {
+            return true;
+        }
+    }
+    function goSearch() {
+        if (!haoValidate(1)) {
+            return false;
+        }
+        else {
+            return false;
+        }
+    }
+
+</SCRIPT>
+<div align="center"><center>
+<table border="0" cellpadding="0" cellspacing="0" width="900" height="51">
+    <tr>
+      <td width="290" height="51"><a href="http://www.hao123.com/" tppabs="http://www.hao123.com/"   target="_self" class="m"><img src="images/logo.gif" tppabs="http://www.hao123.com/images/logo.gif" alt="hao123网址之家"    width="168" height="63" border="0"></a></td>
+     <td height="51" align="center">
+<p class="WB">
+<table width=100% border=0 cellspacing=0 cellpadding=0 style="margin-bottom:-6px "><tr><td width=2 height=18>&nbsp;</td><td  valign=bottom class=searchfod1 id=haoweb onClick="haoSubSearch('web');goSearch()" onMouseDown="ClickMonkey.log('haoweb');" >网 页</td><td width="4"></td><td valign=bottom class=searchfod2 id=haomp3 onClick="haoSubSearch('mp3');goSearch()" onMouseDown="ClickMonkey.log('haomp3');" >MP3</td> <td width="4"></td><td valign=bottom   class=searchfod2 id=haoimg onClick="haoSubSearch('img');goSearch()" onMouseDown="ClickMonkey.log('haoimg');" >图 片</td><td width="4"></td><td valign=bottom class=searchfod2 id=haopost onClick="haoSubSearch('post');goSearch()" onMouseDown="ClickMonkey.log('haopost');" >贴 吧</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haozhidao onClick="haoSubSearch('zhidao');goSearch()" onMouseDown="ClickMonkey.log('haozhidao');" >知 道</td><td width="4"></td><td  valign=bottom class=searchfod2 id=haonews onClick="haoSubSearch('news');goSearch()" onMouseDown="ClickMonkey.log('haonews');" >新 闻</td><td width="4"></td><td valign=bottom class=searchfod2 id=haovideo onClick="haoSubSearch('video');goSearch()" onMouseDown="ClickMonkey.log('haovideo');">视 频</td><td width="4"></td><td  width=240 valign=bottom> </td></tr></table>
+<table border="0" cellspacing="0" cellpadding="0" id=FrP><tr><form onSubmit="return haoValidate();" action="http://www.baidu.com/s" name=f><td align="left"><INPUT type=hidden name=kw><INPUT type=hidden name=sc><input type=hidden name=cl value=3><input type=hidden name=tn value=hao123><input type=hidden name=ct><input type=hidden name=rn><input type=hidden name=lm><input type=hidden name=ie><input type=hidden name=rs2><input type=hidden name=myselectvalue><input type=hidden name=f><input type=hidden name=pv><input type=hidden name=z><input type=hidden name=from>&nbsp;
+<input type="text" name="word" size=38 maxlength="100" class="kw" id="kww"  style="margin-bottom:-5px; font-size:16px;height:1.78em;font-family:arial,sans-serif,宋体;padding-top:2px; padding-left:1px"> <input type=submit value=百度一下 style="height:1.82em;width:6.4em;font-size:16px; margin-bottom:-5px; padding-top:2px"  class=sb monkey="submit">
+</span>
+</td>
+</form></tr></table></p>
+</td>
+	</tr>
+  </table>
+</center></div>
+<script language=javascript>
+<!--
+    document.f.word.focus()
+    window.onload = function () {
+        haoSubSearch("web");
+        goSearch();
+    }
+//-->
+</script>
+<div align="center"><center>
+ <table border=0 cellPadding=0 cellSpacing=0 width=900 height=1><tr align=center><td height="1" bgcolor="C1D0D7"></td></tr></table>
+<table width=900 height=25 bgcolor=#EEF7FF border=0 cellspacing=0 cellspadding=2><tr>
+<td width="50%" class="f9pt" style="color:#424242 "> <a href="http://www.hao123.com/" tppabs="http://www.hao123.com/"   onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.hao123.com'/*tpa=http://www.hao123.com/*/);return(false);" style="behavior: url(#default#homepage); color:#D35E04"><img src="images/home.gif" tppabs="http://www.hao123.com/images/home.gif" width="15" height="15" border="0" align="absmiddle"> 把hao123设为主页</a>　<a href="http://www.hao123.com/inc/book/index.html"><img src="images/notebook.gif" tppabs="http://www.hao123.com/images/notebook.gif" width="15" height="15" border="0" align="absmiddle"> 网友留言</a></td><td align="right" class="f9pt" style="color:#424242; padding-right:10px"><a href="http://www.hao123.com/" tppabs="http://www.hao123.com/"   target=_self style="color:#424242 ">首页</a> > 星座</td></tr></table>
+</center></div>
+<div align="center" onMouseDown="bdRecord.scope(event)"><center>
+<div class="t1 bgg">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<!--无内容-->
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">星座男女</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://astro.sina.com.cn/">新浪星座</a></td>
+		
+											<td  width="20%"    ><a href="http://astro.lady.qq.com/">腾讯星座</a></td>
+		
+											<td  width="20%"    ><a href="http://www.d1xz.net/">第1星座</a></td>
+		
+											<td  width="20%"    ><a href="http://astro.sina.com.cn/test/">新浪心理测试</a></td>
+		
+											<td  width="20%"    ><a href="http://astro.women.sohu.com/ceshi.shtml">搜狐心理测试</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://astro.women.sohu.com/">搜狐星座</a></td>
+		
+											<td  width="20%"    ><a href="http://astro.lady.qq.com/augury/augu_test.shtml">腾讯心理测试</a></td>
+		
+											<td  width="20%"    ><a href="http://lady.163.com/astro/">网易星座</a></td>
+		
+											<td  width="20%"    ><a href="http://nownow.blogbus.com/">闹闹女巫店</a></td>
+		
+											<td  width="20%"    ><a href="http://astro.sina.com.cn/feeling/">星座配对</a></td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA">
+	<td height="20" class="f9pt" align="center"><font color="#346F0E">占卜/趣味测试</font></td>
+</tr>
+
+<tr bgcolor="C5D5C5">
+	<td >
+		<table width="100%"  border="0" cellspacing="1" cellpadding="7">
+						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.51jiemeng.com/">周公解梦</a></td>
+		
+											<td  width="20%"    ><a href="http://www.xingming.net/">瓷都取名</a></td>
+		
+											<td  width="20%"    ><a href="http://51.aqioo.com/">阿启网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.64gua.com/">周易天地</a></td>
+		
+											<td  width="20%"    ><a href="http://www.buyiju.com/">卜易居</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://astro.lady.qq.com/tarot/">塔罗占卜-腾讯</a></td>
+		
+											<td  width="20%"    ><a href="http://www.nongli.com/">中华农历网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.zdic.net/appendix/f27.htm">黄历查询</a></td>
+		
+											<td  width="20%"    ><a href="http://bbs.china95.net/">元亨利贞</a></td>
+		
+											<td  width="20%"    ><a href="http://www4.skycn.com/sort/sort2080200_indate_DESC_1.html">天空-算命软件</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://www.meimingteng.com/">美名腾起名</a></td>
+		
+											<td  width="20%"    ><a href="http://comic.qq.com/z/xx/">血型漫画</a></td>
+		
+											<td  width="20%"    ><a href="http://www.uqude.com/">有趣网</a></td>
+		
+											<td  width="20%"    ><a href="http://www.1518.com/">1518姓名测试</a></td>
+		
+											<td  width="20%"    ><a href="http://life.httpcn.com/sm.asp">在线算命</a></td>
+		
+				</tr>						<tr bgcolor="#EFF7F0">					<td  width="20%"    ><a href="http://mobile.9om.com/">号令天下手机号吉凶</a></td>
+		
+											<td  width="20%"    ><a href="http://astro.lady.qq.com/zt2010/2011yszt/index.htm">2011年运势预测</a></td>
+		
+											<td  width="20%"    ><a href="http://astro.women.sohu.com/20101210/n300989565.shtml">2011兔年12生肖运势</a></td>
+		
+											<td  width="20%"    ><a href="http://astro.women.sohu.com/20101210/n301005391.shtml">2011星座运势</a></td>
+		
+											<td  width="20%"    ><a href="http://www.lansin.com/">蓝心网</a></td>
+		
+				</tr>				</table>
+	</td>
+</tr>
+<tr bgcolor="#D9EDDA"><td align=center height=20 class="f9pt"><font color=#346F0E>星座论坛</font></td></tr>
+<tr bgcolor=C5D5C5>
+    <td ><table width="100%"  border="0" cellspacing="1" cellpadding="5">
+      <tr bgcolor="#EFF7F0" >
+        <td  ><a href="http://tieba.baidu.com/f?kw=%B0%D7%D1%F2%D7%F9"><img src="images/xinzuo_01.gif" tppabs="http://www.hao123.com/images/xinzuo_01.gif" width="35" height="36" border="0" align="absmiddle"> 白羊座吧</a><font class="f5pt">(3.21-4.20)</font></td>
+        <td  ><a href="http://tieba.baidu.com/f?kw=%BD%F0%C5%A3%D7%F9"><img src="images/xinzuo_02.gif" tppabs="http://www.hao123.com/images/xinzuo_02.gif" width="35" height="35" border="0" align="absmiddle"> 金牛座吧</a><font class="f5pt">(4.21-5.21)</font></td>
+        <td  ><a href="http://tieba.baidu.com/f?kw=%CB%AB%D7%D3%D7%F9"><img src="images/xinzuo_03.gif" tppabs="http://www.hao123.com/images/xinzuo_03.gif" width="35" height="35" border="0" align="absmiddle"> 双子座吧</a><font class="f5pt">(5.21-6.21)</font></td>
+        <td bgcolor="#EFF7F0" ><a href="http://tieba.baidu.com/f?kw=%BE%DE%D0%B7%D7%F9"><img src="images/xinzuo_04.gif" tppabs="http://www.hao123.com/images/xinzuo_04.gif" width="35" height="35" border="0" align="absmiddle"> 巨蟹座吧</a><font class="f5pt">(6.22-7.22)</font></td>
+        <td  ><a href="http://tieba.baidu.com/f?kw=%CA%A8%D7%D3%D7%F9"><img src="images/xinzuo_05.gif" tppabs="http://www.hao123.com/images/xinzuo_05.gif" width="35" height="34" border="0" align="absmiddle"> 狮子座吧</a><font class="f5pt">(7.23-8.23)</font></td>		
+      </tr>
+      <tr bgcolor="#EFF7F0" >
+        <td  ><a href="http://tieba.baidu.com/f?kw=%B4%A6%C5%AE%D7%F9"><img src="images/xinzuo_06.gif" tppabs="http://www.hao123.com/images/xinzuo_06.gif" width="35" height="35" border="0" align="absmiddle"> 处女座吧</a><font class="f5pt">(8.24-9.23)</font></td>
+        <td  ><a href="http://tieba.baidu.com/f?kw=%CC%EC%B3%D3%D7%F9"><img src="images/xinzuo_07.gif" tppabs="http://www.hao123.com/images/xinzuo_07.gif" width="35" height="36" border="0" align="absmiddle"> 天秤座吧</a><font class="f5pt">(9.24-10.23)</font></td>
+        <td  ><a href="http://tieba.baidu.com/f?kw=%CC%EC%D0%AB%D7%F9"><img src="images/xinzuo_08.gif" tppabs="http://www.hao123.com/images/xinzuo_08.gif" width="35" height="34" border="0" align="absmiddle"> 天蝎座吧</a><font class="f5pt">(10.24-11.22)</font></td>
+        <td  ><a href="http://tieba.baidu.com/f?kw=%C9%E4%CA%D6%D7%F9"><img src="images/xinzuo_09.gif" tppabs="http://www.hao123.com/images/xinzuo_09.gif" width="35" height="35" border="0" align="absmiddle"> 射手座吧</a><font class="f5pt">(11.23-12.21)</font></td>
+        <td  ><a href="http://tieba.baidu.com/f?kw=%C4%A7%F4%C9%D7%F9"><img src="images/xinzuo_10.gif" tppabs="http://www.hao123.com/images/xinzuo_10.gif" width="35" height="36" border="0" align="absmiddle"> 魔羯座吧</a><font class="f5pt">(12.22-1.20)</font></td>	
+      </tr>
+      <tr bgcolor="#EFF7F0" >
+        <td bgcolor="#EFF7F0" ><a href="http://tieba.baidu.com/f?kw=%CB%AE%C6%BF%D7%F9"><img src="images/xinzuo_11.gif" tppabs="http://www.hao123.com/images/xinzuo_11.gif" width="35" height="35" border="0" align="absmiddle"> 水瓶座吧</a><font class="f5pt">(1.21-2.19)</font></td>
+        <td bgcolor="#EFF7F0" ><a href="http://tieba.baidu.com/f?kw=%CB%AB%D3%E3%D7%F9"><img src="images/xinzuo_12.gif" tppabs="http://www.hao123.com/images/xinzuo_12.gif" width="35" height="35" border="0" align="absmiddle"> 双鱼座吧</a><font class="f5pt">(2.20-3.20)</font></td>	
+        <td><a href="http://tieba.baidu.com/f?kw=%D0%C7%D7%F9">百度星座吧</a></td>
+        <td></td>
+        <td bgcolor="#EFF7F0" ></td>		
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</div>
+<br>
+<SCRIPT>
+    strArr = new Array()
+    //每日运程
+    strArr[0] = new arrItem("双鱼座", "http://astro.sina.com.cn/pisces.html")
+    strArr[1] = new arrItem("水瓶座", "http://astro.sina.com.cn/aquarius.html")
+    strArr[2] = new arrItem("魔羯座", "http://astro.sina.com.cn/capricorn.html")
+    strArr[3] = new arrItem("天蝎座", "http://astro.sina.com.cn/scorpio.html")
+    strArr[4] = new arrItem("天秤座", "http://astro.sina.com.cn/libra.html")
+    strArr[5] = new arrItem("处女座", "http://astro.sina.com.cn/virgo.html")
+    strArr[6] = new arrItem("狮子座", "http://astro.sina.com.cn/leo.html")
+    strArr[7] = new arrItem("巨蟹座", "http://astro.sina.com.cn/cancer.html")
+    strArr[8] = new arrItem("双子座", "http://astro.sina.com.cn/gemini.html")
+    strArr[9] = new arrItem("金牛座", "http://astro.sina.com.cn/taurus.html")
+    strArr[10] = new arrItem("白羊座", "http://astro.sina.com.cn/aries.html")
+    strArr[11] = new arrItem("射手座", "http://astro.sina.com.cn/sagittarius.html")
+    //每周运程
+    strArr[20] = new arrItem("双鱼座", "http://astro.sina.com.cn/fate/astro_aries_week.html?prourl=11")
+    strArr[21] = new arrItem("水瓶座", "http://astro.sina.com.cn/fate/astro_aries_week.html?prourl=10")
+    strArr[22] = new arrItem("魔羯座", "http://astro.sina.com.cn/fate/astro_aries_week.html?prourl=9")
+    strArr[23] = new arrItem("天蝎座", "http://astro.sina.com.cn/fate/astro_aries_week.html?prourl=7")
+    strArr[24] = new arrItem("天秤座", "http://astro.sina.com.cn/fate/astro_aries_week.html?prourl=6")
+    strArr[25] = new arrItem("处女座", "http://astro.sina.com.cn/fate/astro_aries_week.html?prourl=5")
+    strArr[26] = new arrItem("狮子座", "http://astro.sina.com.cn/fate/astro_aries_week.html?prourl=4")
+    strArr[27] = new arrItem("巨蟹座", "http://astro.sina.com.cn/fate/astro_aries_week.html?prourl=3")
+    strArr[28] = new arrItem("双子座", "http://astro.sina.com.cn/fate/astro_aries_week.html?prourl=2")
+    strArr[29] = new arrItem("金牛座", "http://astro.sina.com.cn/fate/astro_aries_week.html?prourl=1")
+    strArr[30] = new arrItem("白羊座", "http://astro.sina.com.cn/fate/astro_aries_week.html?prourl=0")
+    strArr[31] = new arrItem("射手座", "http://astro.sina.com.cn/fate/astro_aries_week.html?prourl=8")
+    //每月运程
+    strArr[40] = new arrItem("双鱼座", "http://astro.sina.com.cn/fate/astro_aries_mon.html?prourl=11")
+    strArr[41] = new arrItem("水瓶座", "http://astro.sina.com.cn/fate/astro_aries_mon.html?prourl=10")
+    strArr[42] = new arrItem("魔羯座", "http://astro.sina.com.cn/fate/astro_aries_mon.html?prourl=9")
+    strArr[43] = new arrItem("天蝎座", "http://astro.sina.com.cn/fate/astro_aries_mon.html?prourl=7")
+    strArr[44] = new arrItem("天秤座", "http://astro.sina.com.cn/fate/astro_aries_mon.html?prourl=6")
+    strArr[45] = new arrItem("处女座", "http://astro.sina.com.cn/fate/astro_aries_mon.html?prourl=5")
+    strArr[46] = new arrItem("狮子座", "http://astro.sina.com.cn/fate/astro_aries_mon.html?prourl=4")
+    strArr[47] = new arrItem("巨蟹座", "http://astro.sina.com.cn/fate/astro_aries_mon.html?prourl=3")
+    strArr[48] = new arrItem("双子座", "http://astro.sina.com.cn/fate/astro_aries_mon.html?prourl=2")
+    strArr[49] = new arrItem("金牛座", "http://astro.sina.com.cn/fate/astro_aries_mon.html?prourl=1")
+    strArr[50] = new arrItem("白羊座", "http://astro.sina.com.cn/fate/astro_aries_mon.html?prourl=0")
+    strArr[51] = new arrItem("射手座", "http://astro.sina.com.cn/fate/astro_aries_mon.html?prourl=8")
+    //2007年运程
+    strArr[60] = new arrItem("双鱼座", "http://astro.sina.com.cn/fate/astro_aries_year.html?prourl=11")
+    strArr[61] = new arrItem("水瓶座", "http://astro.sina.com.cn/fate/astro_aries_year.html?prourl=10")
+    strArr[62] = new arrItem("魔羯座", "http://astro.sina.com.cn/fate/astro_aries_year.html?prourl=9")
+    strArr[63] = new arrItem("天蝎座", "http://astro.sina.com.cn/fate/astro_aries_year.html?prourl=7")
+    strArr[64] = new arrItem("天秤座", "http://astro.sina.com.cn/fate/astro_aries_year.html?prourl=6")
+    strArr[65] = new arrItem("处女座", "http://astro.sina.com.cn/fate/astro_aries_year.html?prourl=5")
+    strArr[66] = new arrItem("狮子座", "http://astro.sina.com.cn/fate/astro_aries_year.html?prourl=4")
+    strArr[67] = new arrItem("巨蟹座", "http://astro.sina.com.cn/fate/astro_aries_year.html?prourl=3")
+    strArr[68] = new arrItem("双子座", "http://astro.sina.com.cn/fate/astro_aries_year.html?prourl=2")
+    strArr[69] = new arrItem("金牛座", "http://astro.sina.com.cn/fate/astro_aries_year.html?prourl=1")
+    strArr[70] = new arrItem("白羊座", "http://astro.sina.com.cn/fate/astro_aries_year.html?prourl=0")
+    strArr[71] = new arrItem("射手座", "http://astro.sina.com.cn/fate/astro_aries_year.html?prourl=8")
+    //2007年爱情运
+    strArr[80] = new arrItem("双鱼座", "http://astro.sina.com.cn/fate/astro_aries_ylove.html?prourl=11")
+    strArr[81] = new arrItem("水瓶座", "http://astro.sina.com.cn/fate/astro_aries_ylove.html?prourl=10")
+    strArr[82] = new arrItem("魔羯座", "http://astro.sina.com.cn/fate/astro_aries_ylove.html?prourl=9")
+    strArr[83] = new arrItem("天蝎座", "http://astro.sina.com.cn/fate/astro_aries_ylove.html?prourl=7")
+    strArr[84] = new arrItem("天秤座", "http://astro.sina.com.cn/fate/astro_aries_ylove.html?prourl=6")
+    strArr[85] = new arrItem("处女座", "http://astro.sina.com.cn/fate/astro_aries_ylove.html?prourl=5")
+    strArr[86] = new arrItem("狮子座", "http://astro.sina.com.cn/fate/astro_aries_ylove.html?prourl=4")
+    strArr[87] = new arrItem("巨蟹座", "http://astro.sina.com.cn/fate/astro_aries_ylove.html?prourl=3")
+    strArr[88] = new arrItem("双子座", "http://astro.sina.com.cn/fate/astro_aries_ylove.html?prourl=2")
+    strArr[89] = new arrItem("金牛座", "http://astro.sina.com.cn/fate/astro_aries_ylove.html?prourl=1")
+    strArr[90] = new arrItem("白羊座", "http://astro.sina.com.cn/fate/astro_aries_ylove.html?prourl=0")
+    strArr[91] = new arrItem("射手座", "http://astro.sina.com.cn/fate/astro_aries_ylove.html?prourl=8")
+
+
+    function arrItem(text, link) {
+        this.text = text
+        this.link = link
+    }
+
+    function astroWord(fm) {
+        var cycle_v;
+        var cycle = fm.cycle
+        var astro = fm.astro.value
+        for (var i = 0; i < cycle.length; i++) {
+            if (cycle[i].checked == true) {
+                cycle_v = cycle[i].value
+            }
+        }
+
+
+        if (cycle_v == '日') {
+            for (i = 0; i < strArr.length; i++) {
+                if (strArr[i].text == astro) {
+                    window.open(strArr[i].link);
+                    return false
+                }
+            }
+        }
+        if (cycle_v == '周') {
+            for (i = 20; i < strArr.length; i++) {
+                if (strArr[i].text == astro) {
+                    window.open(strArr[i].link);
+                    return false
+                }
+            }
+        }
+        if (cycle_v == '月') {
+            for (i = 40; i < strArr.length; i++) {
+                if (strArr[i].text == astro) {
+                    window.open(strArr[i].link);
+                    return false
+                }
+            }
+        }
+        if (cycle_v == '2007') {
+            for (i = 60; i < strArr.length; i++) {
+                if (strArr[i].text == astro) {
+                    window.open(strArr[i].link);
+                    return false
+                }
+            }
+        }
+        if (cycle_v == '情') {
+            for (i = 80; i < strArr.length; i++) {
+                if (strArr[i].text == astro) {
+                    window.open(strArr[i].link);
+                    return false
+                }
+            }
+        }
+        return true
+    }
+    </SCRIPT>
+<!--运程JS结束-->
+<TABLE width=900 border=0 cellPadding=5 cellSpacing=1 borderColorLight=#008000 borderColorDark=#ffffff 
+bgColor=80B080>
+  <TBODY>
+  <TR>
+    <TD align=middle bgcolor="#EFF7F0">
+      <TABLE width="98%" border=0 align="center" cellPadding=0 cellSpacing=0 bgColor=#EEF7FF>
+        <TBODY>
+       
+        <TR>
+          <TD width="130" align="center"><b><img src="images/xinzuo_xz.gif" tppabs="http://www.hao123.com/images/xinzuo_xz.gif" width="29" height="24" border="0" align="absmiddle"> 星座运程</b></TD>
+          <FORM id='yc' onSubmit="return astroWord(this)" method=post target=_blank>
+          <TD  height=40 ><SELECT name=astro> <OPTION value=白羊座 
+              selected>白羊座</OPTION> <OPTION value=金牛座>金牛座</OPTION> <OPTION 
+              value=双子座>双子座</OPTION> <OPTION value=巨蟹座>巨蟹座</OPTION> <OPTION 
+              value=狮子座>狮子座</OPTION> <OPTION value=处女座>处女座</OPTION> <OPTION 
+              value=天秤座>天秤座</OPTION> <OPTION value=天蝎座>天蝎座</OPTION> <OPTION 
+              value=射手座>射手座</OPTION> <OPTION value=魔羯座>魔羯座</OPTION> <OPTION 
+              value=水瓶座>水瓶座</OPTION> <OPTION value=双鱼座>双鱼座</OPTION></SELECT> 
+            <INPUT type=hidden value=1 name=flag><INPUT type=radio 
+            CHECKED value=日 name=cycle>今日运程 <INPUT type=radio value=周 
+            name=cycle>每周运程 <INPUT type=radio value=月 name=cycle>每月运程 <INPUT 
+            type=radio value=2007 name=cycle>
+            2011年运势　
+            <INPUT type=submit value="查 看" id='ycSubmit' name=Submit></TD></FORM></TR></TBODY></TABLE>
+			<br>
+	  <TABLE width="98%" border=0 align="center" cellPadding=0 cellSpacing=0 bgColor=#EEF7FF>
+        <TBODY>
+        
+        <TR>
+          <TD  width="130" align="center"><STRONG><img src="images/xinzuo_sp.gif" tppabs="http://www.hao123.com/images/xinzuo_sp.gif" border="0" align="absmiddle"> 星座速配</STRONG></TD>
+          <FORM action="http://mix.sina.com.cn/astro/view.php" method=post target=_blank>
+          <TD height="30"><INPUT type=hidden value=4 name=flag>男生：<SELECT class=sele01 name=astro_m> 
+  <OPTION value=白羊座 selected>白羊座</OPTION> <OPTION>金牛座</OPTION> 
+  <OPTION>双子座</OPTION> <OPTION>巨蟹座</OPTION> <OPTION>狮子座</OPTION> 
+  <OPTION>处女座</OPTION> <OPTION>天秤座</OPTION> <OPTION>天蝎座</OPTION> 
+  <OPTION>射手座</OPTION> <OPTION>魔羯座</OPTION> <OPTION>水瓶座</OPTION> 
+  <OPTION>双鱼座</OPTION></SELECT>　女生：<SELECT class=sele01 name=astro_f> <OPTION 
+  value=白羊座 selected>白羊座</OPTION> <OPTION>金牛座</OPTION> <OPTION>双子座</OPTION> 
+  <OPTION>巨蟹座</OPTION> <OPTION>狮子座</OPTION> <OPTION>处女座</OPTION> 
+  <OPTION>天秤座</OPTION> <OPTION>天蝎座</OPTION> <OPTION>射手座</OPTION> 
+  <OPTION>魔羯座</OPTION> <OPTION>水瓶座</OPTION> <OPTION>双鱼座</OPTION></SELECT>
+        　<INPUT class=bot01 type=submit value="查 看" id='spSubmit' name=""></TD>
+          </FORM>
+          </TR>
+       
+        </TBODY></TABLE>
+			<BR>
+      <TABLE width="98%" border=0 align="center" cellPadding=0 cellSpacing=0 bgColor=#EEF7FF>
+        <TBODY>
+        
+        <TR>
+          <TD  width="130" align="center"><STRONG><img src="images/xinzuo_sx.gif" tppabs="http://www.hao123.com/images/xinzuo_sx.gif" width="18" border="0" align="absmiddle">　十二生肖</STRONG></TD>
+          <FORM action="http://astro.sina.com.cn/jian/qita.html" method=get   target=_blank>
+          <TD height="30"><select name="cycle"> 
+		   <option value='2010' selected>2010年生肖运势</option>
+                          <option value='2011' selected>2011年生肖运势</option>  
+		</select>　<select name="xiao">
+			  <option>鼠</option>
+			  <option>牛</option>
+			  <option>虎</option>
+              <option>兔</option>
+              <option>龙</option>
+              <option>蛇</option>
+              <option>马</option>
+              <option>羊</option>
+              <option>猴</option>
+              <option>鸡</option>
+              <option>狗</option>
+              <option>猪</option>
+		    </select><input type=hidden name=flag value=6 />　<INPUT type=submit value="查 看" id="sxSubmit" name=Submit /></TD>
+          </FORM>
+          </TR>
+       
+        </TBODY></TABLE>
+      
+	  </TD>
+  </TR></TBODY></TABLE>
+</center></div>
+<DIV align=center><br><br><a href="http://www.hao123.com/" tppabs="http://www.hao123.com/"   target="_self"><img src="images/return.gif" tppabs="http://www.hao123.com/images/return.gif" width="60" height="30" alt="返回本站首页" border="0"></a></DIV>
+<script type="text/javascript">    var pageId = "hao123-xingzuo";</script><script src="js/monitor.js" tppabs="http://www.hao123.com/js/monitor.js"></script>
+ <script src="js/config.js" tppabs="http://www.hao123.com/js/config.js"  type="text/javascript"></script>
+<script src="js/usertrack.js" tppabs="http://www.hao123.com/js/usertrack.js"  type="text/javascript"></script>
+<script type="text/javascript">
+    
+        var doc = document, yc = doc.getElementById('yc'), ycSubmit = doc.getElementById('ycSubmit'), spSubmit = doc.getElementById('spSubmit'), sxSubmit = doc.getElementById('sxSubmit');
+        var map = { '日': 'day', '周': 'week', '月': 'month', '2007': 'year' }
+        ycSubmit.onclick = function () {
+            var ycType = (function () {
+                var typeList = yc.cycle, length = typeList.length;
+                for (var i = 0; i < length; i++) {
+                    if (typeList[i].checked) {
+                        return map[typeList[i].value];
+                    }
+                }
+            })();
+            UserTrack.send({ level: "2", page: pageId, type: "click", position: ycType });
+        };
+        spSubmit.onclick = function () {
+            UserTrack.send({ level: "2", page: pageId, type: "click", position:'xzsp' });
+        };
+        sxSubmit.onclick = function () {
+            UserTrack.send({ level: "2", page: pageId, type: "click", position:'sexx' });
+        }
+</script>
+</body>
+</html>

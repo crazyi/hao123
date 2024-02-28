@@ -1,10 +1,10 @@
 //time
 var lunarInfo=new Array(
 0x04bd8,0x04ae0,0x0a570,0x054d5,0x0d260,0x0d950,0x16554,0x056a0,0x09ad0,0x055d2,0x04ae0,0x0a5b6,0x0a4d0,0x0d250,0x1d255,0x0b540,0x0d6a0,0x0ada2,0x095b0,0x14977,0x04970,0x0a4b0,0x0b4b5,0x06a50,0x06d40,0x1ab54,0x02b60,0x09570,0x052f2,0x04970,0x06566,0x0d4a0,0x0ea50,0x06e95,0x05ad0,0x02b60,0x186e3,0x092e0,0x1c8d7,0x0c950,0x0d4a0,0x1d8a6,0x0b550,0x056a0,0x1a5b4,0x025d0,0x092d0,0x0d2b2,0x0a950,0x0b557,0x06ca0,0x0b550,0x15355,0x04da0,0x0a5d0,0x14573,0x052d0,0x0a9a8,0x0e950,0x06aa0,0x0aea6,0x0ab50,0x04b60,0x0aae4,0x0a570,0x05260,0x0f263,0x0d950,0x05b57,0x056a0,0x096d0,0x04dd5,0x04ad0,0x0a4d0,0x0d4d4,0x0d250,0x0d558,0x0b540,0x0b5a0,0x195a6,0x095b0,0x049b0,0x0a974,0x0a4b0,0x0b27a,0x06a50,0x06d40,0x0af46,0x0ab60,0x09570,0x04af5,0x04970,0x064b0,0x074a3,0x0ea50,0x06b58,0x055c0,0x0ab60,0x096d5,0x092e0,0x0c960,0x0d954,0x0d4a0,0x0da50,0x07552,0x056a0,0x0abb7,0x025d0,0x092d0,0x0cab5,0x0a950,0x0b4a0,0x0baa4,0x0ad50,0x055d9,0x04ba0,0x0a5b0,0x15176,0x052b0,0x0a930,0x07954,0x06aa0,0x0ad50,0x05b52,0x04b60,0x0a6e6,0x0a4e0,0x0d260,0x0ea65,0x0d530,0x05aa0,0x076a3,0x096d0,0x04bd7,0x04ad0,0x0a4d0,0x1d0b6,0x0d250,0x0d520,0x0dd45,0x0b5a0,0x056d0,0x055b2,0x049b0,0x0a577,0x0a4b0,0x0aa50,0x1b255,0x06d20,0x0ada0)
-var Gan=new Array("¼×","ÒÒ","±û","¶¡","Îì","¼º","¸ı","ĞÁ","ÈÉ","¹ï")
-var Zhi=new Array("×Ó","³ó","Òú","Ã®","³½","ËÈ","Îç","Î´","Éê","ÓÏ","Ğç","º¥")
-var cmStr = new Array('ÈÕ','Õı','¶ş','Èı','ËÄ','Îå','Áù','Æß','°Ë','¾Å','Ê®','¶¬','À°')
-var nStr1 = new Array('ÈÕ','Ò»','¶ş','Èı','ËÄ','Îå','Áù','Æß','°Ë','¾Å','Ê®')
+var Gan=new Array("ç”²","ä¹™","ä¸™","ä¸","æˆŠ","å·±","åºš","è¾›","å£¬","ç™¸")
+var Zhi=new Array("å­","ä¸‘","å¯…","å¯","è¾°","å·³","åˆ","æœª","ç”³","é…‰","æˆŒ","äº¥")
+var cmStr = new Array('æ—¥','æ­£','äºŒ','ä¸‰','å››','äº”','å…­','ä¸ƒ','å…«','ä¹','å','å†¬','è…Š')
+var nStr1 = new Array('æ—¥','ä¸€','äºŒ','ä¸‰','å››','äº”','å…­','ä¸ƒ','å…«','ä¹','å')
 var now;var SY;var SM;var SD
 function cyclical(num) { return(Gan[num%10]+Zhi[num%12]) }
 function lYearDays(y) {
@@ -50,24 +50,24 @@ else
 if(offset<0){ offset += temp; --i; --this.monCyl; }
 this.month = i
 this.day = offset + 1}
-function YYMMDD() {    return('<span class="rilia">'+SY+'</span>Äê<span class="rilia">'+(SM+1)+'</span>ÔÂ<span class="rilia">'+SD+'</span>ÈÕ')}
+function YYMMDD() {    return('<span class="rilia">'+SY+'</span>å¹´<span class="rilia">'+(SM+1)+'</span>æœˆ<span class="rilia">'+SD+'</span>æ—¥')}
 function weekday(){
-var cl = '';return(cl+'ĞÇÆÚ'+nStr1[now.getDay()]+'');
+var cl = '';return(cl+'æ˜ŸæœŸ'+nStr1[now.getDay()]+'');
 }
 function cDay(m,d){
-var nStr2 = new Array('³õ','Ê®','Ø¥','Ø¦','¡¡');var s
-s= cmStr[m]+'ÔÂ'
+var nStr2 = new Array('åˆ','å','å»¿','å…','ã€€');var s
+s= cmStr[m]+'æœˆ'
 switch (d) {
-  case 10:s += '³õÊ®'; break;
-  case 20:s += '¶şÊ®'; break;
-  case 30:s += 'ÈıÊ®'; break;
+  case 10:s += 'åˆå'; break;
+  case 20:s += 'äºŒå'; break;
+  case 30:s += 'ä¸‰å'; break;
   default:s += nStr2[Math.floor(d/10)]; s += nStr1[Math.round(d%10)];
 }return(s)}
 function solarDay(){
 var sTermInfo = new Array(0,21208,42467,63836,85337,107014,128867,150921,173149,195551,218072,240693,263343,285989,308563,331033,353350,375494,397447,419210,440795,462224,483532,504758)
-var solarTerm = new Array("Ğ¡º®","´óº®","Á¢´º","ÓêË®","¾ªÕİ","´º·Ö","ÇåÃ÷","¹ÈÓê","Á¢ÏÄ","Ğ¡Âú","Ã¢ÖÖ","ÏÄÖÁ","Ğ¡Êî","´óÊî","Á¢Çï","´¦Êî","°×Â¶","Çï·Ö","º®Â¶","Ëª½µ","Á¢¶¬","Ğ¡Ñ©","´óÑ©","¶¬ÖÁ")
-var lFtv = new Array("0101*´º½Ú","0115 ÔªÏü½Ú","0505 ¶ËÎç½Ú","0707 ÆßÏ¦","0715 ÖĞÔª½Ú","0815 ÖĞÇï½Ú","0909 ÖØÑô½Ú","1208 À°°Ë½Ú","1224 Ğ¡Äê","0100*³ıÏ¦")
-var sFtv = new Array("0101*Ôªµ©","0214 ÇéÈË½Ú","0308 ¸¾Å®½Ú","0312 Ö²Ê÷½Ú","0401 ÓŞÈË½Ú","0501 ÀÍ¶¯½Ú","0504 ÇàÄê½Ú","0512 »¤Ê¿½Ú","0601 ¶ùÍ¯½Ú","0701 ½¨µ³½Ú","0801 ½¨¾ü½Ú","0910 ½ÌÊ¦½Ú","1001*¹úÇì½Ú","1101 ÍòÊ¥½Ú","1108 ¼ÇÕßÈÕ","1225 Ê¥µ®½Ú","0509 Ä¸Ç×½Ú","0617 ¸¸Ç×½Ú")
+var solarTerm = new Array("å°å¯’","å¤§å¯’","ç«‹æ˜¥","é›¨æ°´","æƒŠè›°","æ˜¥åˆ†","æ¸…æ˜","è°·é›¨","ç«‹å¤","å°æ»¡","èŠ’ç§","å¤è‡³","å°æš‘","å¤§æš‘","ç«‹ç§‹","å¤„æš‘","ç™½éœ²","ç§‹åˆ†","å¯’éœ²","éœœé™","ç«‹å†¬","å°é›ª","å¤§é›ª","å†¬è‡³")
+var lFtv = new Array("0101*æ˜¥èŠ‚","0115 å…ƒå®µèŠ‚","0505 ç«¯åˆèŠ‚","0707 ä¸ƒå¤•","0715 ä¸­å…ƒèŠ‚","0815 ä¸­ç§‹èŠ‚","0909 é‡é˜³èŠ‚","1208 è…Šå…«èŠ‚","1224 å°å¹´","0100*é™¤å¤•")
+var sFtv = new Array("0101*å…ƒæ—¦","0214 æƒ…äººèŠ‚","0308 å¦‡å¥³èŠ‚","0312 æ¤æ ‘èŠ‚","0401 æ„šäººèŠ‚","0501 åŠ³åŠ¨èŠ‚","0504 é’å¹´èŠ‚","0512 æŠ¤å£«èŠ‚","0601 å„¿ç«¥èŠ‚","0701 å»ºå…šèŠ‚","0801 å»ºå†›èŠ‚","0910 æ•™å¸ˆèŠ‚","1001*å›½åº†èŠ‚","1101 ä¸‡åœ£èŠ‚","1108 è®°è€…æ—¥","1225 åœ£è¯èŠ‚","0509 æ¯äº²èŠ‚","0617 çˆ¶äº²èŠ‚")
 var sDObj = new Date(SY,SM,SD);
 var lDObj = new Lunar(sDObj);
 var lDPOS = new Array(3)
@@ -96,7 +96,7 @@ if(solarTerms=='') sFtv='';else sFtv=solarTerms
 } else sFtv=solarFestival
 } else sFtv=lunarFestival
 if(sFtv=='')
-sTermInfo=cyclical(lDObj.year-1900+36)+'Äê '+cDay(lDObj.month,lDObj.day)
+sTermInfo=cyclical(lDObj.year-1900+36)+'å¹´ '+cDay(lDObj.month,lDObj.day)
 else sTermInfo=cDay(lDObj.month,lDObj.day)+' '+sFtv+''
 return(sTermInfo)
 }
